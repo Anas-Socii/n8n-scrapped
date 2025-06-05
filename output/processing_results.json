@@ -365,5 +365,159 @@
     "nodes_used": ["Webhook (Listen for Telegram Events)", "If (Check User & Chat ID)", "Telegram (Error message)", "HTTP Request (Set Webhook Test URL, Get Telegram Webhook Info)", "Telegram (Get Audio File, Get Image)", "OpenAI (Transcribe Recording, Analyze Image, gpt-4o-mini)", "Set (Image Schema)", "Sticky Notes"],
     "outputs": ["Telegram message responses (text, transcribed audio, analyzed images)", "Error messages for invalid or unauthorized users"],
     "processed_at": "05/06/2025 18:51"
+  },
+  {
+    "input_workflow_name": "0KZs18Ti2KXKoLIr_✨🩷Automated_Social_Media_Content_Publishing_Factory_+_System_Prompt_Composition.json",
+    "output_workflow_name": "Automated_Social_Media_Content_Publishing_Factory",
+    "output_workflow_file_path": "analyzed_workflows/Automated_Social_Media_Content_Publishing_Factory/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Automated_Social_Media_Content_Publishing_Factory/README.md",
+    "summary": "Automates the creation and publishing of social media content (Twitter/X, Instagram, etc.) using LLMs and dynamic system prompts. Supports multi-channel routing and memory for enhanced content generation.",
+    "inputs": ["Chat message received", "Executed by another workflow"],
+    "nodes_used": ["Chat Trigger", "Sticky Notes", "ToolWorkflow (X-Twitter, Instagram)", "Window Buffer Memory"],
+    "outputs": ["Published posts on Twitter/X, Instagram, and other platforms", "Logs or responses summarizing publishing actions"],
+    "processed_at": "05/06/2025 21:32"
+  },
+  {
+    "input_workflow_name": "0wfomsVO0TQtQkwU_Complete_Guide_to_Setting_Up_and_Generating_TOTP_Codes_in_n8n_🔐.json",
+    "output_workflow_name": "Complete_Guide_TOTP_Codes_n8n",
+    "output_workflow_file_path": "analyzed_workflows/Complete_Guide_TOTP_Codes_n8n/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Complete_Guide_TOTP_Codes_n8n/README.md",
+    "summary": "Demonstrates how to generate Time-based One-Time Password (TOTP) codes in n8n for secure authentication workflows.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "TOTP Node"],
+    "outputs": ["Generated TOTP code (for use in authentication or as output data)"],
+    "processed_at": "05/06/2025 21:32"
+  },
+  {
+    "input_workflow_name": "🤖🧑_💻 AI Agent for Top n8n Creators Leaderboard Reporting.json",
+    "output_workflow_name": "AI_Agent_Top_n8n_Creators_Leaderboard_Reporting",
+    "output_workflow_file_path": "analyzed_workflows/AI_Agent_Top_n8n_Creators_Leaderboard_Reporting/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI_Agent_Top_n8n_Creators_Leaderboard_Reporting/README.md",
+    "summary": "Aggregates and reports on the top n8n creators and their most popular workflows using public leaderboard data and AI-powered analytics.",
+    "inputs": ["Manual or scheduled trigger", "Execution by another workflow"],
+    "nodes_used": ["HTTP Request Nodes", "Set (Global Variables)", "Parse/Set Nodes", "Aggregate Node", "LLM Node (gpt-4o-mini)", "Workflow Tool Node", "ConvertToFile"],
+    "outputs": ["Leaderboard reports", "Analytics summaries", "File exports"],
+    "processed_at": "05/06/2025 21:32"
+  },
+  {
+    "input_workflow_name": "🤖🧠 AI Agent Chatbot + LONG TERM Memory + Note Storage + Telegram.json",
+    "output_workflow_name": "AI_Agent_Chatbot_Long_Term_Memory_Telegram",
+    "output_workflow_file_path": "analyzed_workflows/AI_Agent_Chatbot_Long_Term_Memory_Telegram/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI_Agent_Chatbot_Long_Term_Memory_Telegram/README.md",
+    "summary": "AI-powered chatbot with long-term memory, note storage in Google Docs, and Telegram integration for persistent, context-aware conversations.",
+    "inputs": ["Chat message received"],
+    "nodes_used": ["Chat Trigger", "Google Docs Tool", "LLM Node (gpt-4o-mini)", "Telegram Node", "Sticky Notes"],
+    "outputs": ["Chat responses", "Persistent memory entries", "Telegram messages"],
+    "processed_at": "05/06/2025 21:32"
+  },
+  {
+    "input_workflow_name": "1_Add_a_event_to_Calender.json",
+    "output_workflow_name": "Add_Event_to_Calendar",
+    "output_workflow_file_path": "analyzed_workflows/Add_Event_to_Calendar/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Add_Event_to_Calendar/README.md",
+    "summary": "Adds a new event to a specified Google Calendar when manually triggered.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "Google Calendar"],
+    "outputs": ["New event created in the designated Google Calendar"],
+    "processed_at": "05/06/2025 21:39"
+  },
+  {
+    "input_workflow_name": "1_Add_text_to_an_image_downloaded_from_the_internet.json",
+    "output_workflow_name": "Add_Text_to_Image_from_Internet",
+    "output_workflow_file_path": "analyzed_workflows/Add_Text_to_Image_from_Internet/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Add_Text_to_Image_from_Internet/README.md",
+    "summary": "Downloads an image from a URL and overlays custom text onto it when manually triggered.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "HTTP Request", "Edit Image"],
+    "outputs": ["Image file with overlaid text"],
+    "processed_at": "05/06/2025 21:39"
+  },
+  {
+    "input_workflow_name": "1_Create_Nextcloud_Deck_card_from_email.json",
+    "output_workflow_name": "Create_Nextcloud_Deck_Card_from_Email",
+    "output_workflow_file_path": "analyzed_workflows/Create_Nextcloud_Deck_Card_from_Email/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Create_Nextcloud_Deck_Card_from_Email/README.md",
+    "summary": "Reads emails via IMAP, processes the content, and creates a new card in a Nextcloud Deck board using the email’s subject and body.",
+    "inputs": ["IMAP Email"],
+    "nodes_used": ["IMAP Email", "Function", "HTTP Request"],
+    "outputs": ["New card created in the specified Nextcloud Deck board and stack"],
+    "processed_at": "05/06/2025 21:39"
+  },
+  {
+    "input_workflow_name": "1_Create_entry_in_Mailchimp_from_Airtable.json",
+    "output_workflow_name": "Create_Entry_in_Mailchimp_from_Airtable",
+    "output_workflow_file_path": "analyzed_workflows/Create_Entry_in_Mailchimp_from_Airtable/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Create_Entry_in_Mailchimp_from_Airtable/README.md",
+    "summary": "Syncs user records from an Airtable table to a Mailchimp list on a scheduled basis.",
+    "inputs": ["Cron Trigger"],
+    "nodes_used": ["Cron", "Airtable", "Mailchimp"],
+    "outputs": ["New or updated subscriber entries in the chosen Mailchimp list"],
+    "processed_at": "05/06/2025 21:39"
+  },
+  {
+    "input_workflow_name": "1_Daily_Journal_Reminder.json",
+    "output_workflow_name": "Daily_Journal_Reminder",
+    "output_workflow_file_path": "analyzed_workflows/Daily_Journal_Reminder/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Daily_Journal_Reminder/README.md",
+    "summary": "Sends a daily Telegram reminder each morning, prompting the user to log their journal entry for the previous day.",
+    "inputs": ["Cron Trigger"],
+    "nodes_used": ["Cron", "Function Item", "Telegram"],
+    "outputs": ["Telegram message reminder sent to the user"],
+    "processed_at": "05/06/2025 21:50"
+  },
+  {
+    "input_workflow_name": "1_Dialpad_to_Syncro.json",
+    "output_workflow_name": "Dialpad_to_Syncro",
+    "output_workflow_file_path": "analyzed_workflows/Dialpad_to_Syncro/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Dialpad_to_Syncro/README.md",
+    "summary": "Integrates Dialpad call events with Syncro ticketing and Google Sheets for automated customer lookup, ticket creation, and logging.",
+    "inputs": ["Webhook"],
+    "nodes_used": ["Webhook", "GetCustomer (HTTP Request)", "GetTicket (HTTP Request)", "IFMoreThanOne (If)", "CreateTicket (HTTP Request)", "UpdateTicket (HTTP Request)", "ForGoogle (Set)", "Google Sheets"],
+    "outputs": ["Tickets created or updated in Syncro", "Call and ticket IDs logged in Google Sheets"],
+    "processed_at": "05/06/2025 21:50"
+  },
+  {
+    "input_workflow_name": "1_Google_Cal_to_Zoom_meeting.json",
+    "output_workflow_name": "Google_Calendar_to_Zoom_Meeting",
+    "output_workflow_file_path": "analyzed_workflows/Google_Calendar_to_Zoom_Meeting/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Google_Calendar_to_Zoom_Meeting/README.md",
+    "summary": "Automatically creates Zoom meetings for upcoming Google Calendar events, filtering out unwanted types, and scheduling them via a daily cron job or manual execution.",
+    "inputs": ["Cron Trigger", "Manual Trigger"],
+    "nodes_used": ["Cron Once a Day", "Manual Trigger", "Date & Time", "Google Calendar", "IF Zoom meeting", "Zoom"],
+    "outputs": ["Zoom meetings created for filtered Google Calendar events"],
+    "processed_at": "05/06/2025 21:50"
+  },
+  {
+    "input_workflow_name": "1_Google_Sheet_to_Mailchimp.json",
+    "output_workflow_name": "Google_Sheet_to_Mailchimp",
+    "output_workflow_file_path": "analyzed_workflows/Google_Sheet_to_Mailchimp/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Google_Sheet_to_Mailchimp/README.md",
+    "summary": "Syncs email addresses from a Google Sheet to a Mailchimp list, supporting both manual and interval-based execution.",
+    "inputs": ["Manual Trigger", "Interval Trigger"],
+    "nodes_used": ["Manual Trigger", "Interval", "Google Sheets", "Mailchimp"],
+    "outputs": ["New or updated subscriber entries in the specified Mailchimp list"],
+    "processed_at": "05/06/2025 21:50"
+  },
+  {
+    "input_workflow_name": "1_ImapEmail,_XmlToJson,_POST-HTTP-Request.json",
+    "output_workflow_name": "IMAP_Email_XML_to_JSON_POST_HTTP_Request",
+    "output_workflow_file_path": "analyzed_workflows/IMAP_Email_XML_to_JSON_POST_HTTP_Request/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/IMAP_Email_XML_to_JSON_POST_HTTP_Request/README.md",
+    "summary": "Reads emails with attachments via IMAP, converts XML attachments to JSON, and posts the data to an API endpoint.",
+    "inputs": ["IMAP Email"],
+    "nodes_used": ["IMAP Email", "Move Binary Data", "XML", "Set", "HTTP Request"],
+    "outputs": ["HTTP POST request sent to the configured API endpoint with extracted data"],
+    "processed_at": "05/06/2025 21:50"
+  },
+  {
+    "input_workflow_name": "1_My_workflow.json",
+    "output_workflow_name": "Send_Certificate_Emails_in_Batches",
+    "output_workflow_file_path": "analyzed_workflows/Send_Certificate_Emails_in_Batches/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Send_Certificate_Emails_in_Batches/README.md",
+    "summary": "Reads a CSV file, parses it, and sends certificate emails with personalized attachments in batches.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "Read Binary File", "Spreadsheet File", "SplitInBatches", "Read Binary File1", "Send Email"],
+    "outputs": ["Personalized emails with certificate attachments sent to each user in the CSV"],
+    "processed_at": "05/06/2025 21:55"
   }
 ]
