@@ -1,0 +1,176 @@
+[
+  {
+    "input_workflow_name": "__Calendar_Agent.json",
+    "output_workflow_name": "🤖Calendar Agent",
+    "output_workflow_file_path": "analyzed_workflows/Calendar_Agent/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Calendar_Agent/README.md",
+    "summary": "An AI-powered agent to manage Google Calendar events (create, get, delete, update) based on natural language queries.",
+    "inputs": ["n8n-nodes-base.executeWorkflowTrigger"],
+    "nodes_used": [
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.googleCalendarTool",
+      "n8n-nodes-base.set"
+    ],
+    "outputs": ["JSON response with agent's output or error message"],
+    "processed_at": "05/06/2025 16:49"
+  },
+  {
+    "input_workflow_name": "__Contact_Agent.json",
+    "output_workflow_name": "🤖Contact Agent",
+    "output_workflow_file_path": "analyzed_workflows/Contact_Agent/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Contact_Agent/README.md",
+    "summary": "An AI-powered agent for managing contact records in Airtable—searching, adding, and updating contacts through natural language queries.",
+    "inputs": ["n8n-nodes-base.executeWorkflowTrigger"],
+    "nodes_used": [
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.airtableTool",
+      "n8n-nodes-base.set"
+    ],
+    "outputs": ["JSON response with agent's output or error message"],
+    "processed_at": "05/06/2025 17:00"
+  },
+  {
+    "input_workflow_name": "[CENSORED]_(G)_LineChatBot_+_Google_Sheets_(as_a_memory).json",
+    "output_workflow_name": "(G) LineChatBot + Google Sheets (as a memory)",
+    "output_workflow_file_path": "analyzed_workflows/LineChatBot_Google_Sheets_as_a_memory/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/LineChatBot_Google_Sheets_as_a_memory/README.md",
+    "summary": "A chatbot workflow that integrates LINE messaging with Google Sheets, using an AI agent to provide interactive, memory-enabled conversations.",
+    "inputs": ["n8n-nodes-base.webhook"],
+    "nodes_used": [
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.googleSheets",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.function"
+    ],
+    "outputs": ["LINE reply message", "Google Sheets memory update"],
+    "processed_at": "05/06/2025 17:09"
+  },
+  {
+    "input_workflow_name": "_Easily_Compare_LLMs_Using_OpenAI_and_Google_Sheets.json",
+    "output_workflow_name": "Easily Compare LLMs Using OpenAI and Google Sheets",
+    "output_workflow_file_path": "analyzed_workflows/Easily_Compare_LLMs_Using_OpenAI_and_Google_Sheets/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Easily_Compare_LLMs_Using_OpenAI_and_Google_Sheets/README.md",
+    "summary": "A workflow for comparing the outputs of multiple large language models (LLMs) such as OpenAI's GPT and OpenRouter models, using Google Sheets for structured evaluation and result logging.",
+    "inputs": ["@n8n/n8n-nodes-langchain.chatTrigger"],
+    "nodes_used": [
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.splitInBatches",
+      "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "@n8n/n8n-nodes-langchain.memoryManager",
+      "n8n-nodes-base.summarize",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.googleSheets"
+    ],
+    "outputs": ["Aggregated LLM responses", "Google Sheets results log"],
+    "processed_at": "05/06/2025 17:21"
+  },
+  {
+    "input_workflow_name": "_Generate_AI-Ready_llms.txt_Files_from_Screaming_Frog_Website_Crawls.json",
+    "output_workflow_name": "Generate AI-Ready llms.txt Files from Screaming Frog Website Crawls",
+    "output_workflow_file_path": "analyzed_workflows/Generate_AI-Ready_llms_txt_Files_from_Screaming_Frog_Website_Crawls/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Generate_AI-Ready_llms_txt_Files_from_Screaming_Frog_Website_Crawls/README.md",
+    "summary": "Automates the creation of llms.txt files from Screaming Frog website crawl exports, filtering and formatting content for LLM ingestion or discovery.",
+    "inputs": ["Form Node (CSV upload)", "Screaming Frog Export"],
+    "nodes_used": [
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.textClassifier",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.summarize",
+      "n8n-nodes-base.convertToFile"
+    ],
+    "outputs": ["llms.txt file (download or upload)"],
+    "processed_at": "05/06/2025 17:25"
+  },
+  {
+    "input_workflow_name": "__Content_Creator_Agent.json",
+    "output_workflow_name": "🤖Content Creator Agent",
+    "output_workflow_file_path": "analyzed_workflows/Content_Creator_Agent/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Content_Creator_Agent/README.md",
+    "summary": "AI-powered agent that generates high-quality, SEO-optimized blog content using web search and advanced language models. Integrates external search (Tavily), Anthropic and agent nodes for robust, fact-checked, and well-structured blog writing.",
+    "inputs": ["Execute Workflow Trigger", "User Query (blog topic)"],
+    "nodes_used": [
+      "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "outputs": ["HTML blog content response"],
+    "processed_at": "05/06/2025 17:26"
+  },
+  {
+    "input_workflow_name": "__Email_Agent.json",
+    "output_workflow_name": "🤖Email Agent",
+    "output_workflow_file_path": "analyzed_workflows/Email_Agent/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Email_Agent/README.md",
+    "summary": "AI-powered agent for professional email management and automation. Integrates OpenAI, n8n agent, and Gmail nodes to automate sending, drafting, labeling, replying, and managing emails with robust error handling and workflow chaining.",
+    "inputs": ["Execute Workflow Trigger", "User Query (email task)"],
+    "nodes_used": [
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.gmailTool",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "outputs": ["Email sent/drafted/labeled/etc. or error message"],
+    "processed_at": "05/06/2025 17:32"
+  },
+  {
+    "input_workflow_name": "_piepdrive-test.json",
+    "output_workflow_name": "piepdrive-test",
+    "output_workflow_file_path": "analyzed_workflows/piepdrive-test/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/piepdrive-test/README.md",
+    "summary": "Enriches Pipedrive organization data with AI-generated notes when a new organization is created. Scrapes the organization's website, summarizes key info with OpenAI GPT-4o, and posts results to Pipedrive and Slack.",
+    "inputs": ["Pipedrive Trigger (Organization Created)", "Organization Website URL"],
+    "nodes_used": [
+      "n8n-nodes-base.pipedriveTrigger",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.pipedrive",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.markdown",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.slack",
+      "@n8n/n8n-nodes-langchain.openAi"
+    ],
+    "outputs": ["Pipedrive Note", "Slack Notification"],
+    "processed_at": "05/06/2025 17:33"
+  },
+  {
+    "input_workflow_name": "⚡AI-Powered YouTube Video Summarization & Analysis.json",
+    "output_workflow_name": "⚡AI-Powered YouTube Video Summarization & Analysis",
+    "output_workflow_file_path": "analyzed_workflows/AI-Powered_YouTube_Video_Summarization_Analysis/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI-Powered_YouTube_Video_Summarization_Analysis/README.md",
+    "summary": "Automates extraction, summarization, and analysis of YouTube video content. Uses webhooks, transcript extraction, OpenAI GPT-4o, and messaging integrations to deliver concise video summaries and insights via webhook and Telegram.",
+    "inputs": ["Webhook (YouTube URL)"],
+    "nodes_used": [
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.youTube",
+      "n8n-nodes-youtube-transcription.youtubeTranscripter",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.summarize",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.telegram"
+    ],
+    "outputs": ["Webhook Response (summary, topics, title, description, id, youtubeUrl)", "Telegram Message"],
+    "processed_at": "05/06/2025 17:34"
+  }
+]
