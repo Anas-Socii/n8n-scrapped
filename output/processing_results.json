@@ -135,7 +135,10 @@
     "output_workflow_file_path": "analyzed_workflows/piepdrive-test/workflow.json",
     "output_readme_file_path": "analyzed_workflows/piepdrive-test/README.md",
     "summary": "Enriches Pipedrive organization data with AI-generated notes when a new organization is created. Scrapes the organization's website, summarizes key info with OpenAI GPT-4o, and posts results to Pipedrive and Slack.",
-    "inputs": ["Pipedrive Trigger (Organization Created)", "Organization Website URL"],
+    "inputs": [
+      "Pipedrive Trigger (Organization Created)",
+      "Organization Website URL"
+    ],
     "nodes_used": [
       "n8n-nodes-base.pipedriveTrigger",
       "n8n-nodes-base.stickyNote",
@@ -170,7 +173,197 @@
       "n8n-nodes-base.respondToWebhook",
       "n8n-nodes-base.telegram"
     ],
-    "outputs": ["Webhook Response (summary, topics, title, description, id, youtubeUrl)", "Telegram Message"],
+    "outputs": [
+      "Webhook Response (summary, topics, title, description, id, youtubeUrl)",
+      "Telegram Message"
+    ],
     "processed_at": "05/06/2025 17:34"
+  },
+  {
+    "input_workflow_name": "⚡AI-Powered YouTube Video Summarization & Analysis.json",
+    "output_workflow_name": "AI_Powered_YouTube_Summarization_Analysis",
+    "output_workflow_file_path": "analyzed_workflows/AI_Powered_YouTube_Summarization_Analysis/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI_Powered_YouTube_Summarization_Analysis/README.md",
+    "summary": "Extracts, summarizes, and analyzes YouTube video transcripts using AI, delivering results via Telegram and webhook.",
+    "inputs": ["Webhook"],
+    "nodes_used": [
+      "Webhook",
+      "Get YouTube URL",
+      "YouTube Video ID",
+      "Get YouTube Video",
+      "YouTube Transcript",
+      "Split Out",
+      "Concatenate",
+      "gpt-4o-mini",
+      "Summarize & Analyze Transcript",
+      "Response Object",
+      "Respond to Webhook",
+      "Telegram"
+    ],
+    "outputs": ["Telegram message", "Webhook response"],
+    "processed_at": "05/06/2025 18:00"
+  },
+  {
+    "input_workflow_name": "✨ Vision-Based AI Agent Scraper - with Google Sheets, ScrapingBee, and Gemini.json",
+    "output_workflow_name": "Vision_Based_AI_Agent_Scraper_GSheets_ScrapingBee_Gemini",
+    "output_workflow_file_path": "analyzed_workflows/Vision_Based_AI_Agent_Scraper_GSheets_ScrapingBee_Gemini/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Vision_Based_AI_Agent_Scraper_GSheets_ScrapingBee_Gemini/README.md",
+    "summary": "Scrapes structured product data from web pages using a vision-based AI agent, integrating Google Sheets, ScrapingBee, and Gemini for robust extraction and output.",
+    "inputs": [
+      "Manual Trigger (Test workflow)",
+      "Google Sheets - List of URLs"
+    ],
+    "nodes_used": [
+      "Manual Trigger",
+      "Google Sheets - Get list of URLs",
+      "Set fields",
+      "ScrapingBee - Get page screenshot",
+      "ScrapingBee- Get page HTML",
+      "Google Gemini Chat Model",
+      "Structured Output Parser",
+      "Split Out",
+      "HTML-based Scraping Tool",
+      "Google Sheets - Create Rows",
+      "Sticky Notes"
+    ],
+    "outputs": [
+      "Structured product data in Google Sheets",
+      "Screenshots and extracted information for each URL"
+    ],
+    "processed_at": "05/06/2025 18:10"
+  },
+  {
+    "input_workflow_name": "🎨 Interactive Image Editor with FLUX.1 Fill Tool for Inpainting.json",
+    "output_workflow_name": "Interactive_Image_Editor_FLUX1_Fill_Tool_Inpainting",
+    "output_workflow_file_path": "analyzed_workflows/Interactive_Image_Editor_FLUX1_Fill_Tool_Inpainting/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Interactive_Image_Editor_FLUX1_Fill_Tool_Inpainting/README.md",
+    "summary": "Enables interactive image editing and inpainting via a web-based editor and the FLUX.1 Fill Tool API, handling user uploads, masks, prompts, and real-time delivery of edited images.",
+    "inputs": [
+      "Webhook (HTTP endpoint /flux-fill)",
+      "Editor page loaded in browser"
+    ],
+    "nodes_used": [
+      "Webhook",
+      "Mockups",
+      "Merge",
+      "Editor page (HTML)",
+      "NO OP",
+      "FLUX Fill (HTTP Request)",
+      "Wait 3 sec",
+      "Check FLUX status (HTTP Request)",
+      "Is Ready? (If)",
+      "Get Fill Image (HTTP Request)",
+      "Show the image to user (Respond to Webhook)",
+      "Sticky Notes"
+    ],
+    "outputs": [
+      "Edited/inpainted image returned to the user",
+      "HTML editor page with before/after comparison"
+    ],
+    "processed_at": "05/06/2025 18:13"
+  },
+  {
+    "input_workflow_name": "🐋DeepSeek V3 Chat & R1 Reasoning Quick Start.json",
+    "output_workflow_name": "DeepSeek_V3_Chat_R1_Reasoning_Quick_Start",
+    "output_workflow_file_path": "analyzed_workflows/DeepSeek_V3_Chat_R1_Reasoning_Quick_Start/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/DeepSeek_V3_Chat_R1_Reasoning_Quick_Start/README.md",
+    "summary": "Conversational AI and reasoning starter using DeepSeek V3 and R1 models, supporting chat triggers, agent orchestration, memory, and multiple LLM integrations.",
+    "inputs": [
+      "Chat message received (via @n8n/n8n-nodes-langchain.chatTrigger)"
+    ],
+    "nodes_used": [
+      "When chat message received",
+      "AI Agent",
+      "DeepSeek",
+      "Window Buffer Memory",
+      "Basic LLM Chain2",
+      "Ollama DeepSeek",
+      "Sticky Notes"
+    ],
+    "outputs": ["AI-generated response to the chat input"],
+    "processed_at": "05/06/2025 18:16"
+  },
+  {
+    "input_workflow_name": "🐋🤖 DeepSeek AI Agent + Telegram + LONG TERM Memory 🧠.json",
+    "output_workflow_name": "DeepSeek_AI_Agent_Telegram_Long_Term_Memory",
+    "output_workflow_file_path": "analyzed_workflows/DeepSeek_AI_Agent_Telegram_Long_Term_Memory/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/DeepSeek_AI_Agent_Telegram_Long_Term_Memory/README.md",
+    "summary": "Telegram-integrated DeepSeek AI agent with advanced reasoning and long-term memory. Validates users, routes messages, and maintains persistent context for personalized AI chat.",
+    "inputs": [
+      "Telegram webhook (via Listen for Telegram Events node)",
+      "Text, audio, or image messages"
+    ],
+    "nodes_used": [
+      "Listen for Telegram Events",
+      "Validation / Check User & Chat ID",
+      "Message Router",
+      "AI Agent",
+      "DeepSeek-V3 Chat / DeepSeek-R1 Reasoning",
+      "Window Buffer Memory",
+      "Save/Retrieve Long Term Memories",
+      "Merge",
+      "Error message / Telegram Response",
+      "Sticky Notes"
+    ],
+    "outputs": [
+      "AI-generated response on Telegram",
+      "Error message if validation fails or unsupported input"
+    ],
+    "processed_at": "05/06/2025 18:16"
+  },
+  {
+    "input_workflow_name": "📚 Auto-generate documentation for n8n workflows with GPT and Docsify.json",
+    "output_workflow_name": "Auto_generate_documentation_with_GPT_and_Docsify",
+    "output_workflow_file_path": "analyzed_workflows/Auto_generate_documentation_with_GPT_and_Docsify/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Auto_generate_documentation_with_GPT_and_Docsify/README.md",
+    "summary": "Automates creation and serving of documentation for all n8n workflows using Docsify and GPT.",
+    "inputs": ["Manual or Scheduled Trigger (implied)", "Workflow Data"],
+    "nodes_used": ["Set (CONFIG)", "Convert to File", "If (HasFile?)", "Extract from File", "HTML (Main Page)", "HTML (Instance overview)", "Sort", "Switch (doc action)", "Other workflow utility nodes"],
+    "outputs": ["Docsify HTML documentation", "Markdown/HTML files"],
+    "processed_at": "05/06/2025 18:36"
+  },
+  {
+    "input_workflow_name": "🔍 Perplexity Research to HTML_ AI-Powered Content Creation.json",
+    "output_workflow_name": "Perplexity_Research_to_HTML_AI_Powered_Content_Creation",
+    "output_workflow_file_path": "analyzed_workflows/Perplexity_Research_to_HTML_AI_Powered_Content_Creation/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Perplexity_Research_to_HTML_AI_Powered_Content_Creation/README.md",
+    "summary": "Uses Perplexity AI and GPT-4o-mini to research a topic, generate a structured article, and convert it to HTML for publishing.",
+    "inputs": ["Webhook or Manual Trigger (topic input)"],
+    "nodes_used": ["ai_tool (gpt-4o-mini-2024-07-18)", "Perplexity Researcher", "Structured Output Parser", "If/Branch Nodes", "Webhook/Manual Trigger", "Telegram Node (optional)"],
+    "outputs": ["JSON with title and HTML content"],
+    "processed_at": "05/06/2025 18:40"
+  },
+  {
+    "input_workflow_name": "🔐🦙🤖 Private & Local Ollama Self-Hosted AI Assistant.json",
+    "output_workflow_name": "Private_Local_Ollama_Self_Hosted_AI_Assistant",
+    "output_workflow_file_path": "analyzed_workflows/Private_Local_Ollama_Self_Hosted_AI_Assistant/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Private_Local_Ollama_Self_Hosted_AI_Assistant/README.md",
+    "summary": "Creates a private chat assistant using the local Ollama Llama 3.2 model, triggered by chat messages and returning structured JSON responses.",
+    "inputs": ["Chat Trigger (message received)", "User Prompt"],
+    "nodes_used": ["Chat Trigger", "Basic LLM Chain", "Ollama Model", "Set (JSON to Object)", "Set (Structured Response)", "Set (Error Response)", "Sticky Notes"],
+    "outputs": ["Structured JSON with prompt and response"],
+    "processed_at": "05/06/2025 18:40"
+  },
+  {
+    "input_workflow_name": "🔥📈🤖 AI Agent for n8n Creators Leaderboard - Find Popular Workflows.json",
+    "output_workflow_name": "AI_Agent_for_n8n_Creators_Leaderboard_Find_Popular_Workflows",
+    "output_workflow_file_path": "analyzed_workflows/AI_Agent_for_n8n_Creators_Leaderboard_Find_Popular_Workflows/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI_Agent_for_n8n_Creators_Leaderboard_Find_Popular_Workflows/README.md",
+    "summary": "Analyzes public n8n community leaderboard data to identify top creators and their most popular workflows using HTTP requests, parsing, filtering, and aggregation.",
+    "inputs": ["Manual or scheduled trigger"],
+    "nodes_used": ["Set (Global Variables)", "HTTP Request (stats_aggregate_creators, stats_aggregate_workflows)", "Set (Parse Workflow Data/Creators Data)", "Limit (Take Top 25 Creators)", "Aggregate", "Filter (By Creator Username)", "gpt-4o-mini"],
+    "outputs": ["Aggregated and filtered data on top creators and workflows"],
+    "processed_at": "05/06/2025 18:45"
+  },
+  {
+    "input_workflow_name": "🤖 Telegram Messaging Agent for Text_Audio_Images.json",
+    "output_workflow_name": "Telegram_Messaging_Agent_for_Text_Audio_Images",
+    "output_workflow_file_path": "analyzed_workflows/Telegram_Messaging_Agent_for_Text_Audio_Images/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Telegram_Messaging_Agent_for_Text_Audio_Images/README.md",
+    "summary": "Enables a Telegram bot to receive, process, and respond to text, audio, and image messages. Handles user verification, webhooks, and uses OpenAI for transcription and image analysis.",
+    "inputs": ["Telegram webhook (message received)"],
+    "nodes_used": ["Webhook (Listen for Telegram Events)", "If (Check User & Chat ID)", "Telegram (Error message)", "HTTP Request (Set Webhook Test URL, Get Telegram Webhook Info)", "Telegram (Get Audio File, Get Image)", "OpenAI (Transcribe Recording, Analyze Image, gpt-4o-mini)", "Set (Image Schema)", "Sticky Notes"],
+    "outputs": ["Telegram message responses (text, transcribed audio, analyzed images)", "Error messages for invalid or unauthorized users"],
+    "processed_at": "05/06/2025 18:51"
   }
 ]

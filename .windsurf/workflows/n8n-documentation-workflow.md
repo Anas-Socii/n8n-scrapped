@@ -25,7 +25,7 @@ For each `.json` file in @data/input:
 For every workflow file:
 
 1. **Create a subdirectory** in `@analyzed_workflows/` with a meaningful name reflecting the workflow's purpose.
-2. **Move** and **rename** the original workflow JSON file into that directory.
+2. **Move** the original workflow wile in that directory with the name 'workflow.json'.
 3. Generate a `README.md` in that directory with the following structure:
 
 ```
