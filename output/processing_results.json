@@ -1492,5 +1492,115 @@
     ],
     "outputs": ["JSON response with entity analysis from Google API"],
     "processed_at": "08/06/2025 19:15"
+  },
+  {
+    "input_workflow_name": "5_Append,_lookup,_update,_and_read_data_from_a_Google_Sheets_spreadsheet.json",
+    "output_workflow_name": "Append_lookup_update_and_read_data_from_a_Google_Sheets_spreadsheet",
+    "output_workflow_file_path": "analyzed_workflows/Append_lookup_update_and_read_data_from_a_Google_Sheets_spreadsheet/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Append_lookup_update_and_read_data_from_a_Google_Sheets_spreadsheet/README.md",
+    "summary": "Appends, looks up, updates, and reads data from a Google Sheets spreadsheet using n8n nodes.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "Google Sheets1", "Set1", "Google Sheets2"],
+    "outputs": ["Updated Google Sheets data"],
+    "processed_at": "08/06/2025 19:18"
+  },
+  {
+    "input_workflow_name": "5_Slack-GitHub_User_Info.json",
+    "output_workflow_name": "Slack-GitHub_User_Info",
+    "output_workflow_file_path": "analyzed_workflows/Slack-GitHub_User_Info/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Slack-GitHub_User_Info/README.md",
+    "summary": "Retrieves GitHub user information and emails, and posts the details to a Slack channel.",
+    "inputs": ["Webhook"],
+    "nodes_used": ["Webhook", "GraphQL", "Function", "Slack"],
+    "outputs": ["Slack message with GitHub user details and emails"],
+    "processed_at": "08/06/2025 19:18"
+  },
+  {
+    "input_workflow_name": "5_Syncro_Status_Update_Clockify.json",
+    "output_workflow_name": "Syncro_Status_Update_Clockify",
+    "output_workflow_file_path": "analyzed_workflows/Syncro_Status_Update_Clockify/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Syncro_Status_Update_Clockify/README.md",
+    "summary": "Updates project status in Clockify based on incoming webhook events.",
+    "inputs": ["Webhook"],
+    "nodes_used": ["Webhook", "Clockify", "HTTP Request", "IF1"],
+    "outputs": ["Updated project status in Clockify"],
+    "processed_at": "08/06/2025 19:18"
+  },
+  {
+    "input_workflow_name": "5_bash-dash_telegram.json",
+    "output_workflow_name": "bash-dash_telegram",
+    "output_workflow_file_path": "analyzed_workflows/bash-dash_telegram/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/bash-dash_telegram/README.md",
+    "summary": "Receives webhook requests and sends messages to a Telegram chat using n8n.",
+    "inputs": ["Webhook"],
+    "nodes_used": ["Webhook", "Telegram", "Set"],
+    "outputs": ["Message sent to a Telegram chat"],
+    "processed_at": "08/06/2025 19:18"
+  },
+  {
+    "input_workflow_name": "5_new.json",
+    "output_workflow_name": "new",
+    "output_workflow_file_path": "analyzed_workflows/new/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/new/README.md",
+    "summary": "Fetches GitHub repository profile information when triggered manually.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "Github"],
+    "outputs": ["GitHub repository profile data"],
+    "processed_at": "08/06/2025 19:18"
+  },
+  {
+    "input_workflow_name": "5dcd71e5db772d996680f0be_Example_-_Backup_n8n_to_Nextcloud.json",
+    "output_workflow_name": "Backup_n8n_Workflows_to_Nextcloud",
+    "output_workflow_file_path": "analyzed_workflows/Backup_n8n_Workflows_to_Nextcloud/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Backup_n8n_Workflows_to_Nextcloud/README.md",
+    "summary": "Backs up all n8n workflow definitions to a Nextcloud instance on a scheduled basis or manual trigger.",
+    "inputs": ["Manual Trigger", "Cron"],
+    "nodes_used": ["Manual Trigger", "Cron", "Get Workflow List (HTTP Request)", "Map (Function)", "Get Workflow (HTTP Request)", "Merge", "Move Binary Data", "FunctionItem", "NextCloud1"],
+    "outputs": ["JSON backup files of each n8n workflow stored in Nextcloud"],
+    "processed_at": "08/06/2025 19:23"
+  },
+  {
+    "input_workflow_name": "5DiXT9FykJvuElc1_Get_Comments_from_Facebook_Page.json",
+    "output_workflow_name": "Get_Comments_from_Facebook_Page",
+    "output_workflow_file_path": "analyzed_workflows/Get_Comments_from_Facebook_Page/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Get_Comments_from_Facebook_Page/README.md",
+    "summary": "Fetches, filters, and processes comments from a Facebook Page using n8n.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "Split Out Comments", "Filter Out Null Comments", "Select Result Field"],
+    "outputs": ["Structured list of valid comments from the Facebook Page"],
+    "processed_at": "08/06/2025 19:25"
+  },
+  {
+    "input_workflow_name": "5ec2322573f7590007802e1f_Extranet_Releases.json",
+    "output_workflow_name": "Extranet_Releases",
+    "output_workflow_file_path": "analyzed_workflows/Extranet_Releases/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Extranet_Releases/README.md",
+    "summary": "Posts notifications to Slack when a new release occurs in a specified GitHub repository.",
+    "inputs": ["GitHub Trigger"],
+    "nodes_used": ["Github Trigger", "Slack"],
+    "outputs": ["Slack notification with release details"],
+    "processed_at": "08/06/2025 19:25"
+  },
+  {
+    "input_workflow_name": "5kYHogzDGeo21MxE_Automate_Figma_Versioning_and_Jira_Updates_with_n8n_Webhook_Integration.json",
+    "output_workflow_name": "Automate_Figma_Versioning_and_Jira_Updates",
+    "output_workflow_file_path": "analyzed_workflows/Automate_Figma_Versioning_and_Jira_Updates/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Automate_Figma_Versioning_and_Jira_Updates/README.md",
+    "summary": "Automates Figma versioning updates and posts comments to Jira issues via webhook integration.",
+    "inputs": ["Figma Trigger"],
+    "nodes_used": ["Figma Trigger", "Find Jira Issue", "Add Comment in Issue", "Sticky Note"],
+    "outputs": ["Comment added to the corresponding Jira issue"],
+    "processed_at": "08/06/2025 19:25"
+  },
+  {
+    "input_workflow_name": "5lMPjSDuoMvCJnko_🔍🛠️Generate_SEO-Optimized_WordPress_Content_with_Perplexity_Research.json",
+    "output_workflow_name": "Generate_SEO_Optimized_WordPress_Content_with_Perplexity_Research",
+    "output_workflow_file_path": "analyzed_workflows/Generate_SEO_Optimized_WordPress_Content_with_Perplexity_Research/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Generate_SEO_Optimized_WordPress_Content_with_Perplexity_Research/README.md",
+    "summary": "Generates SEO-optimized WordPress blog posts using Perplexity AI research and automation.",
+    "inputs": ["Manual Trigger or Webhook"],
+    "nodes_used": ["Sticky Note", "WordPress", "Other Nodes"],
+    "outputs": ["Draft blog post created in WordPress"],
+    "processed_at": "08/06/2025 19:25"
   }
 ]
