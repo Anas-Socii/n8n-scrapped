@@ -1,0 +1,33 @@
+{
+  "id": 3,
+  "name": "NameCheap Dynamic DNS (DDNS)",
+  "nodes": [
+    {
+      "name": "Cron",
+      "type": "n8n-nodes-base.cron",
+      "position": [380, 300],
+      "parameters": {
+        "triggerTimes": { "item": [ { "mode": "everyX", "unit": "minutes", "value": 15 } ] }
+      },
+      "typeVersion": 1
+    },
+    {
+      "name": "Checks IP if new",
+      "type": "n8n-nodes-base.function",
+      "position": [740, 300],
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newItem = items.map(item => item.json[\"ip\"]);\nconst ildItem = staticData.ildItem; \n\nif (!ildItem) {\n  staticData.ildItem = newItem;\n  return items;\n}\n\n\nconst actualnewItem = newItem.filter((id) => !ildItem.includes(id));\nconst actualItem = items.filter((data) => actualnewItem.includes(data.json['ip']));\nstaticData.ildItem = [...actualnewItem, ...ildItem];\n\nreturn actualItem;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "name": "subdomains",
+      "type": "n8n-nodes-base.function",
+      "position": [1100, 300],
+      "parameters": {
+        "functionCode": "items[0].json = {\n    value: [\n        {id: \"subdomain1\"},\n        {id: \"subdomain2\"},\n        {id: \"subdomain3\"}\n    ]\n};\nreturn items;"
+      },
+      "typeVersion": 1
+    }
+  ]
+}

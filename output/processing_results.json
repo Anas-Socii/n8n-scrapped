@@ -1039,5 +1039,104 @@
     "nodes_used": ["Manual Trigger", "Global SETTINGS", "RANDOM Camera Motion", "Text 2 Video", "Sticky Note"],
     "outputs": ["Generated video from the Luma AI Dream Machine API, based on the provided text prompt and settings"],
     "processed_at": "08/06/2025 17:15"
+  },
+  {
+    "input_workflow_name": "3_Clockify_to_Syncro.json",
+    "output_workflow_name": "Clockify_to_Syncro",
+    "output_workflow_file_path": "analyzed_workflows/Clockify_to_Syncro/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Clockify_to_Syncro/README.md",
+    "summary": "Automates the transfer and mapping of project/task data between Clockify and Syncro, logging results in Google Sheets.",
+    "inputs": ["Webhook (POST from Clockify or other sources)"],
+    "nodes_used": ["Webhook", "ForSyncro", "FindMatch", "ForGoogle", "Google Sheets"],
+    "outputs": ["Appended rows in Google Sheets containing mapped Syncro and Clockify IDs"],
+    "processed_at": "08/06/2025 17:34"
+  },
+  {
+    "input_workflow_name": "3_Daily_poems_in_Telegram.json",
+    "output_workflow_name": "Daily_poems_in_Telegram",
+    "output_workflow_file_path": "analyzed_workflows/Daily_poems_in_Telegram/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Daily_poems_in_Telegram/README.md",
+    "summary": "Automatically sends a daily poem to a Telegram chat by fetching a random poem, translating it if needed, and formatting it for Telegram delivery.",
+    "inputs": ["Cron (scheduled daily at 10:00 AM)", "HTTP Request (Poemist API)", "LingvaNex (translation)", "Telegram (chat delivery)", "Workflow settings (API keys, chat IDs)", "Poem content (from API)", "Translation configuration (optional)", "Scheduling parameters (cron)", "Telegram Bot credentials"],
+    "nodes_used": ["Cron", "HTTP Request", "LingvaNex", "Telegram"],
+    "outputs": ["A formatted poem message sent to a Telegram chat"],
+    "processed_at": "08/06/2025 17:36"
+  },
+  {
+    "input_workflow_name": "3_Mailchimp.json",
+    "output_workflow_name": "Mailchimp",
+    "output_workflow_file_path": "analyzed_workflows/Mailchimp/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Mailchimp/README.md",
+    "summary": "Automates the addition of new subscribers to a Mailchimp list via a manual trigger in n8n.",
+    "inputs": ["Manual Trigger (user clicks 'execute' in n8n)", "Mailchimp list ID", "Subscriber email", "Merge fields (e.g., FNAME)", "Mailchimp API credentials"],
+    "nodes_used": ["On clicking 'execute'", "Mailchimp"],
+    "outputs": ["New subscriber added to the specified Mailchimp list"],
+    "processed_at": "08/06/2025 17:36"
+  },
+  {
+    "input_workflow_name": "3_NameCheap_Dynamic_DNS_(DDNS).json",
+    "output_workflow_name": "NameCheap_Dynamic_DNS_DDNS",
+    "output_workflow_file_path": "analyzed_workflows/NameCheap_Dynamic_DNS_DDNS/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/NameCheap_Dynamic_DNS_DDNS/README.md",
+    "summary": "Automates dynamic DNS updates for NameCheap domains by regularly checking the public IP address and updating DNS records when changes are detected.",
+    "inputs": ["Cron (every 15 minutes)", "Checks IP if new (static data)", "subdomains (list of subdomains)", "NameCheap Dynamic DNS API credentials"],
+    "nodes_used": ["Cron", "Checks IP if new", "subdomains"],
+    "outputs": ["DNS records for specified subdomains updated on NameCheap if public IP changes"],
+    "processed_at": "08/06/2025 17:51"
+  },
+  {
+    "input_workflow_name": "3_StatsInstagram.json",
+    "output_workflow_name": "StatsInstagram",
+    "output_workflow_file_path": "analyzed_workflows/StatsInstagram/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/StatsInstagram/README.md",
+    "summary": "Automates the reporting of Instagram statistics to a Mattermost channel, using Google Sheets for data storage and scheduled reporting.",
+    "inputs": ["Cron (scheduled daily at 8:00 AM)", "Google Sheets (Instagram stats)", "Mattermost API credentials", "Sheet ID", "Channel ID", "Date/time formatting"],
+    "nodes_used": ["Cron", "Get the date today", "Date & Time", "Read data on Google Sheets", "Mattermost"],
+    "outputs": ["A formatted message posted to a Mattermost channel with Instagram stats"],
+    "processed_at": "08/06/2025 17:51"
+  },
+  {
+    "input_workflow_name": "3_Orlen.json",
+    "output_workflow_name": "Orlen",
+    "output_workflow_file_path": "analyzed_workflows/Orlen/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Orlen/README.md",
+    "summary": "Automates a process using n8n for Orlen (details to be filled from the workflow nodes).",
+    "inputs": ["To be filled"],
+    "nodes_used": ["To be filled"],
+    "outputs": ["To be filled"],
+    "processed_at": "08/06/2025 17:51"
+  },
+  {
+    "input_workflow_name": "3_TheHive.json",
+    "output_workflow_name": "TheHive",
+    "output_workflow_file_path": "analyzed_workflows/TheHive/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/TheHive/README.md",
+    "summary": "Automates security or incident response processes using TheHive and n8n (details to be filled from the workflow nodes).",
+    "inputs": ["To be filled"],
+    "nodes_used": ["To be filled"],
+    "outputs": ["To be filled"],
+    "processed_at": "08/06/2025 17:51"
+  },
+  {
+    "input_workflow_name": "3_rss-telegram.json",
+    "output_workflow_name": "rss-telegram",
+    "output_workflow_file_path": "analyzed_workflows/rss-telegram/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/rss-telegram/README.md",
+    "summary": "Automates the delivery of RSS feed updates to Telegram using n8n (details to be filled from the workflow nodes).",
+    "inputs": ["To be filled"],
+    "nodes_used": ["To be filled"],
+    "outputs": ["To be filled"],
+    "processed_at": "08/06/2025 17:51"
+  },
+  {
+    "input_workflow_name": "3_workflow_3.json",
+    "output_workflow_name": "workflow_3",
+    "output_workflow_file_path": "analyzed_workflows/workflow_3/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/workflow_3/README.md",
+    "summary": "Automates a process using n8n (details to be filled from the workflow nodes).",
+    "inputs": ["To be filled"],
+    "nodes_used": ["To be filled"],
+    "outputs": ["To be filled"],
+    "processed_at": "08/06/2025 17:51"
   }
 ]
