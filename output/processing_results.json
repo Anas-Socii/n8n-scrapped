@@ -951,5 +951,93 @@
     "nodes_used": ["Run Query (Postgres)", "Spreadsheet File", "Write Binary File"],
     "outputs": ["spreadsheet.xls with product data"],
     "processed_at": "08/06/2025 16:21"
+  },
+  {
+    "input_workflow_name": "2ddwHvuidKc6lZia_AI_Agent_-_Cv_Resume_-_Automated_Screening_,_Sorting_,_Rating_and_Tracker_System.json",
+    "output_workflow_name": "AI_Agent_Cv_Resume_Automated_Screening_Sorting_Rating_Tracker_System",
+    "output_workflow_file_path": "analyzed_workflows/AI_Agent_Cv_Resume_Automated_Screening_Sorting_Rating_Tracker_System/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI_Agent_Cv_Resume_Automated_Screening_Sorting_Rating_Tracker_System/README.md",
+    "summary": "Automates the screening, sorting, rating, and tracking of CV/resume files using Google Drive and Google Docs integrations in n8n.",
+    "inputs": ["Google Drive Trigger"],
+    "nodes_used": ["Google Drive - Resume CV File Created", "GDocs - Get Job Desc"],
+    "outputs": ["Initiates automated processing of new resumes, including job description retrieval and preparation for screening and rating"],
+    "processed_at": "08/06/2025 16:26"
+  },
+  {
+    "input_workflow_name": "02GdRzvsuHmSSgBw_#️⃣Nostr_#damus_AI_Powered_Reporting_+_Gmail_+_Telegram.json",
+    "output_workflow_name": "Nostr_Damus_AI_Powered_Reporting_Gmail_Telegram",
+    "output_workflow_file_path": "analyzed_workflows/Nostr_Damus_AI_Powered_Reporting_Gmail_Telegram/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Nostr_Damus_AI_Powered_Reporting_Gmail_Telegram/README.md",
+    "summary": "Automates the extraction, analysis, and reporting of Nostr (#damus) threads, generating AI-powered summaries and distributing reports via Gmail and Telegram.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "Get HTML", "Get HTML Report", "Gmail Themes", "#damus Themes List", "#damus Thread Themes"],
+    "outputs": ["HTML and email reports summarizing Nostr #damus threads and their main themes, sent via Gmail"],
+    "processed_at": "08/06/2025 16:26"
+  },
+  {
+    "input_workflow_name": "2DT5BW5tOdy87AUl_Streamline_Your_Zoom_Meetings_with_Secure,_Automated_Stripe_Payments.json",
+    "output_workflow_name": "Streamline_Zoom_Stripe_Payments",
+    "output_workflow_file_path": "analyzed_workflows/Streamline_Zoom_Stripe_Payments/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Streamline_Zoom_Stripe_Payments/README.md",
+    "summary": "Automates the creation of Zoom meetings and the setup of Stripe payment products for seamless, secure meeting scheduling and payment processing.",
+    "inputs": ["Form submission or manual trigger"],
+    "nodes_used": ["Config", "Create Zoom meeting", "Create Stripe Product"],
+    "outputs": ["A new Zoom meeting scheduled", "A Stripe product created for payment collection"],
+    "processed_at": "08/06/2025 16:30"
+  },
+  {
+    "input_workflow_name": "2DzQ1FH11S3Gp6wn_YogiAI.json",
+    "output_workflow_name": "YogiAI",
+    "output_workflow_file_path": "analyzed_workflows/YogiAI/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/YogiAI/README.md",
+    "summary": "Automates the logging and analysis of yoga practice data using AI and Google Sheets.",
+    "inputs": ["Trigger (scheduled or webhook, not shown)"],
+    "nodes_used": ["Azure OpenAI Chat Model2", "YogaLog"],
+    "outputs": ["Appended rows in a Google Sheet containing the date, original JSON log, and AI-rewritten text summary of the yoga session"],
+    "processed_at": "08/06/2025 16:30"
+  },
+  {
+    "input_workflow_name": "2Eba0OHGtOmoTWOU_RAG_AI_Agent_with_Milvus_and_Cohere.json",
+    "output_workflow_name": "RAG_AI_Agent_with_Milvus_and_Cohere",
+    "output_workflow_file_path": "analyzed_workflows/RAG_AI_Agent_with_Milvus_and_Cohere/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/RAG_AI_Agent_with_Milvus_and_Cohere/README.md",
+    "summary": "Automates retrieval-augmented generation (RAG) by integrating LangChain, Milvus, and Cohere for document search, embedding, and chat-based responses.",
+    "inputs": ["Google Drive Trigger", "Chat Trigger"],
+    "nodes_used": ["Watch New Files", "Default Data Loader", "Embeddings Cohere", "When chat message received"],
+    "outputs": ["Embedded documents in Milvus for semantic search", "AI-powered chat responses based on uploaded documents"],
+    "processed_at": "08/06/2025 16:30"
+  },
+  {
+    "input_workflow_name": "2LFEJVoSkeZMndiM_YT_AI_News_Playlist_Creator_AI_News_Form_Updater.json",
+    "output_workflow_name": "YT_AI_News_Playlist_Creator_AI_News_Form_Updater",
+    "output_workflow_file_path": "analyzed_workflows/YT_AI_News_Playlist_Creator_AI_News_Form_Updater/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/YT_AI_News_Playlist_Creator_AI_News_Form_Updater/README.md",
+    "summary": "Automates the aggregation of recent YouTube videos from AI news channels and processes them for playlist or form updates using Google Sheets and YouTube Data API.",
+    "inputs": ["Trigger (scheduled or manual, not shown)"],
+    "nodes_used": ["Read Channel Names", "Get Videos", "Split Out"],
+    "outputs": ["List of recent AI news videos, ready for playlist update, reporting, or further processing"],
+    "processed_at": "08/06/2025 17:15"
+  },
+  {
+    "input_workflow_name": "2NhqmUqW3KruEkaE_Exponential_Backoff_for_Google_APIs.json",
+    "output_workflow_name": "Exponential_Backoff_for_Google_APIs",
+    "output_workflow_file_path": "analyzed_workflows/Exponential_Backoff_for_Google_APIs/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Exponential_Backoff_for_Google_APIs/README.md",
+    "summary": "Implements exponential backoff logic for handling Google API rate limits or errors, ensuring reliable and resilient workflow execution.",
+    "inputs": ["Manual Trigger", "(Can be extended to schedule or webhook)", "Loop Over Items"],
+    "nodes_used": ["Manual Trigger", "Loop Over Items", "Google Sheets", "Exponential Backoff", "Wait", "Stop and Error"],
+    "outputs": ["Data written to Google Sheets, or an error message if retries are exhausted"],
+    "processed_at": "08/06/2025 17:15"
+  },
+  {
+    "input_workflow_name": "2pMoIW58KP6ZeGir_Luma_AI_Dream_Machine_-_Simple_v1_-_AK.json",
+    "output_workflow_name": "Luma_AI_Dream_Machine_Simple_v1_AK",
+    "output_workflow_file_path": "analyzed_workflows/Luma_AI_Dream_Machine_Simple_v1_AK/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Luma_AI_Dream_Machine_Simple_v1_AK/README.md",
+    "summary": "Automates text-to-video generation using the Luma AI Dream Machine API, with customizable camera motion and video settings.",
+    "inputs": ["Manual Trigger", "(Can be extended to schedule or webhook)", "Global SETTINGS"],
+    "nodes_used": ["Manual Trigger", "Global SETTINGS", "RANDOM Camera Motion", "Text 2 Video", "Sticky Note"],
+    "outputs": ["Generated video from the Luma AI Dream Machine API, based on the provided text prompt and settings"],
+    "processed_at": "08/06/2025 17:15"
   }
 ]
