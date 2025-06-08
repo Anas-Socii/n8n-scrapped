@@ -1602,5 +1602,71 @@
     "nodes_used": ["Sticky Note", "WordPress", "Other Nodes"],
     "outputs": ["Draft blog post created in WordPress"],
     "processed_at": "08/06/2025 19:25"
+  },
+  {
+    "input_workflow_name": "6_ETL_pipeline.json",
+    "output_workflow_name": "ETL_pipeline",
+    "output_workflow_file_path": "analyzed_workflows/ETL_pipeline/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/ETL_pipeline/README.md",
+    "summary": "Extracts tweets, performs sentiment analysis, stores results in MongoDB and Postgres, and notifies via Slack.",
+    "inputs": [],
+    "nodes_used": ["Twitter", "MongoDB", "Postgres", "Slack", "IF"],
+    "outputs": ["Tweets with sentiment scores stored in databases and posted to Slack"],
+    "processed_at": "08/06/2025 19:31"
+  },
+  {
+    "input_workflow_name": "6_workflow_6.json",
+    "output_workflow_name": "Google_Sheets_BiDirectional_Sync",
+    "output_workflow_file_path": "analyzed_workflows/Google_Sheets_BiDirectional_Sync/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Google_Sheets_BiDirectional_Sync/README.md",
+    "summary": "Synchronizes data between two Google Sheets in both directions on a scheduled basis.",
+    "inputs": ["Cron"],
+    "nodes_used": ["Cron", "Read Sheet", "Write Sheet 1", "Write Sheet 2"],
+    "outputs": ["Updated data in both target Google Sheets"],
+    "processed_at": "08/06/2025 19:31"
+  },
+  {
+    "input_workflow_name": "6_workflow_6 copy.json",
+    "output_workflow_name": "Google_Sheets_BiDirectional_Sync_2",
+    "output_workflow_file_path": "analyzed_workflows/Google_Sheets_BiDirectional_Sync_2/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Google_Sheets_BiDirectional_Sync_2/README.md",
+    "summary": "Synchronizes data between two Google Sheets in both directions on a scheduled basis (duplicate workflow).",
+    "inputs": ["Cron"],
+    "nodes_used": ["Cron", "Read Sheet", "Write Sheet 1", "Write Sheet 2"],
+    "outputs": ["Updated data in both target Google Sheets"],
+    "processed_at": "08/06/2025 19:31"
+  },
+  {
+    "input_workflow_name": "5Y8QXJ3N67wnmR2R_POC_-_Chatbot_Order_by_Sheet_Data.json",
+    "output_workflow_name": "POC_Chatbot_Order_by_Sheet_Data",
+    "output_workflow_file_path": "analyzed_workflows/POC_Chatbot_Order_by_Sheet_Data/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/POC_Chatbot_Order_by_Sheet_Data/README.md",
+    "summary": "A proof-of-concept chatbot workflow that retrieves product data from a sheet and allows users to order products via chat.",
+    "inputs": ["Chat OpenAI"],
+    "nodes_used": ["Chat OpenAI", "Calculator", "Window Buffer Memory", "Get Products", "Order Product"],
+    "outputs": ["Orders placed and product information returned to the user"],
+    "processed_at": "08/06/2025 19:44"
+  },
+  {
+    "input_workflow_name": "5Ycrm1MuK8htwd96_Telegram_RAG_pdf.json",
+    "output_workflow_name": "Telegram_RAG_pdf",
+    "output_workflow_file_path": "analyzed_workflows/Telegram_RAG_pdf/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Telegram_RAG_pdf/README.md",
+    "summary": "A workflow that enables retrieval-augmented generation (RAG) using Telegram as the interface and PDF documents as the knowledge source.",
+    "inputs": ["Telegram Trigger"],
+    "nodes_used": ["Telegram Trigger", "Default Data Loader", "Recursive Character Text Splitter", "Embeddings OpenAI"],
+    "outputs": ["Answers to user queries based on uploaded PDF content"],
+    "processed_at": "08/06/2025 19:44"
+  },
+  {
+    "input_workflow_name": "5opbTWPZRN05bYdz_Build_an_MCP_Server_with_Google_Calendar.json",
+    "output_workflow_name": "Build_an_MCP_Server_with_Google_Calendar",
+    "output_workflow_file_path": "analyzed_workflows/Build_an_MCP_Server_with_Google_Calendar/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Build_an_MCP_Server_with_Google_Calendar/README.md",
+    "summary": "A workflow to demonstrate building an MCP server integrated with Google Calendar for event management.",
+    "inputs": [],
+    "nodes_used": ["Sticky Notes", "Other Nodes"],
+    "outputs": ["Google Calendar events managed via MCP server"],
+    "processed_at": "08/06/2025 19:44"
   }
 ]
