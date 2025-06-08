@@ -18,6 +18,7 @@ For each `.json` file in @data/input:
 2. **Understand** the components, triggers, nodes, and flow logic using the local `docs` and online tools if needed.
 3. **Generate Documentation** in a clearly readable format.
 
+
 ---
 
 ### 📤 OUTPUT:

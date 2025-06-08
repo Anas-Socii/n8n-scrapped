@@ -885,5 +885,71 @@
     "nodes_used": ["Manual Trigger", "Discord"],
     "outputs": ["Message sent to Discord channel via webhook"],
     "processed_at": "08/06/2025 16:06"
+  },
+  {
+    "input_workflow_name": "2_post_to_mattermost_v2.json",
+    "output_workflow_name": "Post_to_Mattermost_v2",
+    "output_workflow_file_path": "analyzed_workflows/Post_to_Mattermost_v2/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Post_to_Mattermost_v2/README.md",
+    "summary": "Automatically posts new items from an RSS feed to a Mastodon instance on a schedule.",
+    "inputs": ["Cron"],
+    "nodes_used": ["RSS Feed Read", "Function", "IF", "HTTP Request", "NoOp"],
+    "outputs": ["Mastodon Status Update"],
+    "processed_at": "08/06/2025 16:18"
+  },
+  {
+    "input_workflow_name": "2_RSS_to_Telegram.json",
+    "output_workflow_name": "RSS_to_Telegram",
+    "output_workflow_file_path": "analyzed_workflows/RSS_to_Telegram/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/RSS_to_Telegram/README.md",
+    "summary": "Automatically forwards new items from an RSS feed to a Telegram chat.",
+    "inputs": ["Cron"],
+    "nodes_used": ["Cron", "RSS Feed Read", "Latest Read (Function)", "IF", "Write Latest Read (Function)", "Telegram", "NoOp"],
+    "outputs": ["Telegram message for each new RSS item"],
+    "processed_at": "08/06/2025 16:21"
+  },
+  {
+    "input_workflow_name": "2_SIGNL4_Alert.json",
+    "output_workflow_name": "SIGNL4_Alert",
+    "output_workflow_file_path": "analyzed_workflows/SIGNL4_Alert/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/SIGNL4_Alert/README.md",
+    "summary": "Automates the creation and processing of alert data files, converting between JSON and binary formats, and marking alerts as processed.",
+    "inputs": ["Cron"],
+    "nodes_used": ["Cron", "Write Binary File", "Read Binary File", "Binary to JSON", "JSON to Binary", "Mark as Done (Function)", "IF"],
+    "outputs": ["Processed alert data in binary and JSON files"],
+    "processed_at": "08/06/2025 16:21"
+  },
+  {
+    "input_workflow_name": "2_Syncro_to_Clockify.json",
+    "output_workflow_name": "Syncro_to_Clockify",
+    "output_workflow_file_path": "analyzed_workflows/Syncro_to_Clockify/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Syncro_to_Clockify/README.md",
+    "summary": "Automatically logs new Syncro tickets as time entries in Clockify via webhook integration.",
+    "inputs": ["Webhook"],
+    "nodes_used": ["Webhook", "Clockify"],
+    "outputs": ["Clockify time entry for each Syncro ticket"],
+    "processed_at": "08/06/2025 16:21"
+  },
+  {
+    "input_workflow_name": "2_Telegram_Weather_Workflow.json",
+    "output_workflow_name": "Telegram_Weather_Workflow",
+    "output_workflow_file_path": "analyzed_workflows/Telegram_Weather_Workflow/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Telegram_Weather_Workflow/README.md",
+    "summary": "Provides current weather updates in a Telegram chat upon receiving a message trigger.",
+    "inputs": ["Telegram Trigger"],
+    "nodes_used": ["Telegram Trigger", "OpenWeatherMap", "Telegram"],
+    "outputs": ["Telegram chat weather update message"],
+    "processed_at": "08/06/2025 16:21"
+  },
+  {
+    "input_workflow_name": "2_workflow_2.json",
+    "output_workflow_name": "Workflow_2",
+    "output_workflow_file_path": "analyzed_workflows/Workflow_2/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Workflow_2/README.md",
+    "summary": "Exports product data from a PostgreSQL database to an Excel spreadsheet file.",
+    "inputs": ["Manual/None (can be scheduled externally)"],
+    "nodes_used": ["Run Query (Postgres)", "Spreadsheet File", "Write Binary File"],
+    "outputs": ["spreadsheet.xls with product data"],
+    "processed_at": "08/06/2025 16:21"
   }
 ]
