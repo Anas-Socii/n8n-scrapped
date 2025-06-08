@@ -852,5 +852,38 @@
     ],
     "outputs": ["TTS phone call with code", "Email with verification code", "Success/failure messages"],
     "processed_at": "08/06/2025 15:49"
+  },
+  {
+    "input_workflow_name": "2_Add_task_to_tasklist.json",
+    "output_workflow_name": "Add_task_to_tasklist",
+    "output_workflow_file_path": "analyzed_workflows/Add_task_to_tasklist/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Add_task_to_tasklist/README.md",
+    "summary": "Adds a new task to a Google Tasklist using a manual trigger in n8n.",
+    "inputs": ["Manual Trigger (On clicking 'execute')"],
+    "nodes_used": ["Manual Trigger", "Google Tasks"],
+    "outputs": ["New task created in the specified Google Tasklist"],
+    "processed_at": "08/06/2025 16:03"
+  },
+  {
+    "input_workflow_name": "2_Daily_Text_Affirmations.json",
+    "output_workflow_name": "Daily_Text_Affirmations",
+    "output_workflow_file_path": "analyzed_workflows/Daily_Text_Affirmations/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Daily_Text_Affirmations/README.md",
+    "summary": "Sends daily affirmation messages to a Telegram user every morning at 9 AM using data from affirmations.dev.",
+    "inputs": ["Cron (Scheduled daily at 9 AM)"],
+    "nodes_used": ["Cron", "HTTP Request", "Telegram"],
+    "outputs": ["Daily affirmation message sent via Telegram"],
+    "processed_at": "08/06/2025 16:05"
+  },
+  {
+    "input_workflow_name": "2_Discord_Intro.json",
+    "output_workflow_name": "Discord_Intro",
+    "output_workflow_file_path": "analyzed_workflows/Discord_Intro/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Discord_Intro/README.md",
+    "summary": "Sends a simple introduction message to a Discord channel using a webhook when manually triggered in n8n.",
+    "inputs": ["Manual Trigger (On clicking 'execute')"],
+    "nodes_used": ["Manual Trigger", "Discord"],
+    "outputs": ["Message sent to Discord channel via webhook"],
+    "processed_at": "08/06/2025 16:06"
   }
 ]
