@@ -1318,5 +1318,179 @@
     ],
     "outputs": ["Markdown (.md) notes and attachments instantly available in your Obsidian Vault"],
     "processed_at": "08/06/2025 18:59"
+  },
+  {
+    "input_workflow_name": "4_Email.json",
+    "output_workflow_name": "Email",
+    "output_workflow_file_path": "analyzed_workflows/Email/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Email/README.md",
+    "summary": "Automatically ingests emails via IMAP and creates TheHive cases for each email with attachments and metadata.",
+    "inputs": ["IMAP Email"],
+    "nodes_used": [
+      "IMAP Email",
+      "TheHive"
+    ],
+    "outputs": ["New case created in TheHive for each processed email, with attachments and metadata"],
+    "processed_at": "08/06/2025 19:03"
+  },
+  {
+    "input_workflow_name": "4_Save_Telegram_reply_to_journal_spreadsheet.json",
+    "output_workflow_name": "Save_Telegram_reply_to_journal_spreadsheet",
+    "output_workflow_file_path": "analyzed_workflows/Save_Telegram_reply_to_journal_spreadsheet/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Save_Telegram_reply_to_journal_spreadsheet/README.md",
+    "summary": "Automatically saves Telegram replies to a Google Sheets journal spreadsheet.",
+    "inputs": ["Telegram Trigger"],
+    "nodes_used": [
+      "Telegram Trigger",
+      "Parse Message",
+      "Add Entry to Sheet"
+    ],
+    "outputs": ["New row appended to a Google Sheets spreadsheet with the journal entry and date"],
+    "processed_at": "08/06/2025 19:08"
+  },
+  {
+    "input_workflow_name": "4_Zammad_Open_Tickets.json",
+    "output_workflow_name": "Zammad_Open_Tickets",
+    "output_workflow_file_path": "analyzed_workflows/Zammad_Open_Tickets/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Zammad_Open_Tickets/README.md",
+    "summary": "Fetches, filters, and summarizes open tickets from Zammad, and sends daily standup summaries via Zulip.",
+    "inputs": ["Manual Trigger", "Standup Cron"],
+    "nodes_used": [
+      "Manual Trigger",
+      "Standup Cron",
+      "List Tickets",
+      "Ticket Filtering",
+      "Notify for Standup"
+    ],
+    "outputs": ["Summary message sent to a Zulip stream with ticket counts by status"],
+    "processed_at": "08/06/2025 19:08"
+  },
+  {
+    "input_workflow_name": "4_post_to_wallabag.json",
+    "output_workflow_name": "post_to_wallabag",
+    "output_workflow_file_path": "analyzed_workflows/post_to_wallabag/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/post_to_wallabag/README.md",
+    "summary": "Automatically posts new RSS feed items to Wallabag for reading and archiving.",
+    "inputs": ["Cron", "Manual Trigger"],
+    "nodes_used": [
+      "Cron",
+      "Manual Trigger",
+      "Function",
+      "HTTP Request"
+    ],
+    "outputs": ["New RSS feed items are posted to Wallabag as entries"],
+    "processed_at": "08/06/2025 19:08"
+  },
+  {
+    "input_workflow_name": "4_workflow_4.json",
+    "output_workflow_name": "workflow_4",
+    "output_workflow_file_path": "analyzed_workflows/workflow_4/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/workflow_4/README.md",
+    "summary": "Posts notifications to Slack when the n8n GitHub repository receives or loses a star.",
+    "inputs": ["GitHub Trigger"],
+    "nodes_used": [
+      "GitHub Trigger",
+      "IF",
+      "Slack - Add",
+      "Slack - Remove"
+    ],
+    "outputs": ["Slack messages announcing new or removed stars, including user details and current star count"],
+    "processed_at": "08/06/2025 19:08"
+  },
+  {
+    "input_workflow_name": "4AG83ybt0S3WQbkS_Daily_AI_News_Translation_&_Summary_with_GPT-4_and_Telegram_Delivery.json",
+    "output_workflow_name": "Daily_AI_News_Translation_and_Summary_with_GPT-4_and_Telegram_Delivery",
+    "output_workflow_file_path": "analyzed_workflows/Daily_AI_News_Translation_and_Summary_with_GPT-4_and_Telegram_Delivery/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Daily_AI_News_Translation_and_Summary_with_GPT-4_and_Telegram_Delivery/README.md",
+    "summary": "Fetches, summarizes, and delivers daily AI news articles to Telegram using GPT-4 and external news APIs.",
+    "inputs": ["Schedule Trigger"],
+    "nodes_used": [
+      "Schedule Trigger",
+      "Fetch GNews Articles",
+      "Fetch NewsAPI Articles",
+      "GPT-4.1 Model",
+      "Send Summary to Telegram"
+    ],
+    "outputs": ["Summarized AI news delivered to a specified Telegram chat"],
+    "processed_at": "08/06/2025 19:15"
+  },
+  {
+    "input_workflow_name": "4Tq5HZBdETVe7jEb_⚡AI-Powered_YouTube_Playlist_&_Video_Summarization_and_Analysis_v2.json",
+    "output_workflow_name": "AI-Powered_YouTube_Playlist_and_Video_Summarization_and_Analysis_v2",
+    "output_workflow_file_path": "analyzed_workflows/AI-Powered_YouTube_Playlist_and_Video_Summarization_and_Analysis_v2/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI-Powered_YouTube_Playlist_and_Video_Summarization_and_Analysis_v2/README.md",
+    "summary": "Analyzes and summarizes YouTube playlists and videos using Google Gemini and LangChain agents.",
+    "inputs": ["Manual/Query Input"],
+    "nodes_used": [
+      "Google Gemini Chat Model",
+      "LangChain Agent",
+      "Split Out",
+      "Summarize & Analyze Transcript",
+      "Concatenate"
+    ],
+    "outputs": ["Structured markdown summary of the playlist or video content"],
+    "processed_at": "08/06/2025 19:15"
+  },
+  {
+    "input_workflow_name": "4aKofiCShqdDSsIS_Import_Odoo_Product_Images_from_Google_Drive.json",
+    "output_workflow_name": "Import_Odoo_Product_Images_from_Google_Drive",
+    "output_workflow_file_path": "analyzed_workflows/Import_Odoo_Product_Images_from_Google_Drive/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Import_Odoo_Product_Images_from_Google_Drive/README.md",
+    "summary": "Imports product images from a Google Drive folder and filters them for Odoo integration.",
+    "inputs": ["Manual/Automated Trigger"],
+    "nodes_used": [
+      "Find Files (Google Drive)",
+      "Filter Images"
+    ],
+    "outputs": ["Filtered list of image files ready for Odoo import"],
+    "processed_at": "08/06/2025 19:15"
+  },
+  {
+    "input_workflow_name": "4nBQyhwqDqmXY2AL_Automated_Image_Metadata_Tagging_(Community_Node).json",
+    "output_workflow_name": "Automated_Image_Metadata_Tagging_Community_Node",
+    "output_workflow_file_path": "analyzed_workflows/Automated_Image_Metadata_Tagging_Community_Node/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Automated_Image_Metadata_Tagging_Community_Node/README.md",
+    "summary": "Automatically tags new images uploaded to a Google Drive folder with metadata using AI and EXIF extraction.",
+    "inputs": ["Google Drive Trigger"],
+    "nodes_used": [
+      "Google Drive Trigger",
+      "Download Image File",
+      "Analyze Image Content",
+      "Extract EXIF Metadata"
+    ],
+    "outputs": ["Tagged metadata for each uploaded image"],
+    "processed_at": "08/06/2025 19:15"
+  },
+  {
+    "input_workflow_name": "4rXRDurF4mQKrHyB_comentarios_automaticos.json",
+    "output_workflow_name": "comentarios_automaticos",
+    "output_workflow_file_path": "analyzed_workflows/comentarios_automaticos/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/comentarios_automaticos/README.md",
+    "summary": "Handles Instagram webhook verification and generates automated, context-aware responses to comments using AI.",
+    "inputs": ["Webhook"],
+    "nodes_used": [
+      "Webhook",
+      "Respond to Webhook",
+      "AI Agent",
+      "OpenRouter Chat Model"
+    ],
+    "outputs": ["Automated responses to Instagram comments, or ignores spam/irrelevant content"],
+    "processed_at": "08/06/2025 19:15"
+  },
+  {
+    "input_workflow_name": "4wPgPbxtojrUO7Dx_Google_Page_Entity_Extraction_Template.json",
+    "output_workflow_name": "Google_Page_Entity_Extraction_Template",
+    "output_workflow_file_path": "analyzed_workflows/Google_Page_Entity_Extraction_Template/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Google_Page_Entity_Extraction_Template/README.md",
+    "summary": "Extracts named entities from web pages using Google Natural Language API.",
+    "inputs": ["Webhook"],
+    "nodes_used": [
+      "Webhook",
+      "Google Entities",
+      "Respond to Webhook",
+      "Sticky Note"
+    ],
+    "outputs": ["JSON response with entity analysis from Google API"],
+    "processed_at": "08/06/2025 19:15"
   }
 ]

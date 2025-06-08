@@ -6,7 +6,7 @@ description: N8n Documentation in loop
 ### 📁 INPUTS:
 
 * JSON workflow files are located in the `@data/input` directory.
-* Supporting documentation about `n8n` is available in the `docs/` folder.
+* Supporting documentation about `n8n` is available in the `@docs/` folder.
 * You can use `brave search` and `context7` to search online for missing or unclear references about n8n components.
 
 ---
