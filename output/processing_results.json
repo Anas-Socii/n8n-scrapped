@@ -519,5 +519,71 @@
     "nodes_used": ["Manual Trigger", "Read Binary File", "Spreadsheet File", "SplitInBatches", "Read Binary File1", "Send Email"],
     "outputs": ["Personalized emails with certificate attachments sent to each user in the CSV"],
     "processed_at": "05/06/2025 21:55"
+  },
+  {
+    "input_workflow_name": "1_TwitterWorkflow.json",
+    "output_workflow_name": "TwitterWorkflow",
+    "output_workflow_file_path": "analyzed_workflows/TwitterWorkflow/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/TwitterWorkflow/README.md",
+    "summary": "Monitors Twitter for mentions of @n8n_io, filters new tweets, and posts notifications to RocketChat.",
+    "inputs": ["Cron Trigger"],
+    "nodes_used": ["Cron", "Twitter", "Set", "Function", "RocketChat"],
+    "outputs": ["RocketChat message for each new mention"],
+    "processed_at": "06/06/2025 13:12"
+  },
+  {
+    "input_workflow_name": "1_Twitter_notifications.json",
+    "output_workflow_name": "Twitter_notifications",
+    "output_workflow_file_path": "analyzed_workflows/Twitter_notifications/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Twitter_notifications/README.md",
+    "summary": "Checks Twitter for recent posts from n8n_io and sends notifications to Mattermost.",
+    "inputs": ["Cron Trigger"],
+    "nodes_used": ["Cron", "Twitter", "Set", "Function", "Mattermost"],
+    "outputs": ["Mattermost message for each new tweet"],
+    "processed_at": "06/06/2025 13:12"
+  },
+  {
+    "input_workflow_name": "1_Website_check.json",
+    "output_workflow_name": "Website_check",
+    "output_workflow_file_path": "analyzed_workflows/Website_check/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Website_check/README.md",
+    "summary": "Checks a website for a specific value and sends a Discord notification based on the result.",
+    "inputs": ["Cron Trigger"],
+    "nodes_used": ["Cron", "HTTP Request", "IF", "Discord", "Discord1"],
+    "outputs": ["Discord notification indicating stock status"],
+    "processed_at": "06/06/2025 13:12"
+  },
+  {
+    "input_workflow_name": "1_Wordpress-to-csv.json",
+    "output_workflow_name": "Wordpress_to_csv",
+    "output_workflow_file_path": "analyzed_workflows/Wordpress_to_csv/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Wordpress_to_csv/README.md",
+    "summary": "Exports all Wordpress posts to a CSV file.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "Wordpress", "Spreadsheet File", "Write Binary File"],
+    "outputs": ["CSV file containing all Wordpress posts"],
+    "processed_at": "06/06/2025 13:12"
+  },
+  {
+    "input_workflow_name": "1_cheems.json",
+    "output_workflow_name": "cheems",
+    "output_workflow_file_path": "analyzed_workflows/cheems/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/cheems/README.md",
+    "summary": "Sends themed Discord notifications on specific days and intervals.",
+    "inputs": ["Cron (Wednesday)", "Cron1 (Friday)", "Cron2 (interval)"],
+    "nodes_used": ["Cron", "Discord", "Cron1", "Discord1", "Cron2", "Discord2"],
+    "outputs": ["Discord notifications with themed content"],
+    "processed_at": "06/06/2025 13:12"
+  },
+  {
+    "input_workflow_name": "1_workflow_1.json",
+    "output_workflow_name": "Import_Spreadsheet_Data_to_PostgreSQL",
+    "output_workflow_file_path": "analyzed_workflows/Import_Spreadsheet_Data_to_PostgreSQL/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Import_Spreadsheet_Data_to_PostgreSQL/README.md",
+    "summary": "Reads an Excel spreadsheet, parses it, and inserts product data into a PostgreSQL database.",
+    "inputs": ["Manual or automated execution"],
+    "nodes_used": ["Read Binary File", "Spreadsheet File", "Insert Rows1 (Postgres)"],
+    "outputs": ["New rows in the product table in PostgreSQL"],
+    "processed_at": "06/06/2025 13:12"
   }
 ]
