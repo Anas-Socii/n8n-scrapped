@@ -584,6 +584,17 @@
     "processed_at": "05/06/2025 21:50"
   },
   {
+    "input_workflow_name": "XML Conversion",
+    "output_workflow_name": "XML Conversion",
+    "output_workflow_file_path": "analyzed_workflows/XML_Conversion/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/XML_Conversion/README.md",
+    "summary": "Converts XML data to JSON using a manual trigger, Set node, and XML node. Useful for data transformation and integration.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "Set", "XML"],
+    "outputs": ["JSON data converted from XML"],
+    "processed_at": "2025-06-08T18:31:54+05:00"
+  },
+  {
     "input_workflow_name": "1_Google_Sheet_to_Mailchimp.json",
     "output_workflow_name": "Google_Sheet_to_Mailchimp",
     "output_workflow_file_path": "analyzed_workflows/Google_Sheet_to_Mailchimp/workflow.json",
@@ -1100,43 +1111,212 @@
     "output_workflow_name": "Orlen",
     "output_workflow_file_path": "analyzed_workflows/Orlen/workflow.json",
     "output_readme_file_path": "analyzed_workflows/Orlen/README.md",
-    "summary": "Automates a process using n8n for Orlen (details to be filled from the workflow nodes).",
-    "inputs": ["To be filled"],
-    "nodes_used": ["To be filled"],
-    "outputs": ["To be filled"],
-    "processed_at": "08/06/2025 17:51"
+    "summary": "Automates daily folder and file management in Google Drive, triggered both manually and on a schedule, for streamlined document organization and archiving.",
+    "inputs": ["Manual Trigger (user clicks 'execute')", "Cron Trigger (every day at 23:45)"],
+    "nodes_used": [
+      "Manual Trigger (On clicking 'execute')",
+      "Cron Trigger (Every 23:45)",
+      "Function (Current date)",
+      "Google Drive (Get Year folder)",
+      "Google Drive (Get Month folder)",
+      "Gmail (Orlen Invoice)",
+      "Google Drive (Upload Invoice to Google Drive)",
+      "Gmail (Mark as Read)",
+      "Merge",
+      "Slack"
+    ],
+    "outputs": ["Year-based and month-based folders created/verified in Google Drive", "Invoices uploaded to Google Drive", "Slack notification sent", "Emails marked as read"],
+    "processed_at": "2025-06-08T18:35:29+05:00"
   },
   {
     "input_workflow_name": "3_TheHive.json",
     "output_workflow_name": "TheHive",
     "output_workflow_file_path": "analyzed_workflows/TheHive/workflow.json",
     "output_readme_file_path": "analyzed_workflows/TheHive/README.md",
-    "summary": "Automates security or incident response processes using TheHive and n8n (details to be filled from the workflow nodes).",
-    "inputs": ["To be filled"],
-    "nodes_used": ["To be filled"],
-    "outputs": ["To be filled"],
-    "processed_at": "08/06/2025 17:51"
+    "summary": "Automates alert creation, reading, and resolution in TheHive, with integration to SIGNL4 for alert notifications and resolution, triggered by webhooks, scheduled, or manual triggers.",
+    "inputs": ["Manual Trigger (Start (Testing))", "Webhook (TheHive Webhook Request)"],
+    "nodes_used": [
+      "Manual Trigger (Start (Testing))",
+      "TheHive Create Alert",
+      "TheHive Read Alerts",
+      "Webhook (TheHive Webhook Request)",
+      "IF (Conditional logic)",
+      "SIGNL4 Send Alert",
+      "SIGNL4 Resolve Alert"
+    ],
+    "outputs": ["Alerts created in TheHive", "Alerts read from TheHive", "Alerts sent to SIGNL4", "Alerts resolved in SIGNL4"],
+    "processed_at": "2025-06-08T18:35:29+05:00"
   },
   {
     "input_workflow_name": "3_rss-telegram.json",
     "output_workflow_name": "rss-telegram",
     "output_workflow_file_path": "analyzed_workflows/rss-telegram/workflow.json",
     "output_readme_file_path": "analyzed_workflows/rss-telegram/README.md",
-    "summary": "Automates the delivery of RSS feed updates to Telegram using n8n (details to be filled from the workflow nodes).",
-    "inputs": ["To be filled"],
-    "nodes_used": ["To be filled"],
-    "outputs": ["To be filled"],
-    "processed_at": "08/06/2025 17:51"
+    "summary": "Automates the delivery of Instagram and Weibo RSS feed updates to Telegram channels, with logic for handling images, deduplication, and message formatting.",
+    "inputs": ["Cron Trigger (scheduled, e.g., every minute)"],
+    "nodes_used": [
+      "Cron1",
+      "instagram rss",
+      "weibo rss",
+      "SplitInBatches",
+      "SplitInBatches1",
+      "Function",
+      "Function1",
+      "NaN",
+      "IF",
+      "IF1",
+      "是否重复",
+      "写入图片的属性",
+      "图片数量判断",
+      "一张图片",
+      "其他状况",
+      "send",
+      "Telegram",
+      "test"
+    ],
+    "outputs": ["Posts sent to Telegram channels (with or without images)"],
+    "processed_at": "2025-06-08T18:35:29+05:00"
   },
   {
     "input_workflow_name": "3_workflow_3.json",
     "output_workflow_name": "workflow_3",
     "output_workflow_file_path": "analyzed_workflows/workflow_3/workflow.json",
     "output_readme_file_path": "analyzed_workflows/workflow_3/README.md",
-    "summary": "Automates a process using n8n (details to be filled from the workflow nodes).",
-    "inputs": ["To be filled"],
-    "nodes_used": ["To be filled"],
-    "outputs": ["To be filled"],
-    "processed_at": "08/06/2025 17:51"
+    "summary": "Automates the process of retrieving an image from a URL, editing it by overlaying custom text, and responding to webhook requests with the resulting image file.",
+    "inputs": ["Webhook (receives HTTP requests with query parameters)"],
+    "nodes_used": [
+      "Webhook",
+      "Read File URL",
+      "Edit Image"
+    ],
+    "outputs": ["Edited image file returned as the response to the webhook request"],
+    "processed_at": "2025-06-08T18:35:29+05:00"
+  },
+  {
+    "input_workflow_name": "3BkxvtCbF6hHGUgM_N8N_Financial_Tracker_Telegram_Invoices_to_Notion_with_AI_Summaries_&_Reports.json",
+    "output_workflow_name": "Financial_Tracker_Telegram_Invoices_to_Notion_AI_Summaries_Reports",
+    "output_workflow_file_path": "analyzed_workflows/Financial_Tracker_Telegram_Invoices_to_Notion_AI_Summaries_Reports/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Financial_Tracker_Telegram_Invoices_to_Notion_AI_Summaries_Reports/README.md",
+    "summary": "Automates extraction of financial data from Telegram invoice photos, summarizes with AI, records transactions in Notion, and generates weekly spending reports sent to Telegram.",
+    "inputs": ["Telegram Trigger", "Schedule Trigger"],
+    "nodes_used": [
+      "Telegram Trigger",
+      "Get Image Info",
+      "Google Gemini Chat Model",
+      "Basic LLM Chain",
+      "Output Parser",
+      "Split Out",
+      "Record to Notion Database",
+      "Sendback to Chat",
+      "Notion (Get Recent Data)",
+      "Summarize Transaction Data",
+      "Convert Data to JSON Chart Payload",
+      "Generate Chart",
+      "Send Chart Image",
+      "Sticky Notes"
+    ],
+    "outputs": ["Transaction details and summaries sent to Telegram", "Transaction data recorded in Notion", "Weekly spending chart image sent to Telegram"],
+    "processed_at": "08/06/2025 18:40"
+  },
+  {
+    "input_workflow_name": "3JsfhcDcjqxx0hr3_Extract_And_Decode_Google_News_RSS_URLs_to_Clean_Article_Links.json",
+    "output_workflow_name": "Google_News_RSS_Decode_to_Clean_Article_Links",
+    "output_workflow_file_path": "analyzed_workflows/Google_News_RSS_Decode_to_Clean_Article_Links/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Google_News_RSS_Decode_to_Clean_Article_Links/README.md",
+    "summary": "Extracts and decodes Google News RSS feed URLs to produce clean, direct article links.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": [
+      "Manual Trigger",
+      "RSS Feed Read",
+      "Limit",
+      "HTTP Request",
+      "HTML Extract",
+      "Set",
+      "Code",
+      "Sticky Notes"
+    ],
+    "outputs": ["Clean, direct article URLs extracted from Google News RSS feed items"],
+    "processed_at": "08/06/2025 18:54"
+  },
+  {
+    "input_workflow_name": "3Lih0LVosR8dZbla_Create_AI-Ready_Vector_Datasets_for_LLMs_with_Bright_Data,_Gemini_&_Pinecone.json",
+    "output_workflow_name": "Create_AI-Ready_Vector_Datasets_for_LLMs_with_Bright_Data_Gemini_Pinecone",
+    "output_workflow_file_path": "analyzed_workflows/Create_AI-Ready_Vector_Datasets_for_LLMs_with_Bright_Data_Gemini_Pinecone/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Create_AI-Ready_Vector_Datasets_for_LLMs_with_Bright_Data_Gemini_Pinecone/README.md",
+    "summary": "Automates the creation of vector datasets for LLMs by leveraging Bright Data, Google Gemini, and Pinecone.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": [
+      "Manual Trigger",
+      "AI Agent",
+      "Pinecone Vector Store",
+      "Embeddings Google Gemini",
+      "Default Data Loader",
+      "Recursive Character Text Splitter",
+      "Google Gemini Chat Model",
+      "Structured Output Parser"
+    ],
+    "outputs": ["Vectorized dataset stored in Pinecone, ready for LLM search, retrieval, or fine-tuning"],
+    "processed_at": "08/06/2025 18:57"
+  },
+  {
+    "input_workflow_name": "3McL3itHTso0Cy10_Automated_PDF_to_HTML_Conversion.json",
+    "output_workflow_name": "Automated_PDF_to_HTML_Conversion",
+    "output_workflow_file_path": "analyzed_workflows/Automated_PDF_to_HTML_Conversion/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Automated_PDF_to_HTML_Conversion/README.md",
+    "summary": "Automatically converts newly uploaded PDF files in Google Drive to HTML format for easy viewing and downstream processing.",
+    "inputs": ["Google Drive Trigger"],
+    "nodes_used": [
+      "Google Drive Trigger",
+      "If",
+      "HTTP Request"
+    ],
+    "outputs": ["HTML file or content generated from the uploaded PDF"],
+    "processed_at": "08/06/2025 18:59"
+  },
+  {
+    "input_workflow_name": "3b1q6ZJTxeONrpUV_Error_Alert_and_Summarizer.json",
+    "output_workflow_name": "Error_Alert_and_Summarizer",
+    "output_workflow_file_path": "analyzed_workflows/Error_Alert_and_Summarizer/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Error_Alert_and_Summarizer/README.md",
+    "summary": "Automatically detects workflow errors, summarizes them using OpenAI, and sends structured alerts via email or other channels.",
+    "inputs": ["Error Trigger"],
+    "nodes_used": [
+      "Error Trigger",
+      "OpenAI Chat Model",
+      "Structured Output Parser",
+      "Set (SET EMAIL)"
+    ],
+    "outputs": ["Structured error summary, diagnosis, cause, and resolution, ready for notification"],
+    "processed_at": "08/06/2025 18:59"
+  },
+  {
+    "input_workflow_name": "3tJcVzt2OqeyjfnH_Analyze_email_headers_for_IPs_and_spoofing__3.json",
+    "output_workflow_name": "Analyze_email_headers_for_IPs_and_spoofing_3",
+    "output_workflow_file_path": "analyzed_workflows/Analyze_email_headers_for_IPs_and_spoofing_3/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Analyze_email_headers_for_IPs_and_spoofing_3/README.md",
+    "summary": "Analyzes email headers to extract sender IPs, check for spoofing, and assess sender reputation using IP quality and security checks.",
+    "inputs": ["Webhook"],
+    "nodes_used": [
+      "Webhook (Receive Headers)",
+      "Sticky Note",
+      "Code (Fraud Score)",
+      "Respond to Webhook"
+    ],
+    "outputs": ["Structured JSON analysis of IP reputation, spam activity, SPF/DKIM/DMARC status, and spoofing indicators"],
+    "processed_at": "08/06/2025 18:59"
+  },
+  {
+    "input_workflow_name": "3wbxkdT6hilhq0Na_Workflow_Results_to_Markdown_Notes_in_Your_Obsidian_Vault,_via_Google_Drive.json",
+    "output_workflow_name": "Workflow_Results_to_Markdown_Notes_in_Your_Obsidian_Vault_via_Google_Drive",
+    "output_workflow_file_path": "analyzed_workflows/Workflow_Results_to_Markdown_Notes_in_Your_Obsidian_Vault_via_Google_Drive/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Workflow_Results_to_Markdown_Notes_in_Your_Obsidian_Vault_via_Google_Drive/README.md",
+    "summary": "Automatically sends workflow results from n8n to your Obsidian Vault by saving them as Markdown files in Google Drive, with instant sync to your notes.",
+    "inputs": ["Workflow Output"],
+    "nodes_used": [
+      "Sticky Note",
+      "Google Drive"
+    ],
+    "outputs": ["Markdown (.md) notes and attachments instantly available in your Obsidian Vault"],
+    "processed_at": "08/06/2025 18:59"
   }
 ]

@@ -72,7 +72,7 @@ Include any relevant metadata, required credentials, environment needs, or API r
   "processed_at": "DD/MM/YYYY HH:MM"
 }
 ```
-
+**Note**: Do not delete any existing record, just append the infomration for the processing workflow.
 ---
 
 ### 🔍 REMINDERS:
