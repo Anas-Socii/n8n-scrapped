@@ -318,7 +318,17 @@
     "output_readme_file_path": "analyzed_workflows/Auto_generate_documentation_with_GPT_and_Docsify/README.md",
     "summary": "Automates creation and serving of documentation for all n8n workflows using Docsify and GPT.",
     "inputs": ["Manual or Scheduled Trigger (implied)", "Workflow Data"],
-    "nodes_used": ["Set (CONFIG)", "Convert to File", "If (HasFile?)", "Extract from File", "HTML (Main Page)", "HTML (Instance overview)", "Sort", "Switch (doc action)", "Other workflow utility nodes"],
+    "nodes_used": [
+      "Set (CONFIG)",
+      "Convert to File",
+      "If (HasFile?)",
+      "Extract from File",
+      "HTML (Main Page)",
+      "HTML (Instance overview)",
+      "Sort",
+      "Switch (doc action)",
+      "Other workflow utility nodes"
+    ],
     "outputs": ["Docsify HTML documentation", "Markdown/HTML files"],
     "processed_at": "05/06/2025 18:36"
   },
@@ -329,7 +339,14 @@
     "output_readme_file_path": "analyzed_workflows/Perplexity_Research_to_HTML_AI_Powered_Content_Creation/README.md",
     "summary": "Uses Perplexity AI and GPT-4o-mini to research a topic, generate a structured article, and convert it to HTML for publishing.",
     "inputs": ["Webhook or Manual Trigger (topic input)"],
-    "nodes_used": ["ai_tool (gpt-4o-mini-2024-07-18)", "Perplexity Researcher", "Structured Output Parser", "If/Branch Nodes", "Webhook/Manual Trigger", "Telegram Node (optional)"],
+    "nodes_used": [
+      "ai_tool (gpt-4o-mini-2024-07-18)",
+      "Perplexity Researcher",
+      "Structured Output Parser",
+      "If/Branch Nodes",
+      "Webhook/Manual Trigger",
+      "Telegram Node (optional)"
+    ],
     "outputs": ["JSON with title and HTML content"],
     "processed_at": "05/06/2025 18:40"
   },
@@ -340,7 +357,15 @@
     "output_readme_file_path": "analyzed_workflows/Private_Local_Ollama_Self_Hosted_AI_Assistant/README.md",
     "summary": "Creates a private chat assistant using the local Ollama Llama 3.2 model, triggered by chat messages and returning structured JSON responses.",
     "inputs": ["Chat Trigger (message received)", "User Prompt"],
-    "nodes_used": ["Chat Trigger", "Basic LLM Chain", "Ollama Model", "Set (JSON to Object)", "Set (Structured Response)", "Set (Error Response)", "Sticky Notes"],
+    "nodes_used": [
+      "Chat Trigger",
+      "Basic LLM Chain",
+      "Ollama Model",
+      "Set (JSON to Object)",
+      "Set (Structured Response)",
+      "Set (Error Response)",
+      "Sticky Notes"
+    ],
     "outputs": ["Structured JSON with prompt and response"],
     "processed_at": "05/06/2025 18:40"
   },
@@ -351,7 +376,15 @@
     "output_readme_file_path": "analyzed_workflows/AI_Agent_for_n8n_Creators_Leaderboard_Find_Popular_Workflows/README.md",
     "summary": "Analyzes public n8n community leaderboard data to identify top creators and their most popular workflows using HTTP requests, parsing, filtering, and aggregation.",
     "inputs": ["Manual or scheduled trigger"],
-    "nodes_used": ["Set (Global Variables)", "HTTP Request (stats_aggregate_creators, stats_aggregate_workflows)", "Set (Parse Workflow Data/Creators Data)", "Limit (Take Top 25 Creators)", "Aggregate", "Filter (By Creator Username)", "gpt-4o-mini"],
+    "nodes_used": [
+      "Set (Global Variables)",
+      "HTTP Request (stats_aggregate_creators, stats_aggregate_workflows)",
+      "Set (Parse Workflow Data/Creators Data)",
+      "Limit (Take Top 25 Creators)",
+      "Aggregate",
+      "Filter (By Creator Username)",
+      "gpt-4o-mini"
+    ],
     "outputs": ["Aggregated and filtered data on top creators and workflows"],
     "processed_at": "05/06/2025 18:45"
   },
@@ -362,8 +395,20 @@
     "output_readme_file_path": "analyzed_workflows/Telegram_Messaging_Agent_for_Text_Audio_Images/README.md",
     "summary": "Enables a Telegram bot to receive, process, and respond to text, audio, and image messages. Handles user verification, webhooks, and uses OpenAI for transcription and image analysis.",
     "inputs": ["Telegram webhook (message received)"],
-    "nodes_used": ["Webhook (Listen for Telegram Events)", "If (Check User & Chat ID)", "Telegram (Error message)", "HTTP Request (Set Webhook Test URL, Get Telegram Webhook Info)", "Telegram (Get Audio File, Get Image)", "OpenAI (Transcribe Recording, Analyze Image, gpt-4o-mini)", "Set (Image Schema)", "Sticky Notes"],
-    "outputs": ["Telegram message responses (text, transcribed audio, analyzed images)", "Error messages for invalid or unauthorized users"],
+    "nodes_used": [
+      "Webhook (Listen for Telegram Events)",
+      "If (Check User & Chat ID)",
+      "Telegram (Error message)",
+      "HTTP Request (Set Webhook Test URL, Get Telegram Webhook Info)",
+      "Telegram (Get Audio File, Get Image)",
+      "OpenAI (Transcribe Recording, Analyze Image, gpt-4o-mini)",
+      "Set (Image Schema)",
+      "Sticky Notes"
+    ],
+    "outputs": [
+      "Telegram message responses (text, transcribed audio, analyzed images)",
+      "Error messages for invalid or unauthorized users"
+    ],
     "processed_at": "05/06/2025 18:51"
   },
   {
@@ -373,8 +418,16 @@
     "output_readme_file_path": "analyzed_workflows/Automated_Social_Media_Content_Publishing_Factory/README.md",
     "summary": "Automates the creation and publishing of social media content (Twitter/X, Instagram, etc.) using LLMs and dynamic system prompts. Supports multi-channel routing and memory for enhanced content generation.",
     "inputs": ["Chat message received", "Executed by another workflow"],
-    "nodes_used": ["Chat Trigger", "Sticky Notes", "ToolWorkflow (X-Twitter, Instagram)", "Window Buffer Memory"],
-    "outputs": ["Published posts on Twitter/X, Instagram, and other platforms", "Logs or responses summarizing publishing actions"],
+    "nodes_used": [
+      "Chat Trigger",
+      "Sticky Notes",
+      "ToolWorkflow (X-Twitter, Instagram)",
+      "Window Buffer Memory"
+    ],
+    "outputs": [
+      "Published posts on Twitter/X, Instagram, and other platforms",
+      "Logs or responses summarizing publishing actions"
+    ],
     "processed_at": "05/06/2025 21:32"
   },
   {
@@ -385,7 +438,9 @@
     "summary": "Demonstrates how to generate Time-based One-Time Password (TOTP) codes in n8n for secure authentication workflows.",
     "inputs": ["Manual Trigger"],
     "nodes_used": ["Manual Trigger", "TOTP Node"],
-    "outputs": ["Generated TOTP code (for use in authentication or as output data)"],
+    "outputs": [
+      "Generated TOTP code (for use in authentication or as output data)"
+    ],
     "processed_at": "05/06/2025 21:32"
   },
   {
@@ -395,7 +450,15 @@
     "output_readme_file_path": "analyzed_workflows/AI_Agent_Top_n8n_Creators_Leaderboard_Reporting/README.md",
     "summary": "Aggregates and reports on the top n8n creators and their most popular workflows using public leaderboard data and AI-powered analytics.",
     "inputs": ["Manual or scheduled trigger", "Execution by another workflow"],
-    "nodes_used": ["HTTP Request Nodes", "Set (Global Variables)", "Parse/Set Nodes", "Aggregate Node", "LLM Node (gpt-4o-mini)", "Workflow Tool Node", "ConvertToFile"],
+    "nodes_used": [
+      "HTTP Request Nodes",
+      "Set (Global Variables)",
+      "Parse/Set Nodes",
+      "Aggregate Node",
+      "LLM Node (gpt-4o-mini)",
+      "Workflow Tool Node",
+      "ConvertToFile"
+    ],
     "outputs": ["Leaderboard reports", "Analytics summaries", "File exports"],
     "processed_at": "05/06/2025 21:32"
   },
@@ -406,8 +469,18 @@
     "output_readme_file_path": "analyzed_workflows/AI_Agent_Chatbot_Long_Term_Memory_Telegram/README.md",
     "summary": "AI-powered chatbot with long-term memory, note storage in Google Docs, and Telegram integration for persistent, context-aware conversations.",
     "inputs": ["Chat message received"],
-    "nodes_used": ["Chat Trigger", "Google Docs Tool", "LLM Node (gpt-4o-mini)", "Telegram Node", "Sticky Notes"],
-    "outputs": ["Chat responses", "Persistent memory entries", "Telegram messages"],
+    "nodes_used": [
+      "Chat Trigger",
+      "Google Docs Tool",
+      "LLM Node (gpt-4o-mini)",
+      "Telegram Node",
+      "Sticky Notes"
+    ],
+    "outputs": [
+      "Chat responses",
+      "Persistent memory entries",
+      "Telegram messages"
+    ],
     "processed_at": "05/06/2025 21:32"
   },
   {
@@ -440,7 +513,9 @@
     "summary": "Reads emails via IMAP, processes the content, and creates a new card in a Nextcloud Deck board using the email’s subject and body.",
     "inputs": ["IMAP Email"],
     "nodes_used": ["IMAP Email", "Function", "HTTP Request"],
-    "outputs": ["New card created in the specified Nextcloud Deck board and stack"],
+    "outputs": [
+      "New card created in the specified Nextcloud Deck board and stack"
+    ],
     "processed_at": "05/06/2025 21:39"
   },
   {
@@ -451,7 +526,9 @@
     "summary": "Syncs user records from an Airtable table to a Mailchimp list on a scheduled basis.",
     "inputs": ["Cron Trigger"],
     "nodes_used": ["Cron", "Airtable", "Mailchimp"],
-    "outputs": ["New or updated subscriber entries in the chosen Mailchimp list"],
+    "outputs": [
+      "New or updated subscriber entries in the chosen Mailchimp list"
+    ],
     "processed_at": "05/06/2025 21:39"
   },
   {
@@ -472,8 +549,20 @@
     "output_readme_file_path": "analyzed_workflows/Dialpad_to_Syncro/README.md",
     "summary": "Integrates Dialpad call events with Syncro ticketing and Google Sheets for automated customer lookup, ticket creation, and logging.",
     "inputs": ["Webhook"],
-    "nodes_used": ["Webhook", "GetCustomer (HTTP Request)", "GetTicket (HTTP Request)", "IFMoreThanOne (If)", "CreateTicket (HTTP Request)", "UpdateTicket (HTTP Request)", "ForGoogle (Set)", "Google Sheets"],
-    "outputs": ["Tickets created or updated in Syncro", "Call and ticket IDs logged in Google Sheets"],
+    "nodes_used": [
+      "Webhook",
+      "GetCustomer (HTTP Request)",
+      "GetTicket (HTTP Request)",
+      "IFMoreThanOne (If)",
+      "CreateTicket (HTTP Request)",
+      "UpdateTicket (HTTP Request)",
+      "ForGoogle (Set)",
+      "Google Sheets"
+    ],
+    "outputs": [
+      "Tickets created or updated in Syncro",
+      "Call and ticket IDs logged in Google Sheets"
+    ],
     "processed_at": "05/06/2025 21:50"
   },
   {
@@ -483,7 +572,14 @@
     "output_readme_file_path": "analyzed_workflows/Google_Calendar_to_Zoom_Meeting/README.md",
     "summary": "Automatically creates Zoom meetings for upcoming Google Calendar events, filtering out unwanted types, and scheduling them via a daily cron job or manual execution.",
     "inputs": ["Cron Trigger", "Manual Trigger"],
-    "nodes_used": ["Cron Once a Day", "Manual Trigger", "Date & Time", "Google Calendar", "IF Zoom meeting", "Zoom"],
+    "nodes_used": [
+      "Cron Once a Day",
+      "Manual Trigger",
+      "Date & Time",
+      "Google Calendar",
+      "IF Zoom meeting",
+      "Zoom"
+    ],
     "outputs": ["Zoom meetings created for filtered Google Calendar events"],
     "processed_at": "05/06/2025 21:50"
   },
@@ -495,7 +591,9 @@
     "summary": "Syncs email addresses from a Google Sheet to a Mailchimp list, supporting both manual and interval-based execution.",
     "inputs": ["Manual Trigger", "Interval Trigger"],
     "nodes_used": ["Manual Trigger", "Interval", "Google Sheets", "Mailchimp"],
-    "outputs": ["New or updated subscriber entries in the specified Mailchimp list"],
+    "outputs": [
+      "New or updated subscriber entries in the specified Mailchimp list"
+    ],
     "processed_at": "05/06/2025 21:50"
   },
   {
@@ -505,8 +603,16 @@
     "output_readme_file_path": "analyzed_workflows/IMAP_Email_XML_to_JSON_POST_HTTP_Request/README.md",
     "summary": "Reads emails with attachments via IMAP, converts XML attachments to JSON, and posts the data to an API endpoint.",
     "inputs": ["IMAP Email"],
-    "nodes_used": ["IMAP Email", "Move Binary Data", "XML", "Set", "HTTP Request"],
-    "outputs": ["HTTP POST request sent to the configured API endpoint with extracted data"],
+    "nodes_used": [
+      "IMAP Email",
+      "Move Binary Data",
+      "XML",
+      "Set",
+      "HTTP Request"
+    ],
+    "outputs": [
+      "HTTP POST request sent to the configured API endpoint with extracted data"
+    ],
     "processed_at": "05/06/2025 21:50"
   },
   {
@@ -516,8 +622,17 @@
     "output_readme_file_path": "analyzed_workflows/Send_Certificate_Emails_in_Batches/README.md",
     "summary": "Reads a CSV file, parses it, and sends certificate emails with personalized attachments in batches.",
     "inputs": ["Manual Trigger"],
-    "nodes_used": ["Manual Trigger", "Read Binary File", "Spreadsheet File", "SplitInBatches", "Read Binary File1", "Send Email"],
-    "outputs": ["Personalized emails with certificate attachments sent to each user in the CSV"],
+    "nodes_used": [
+      "Manual Trigger",
+      "Read Binary File",
+      "Spreadsheet File",
+      "SplitInBatches",
+      "Read Binary File1",
+      "Send Email"
+    ],
+    "outputs": [
+      "Personalized emails with certificate attachments sent to each user in the CSV"
+    ],
     "processed_at": "05/06/2025 21:55"
   },
   {
@@ -560,7 +675,12 @@
     "output_readme_file_path": "analyzed_workflows/Wordpress_to_csv/README.md",
     "summary": "Exports all Wordpress posts to a CSV file.",
     "inputs": ["Manual Trigger"],
-    "nodes_used": ["Manual Trigger", "Wordpress", "Spreadsheet File", "Write Binary File"],
+    "nodes_used": [
+      "Manual Trigger",
+      "Wordpress",
+      "Spreadsheet File",
+      "Write Binary File"
+    ],
     "outputs": ["CSV file containing all Wordpress posts"],
     "processed_at": "06/06/2025 13:12"
   },
@@ -582,8 +702,155 @@
     "output_readme_file_path": "analyzed_workflows/Import_Spreadsheet_Data_to_PostgreSQL/README.md",
     "summary": "Reads an Excel spreadsheet, parses it, and inserts product data into a PostgreSQL database.",
     "inputs": ["Manual or automated execution"],
-    "nodes_used": ["Read Binary File", "Spreadsheet File", "Insert Rows1 (Postgres)"],
+    "nodes_used": [
+      "Read Binary File",
+      "Spreadsheet File",
+      "Insert Rows1 (Postgres)"
+    ],
     "outputs": ["New rows in the product table in PostgreSQL"],
     "processed_at": "06/06/2025 13:12"
+  },
+  {
+    "input_workflow_name": "1GOrjyc9mtZCMvCr_Structured_Data_Extract,_Data_Mining_with_Bright_Data_& _Google_Gemini.json",
+    "output_workflow_name": "Structured_Data_Extract_Data_Mining_with_Bright_Data_and_Google_Gemini",
+    "output_workflow_file_path": "analyzed_workflows/Structured_Data_Extract_Data_Mining_with_Bright_Data_and_Google_Gemini/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Structured_Data_Extract_Data_Mining_with_Bright_Data_and_Google_Gemini/README.md",
+    "summary": "Extracts structured data from web pages using Bright Data Web Unlocker and analyzes it with Google Gemini AI for sentiment, topics, and trends.",
+    "inputs": [
+      "Manual Trigger (When clicking ‘Test workflow’)",
+      "Bright Data Web Unlocker"
+    ],
+    "nodes_used": [
+      "Manual Trigger",
+      "Set URL and Bright Data Zone",
+      "Perform Bright Data Web Request",
+      "Markdown to Textual Data Extractor",
+      "Initiate Webhook Notification",
+      "Topic Extractor with structured response",
+      "Trends by location and category",
+      "Google Gemini Chat Model",
+      "Create binary data for topics/trends",
+      "Write file to disk",
+      "Sticky Notes"
+    ],
+    "outputs": [
+      "Structured topic/trend data as files",
+      "Webhook notifications with extracted content",
+      "AI-analyzed sentiment, topics, and trends"
+    ],
+    "processed_at": "08/06/2025 15:22"
+  },
+  {
+    "input_workflow_name": "1U5Jf4NMQEw9LtxY_Capture_Website_Screenshots_with_Bright_Data_Web_Unlocker_and_Save_to_Disk.json",
+    "output_workflow_name": "Capture_Website_Screenshots_with_Bright_Data_Web_Unlocker_and_Save_to_Disk",
+    "output_workflow_file_path": "analyzed_workflows/Capture_Website_Screenshots_with_Bright_Data_Web_Unlocker_and_Save_to_Disk/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Capture_Website_Screenshots_with_Bright_Data_Web_Unlocker_and_Save_to_Disk/README.md",
+    "summary": "Captures screenshots of specified websites using Bright Data Web Unlocker and saves them to disk.",
+    "inputs": [
+      "Manual Trigger (When clicking ‘Test workflow’)",
+      "Bright Data Web Unlocker"
+    ],
+    "nodes_used": [
+      "Manual Trigger",
+      "Set URL, Filename and Bright Data Zone",
+      "Capture a screenshot",
+      "Write a file to disk",
+      "Sticky Notes"
+    ],
+    "outputs": ["Screenshot image file saved to disk"],
+    "processed_at": "08/06/2025 15:22"
+  },
+  {
+    "input_workflow_name": "1V1gcK6vyczRqdZC_Printify_Automation_-_Update_Title_and_Description_-_AlexK1919.json",
+    "output_workflow_name": "Printify_Automation_Update_Title_and_Description_AlexK1919",
+    "output_workflow_file_path": "analyzed_workflows/Printify_Automation_Update_Title_and_Description_AlexK1919/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Printify_Automation_Update_Title_and_Description_AlexK1919/README.md",
+    "summary": "Automates the process of updating product titles and descriptions on Printify using data from Google Sheets and AI-powered content generation.",
+    "inputs": [
+      "Manual Trigger (for testing)",
+      "Google Sheets Trigger (row update event)",
+      "Printify API",
+      "OpenAI",
+      "Wikipedia"
+    ],
+    "nodes_used": [
+      "Manual Trigger",
+      "Google Sheets Trigger",
+      "Printify - Get Shops / Get Products",
+      "Split Out / Split - id, title, desc",
+      "Loop Over Items",
+      "Brand Guidelines + Custom Instructions",
+      "Wikipedia / Calculator / OpenAI",
+      "Generate Title and Desc",
+      "Printify - Update Product",
+      "Google Sheets",
+      "Sticky Notes"
+    ],
+    "outputs": [
+      "Updated product titles and descriptions on Printify",
+      "Logs and status updates in Google Sheets"
+    ],
+    "processed_at": "08/06/2025 15:22"
+  },
+  {
+    "input_workflow_name": "1blBTEfOEjamDB0N_Email_form.json",
+    "output_workflow_name": "Email_Form",
+    "output_workflow_file_path": "analyzed_workflows/Email_Form/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Email_Form/README.md",
+    "summary": "Automates email collection from a web form, verifies email validity using Hunter.io, and adds valid contacts to a SendGrid mailing list.",
+    "inputs": ["Form Trigger (web form submission)", "Email address"],
+    "nodes_used": [
+      "Form Trigger",
+      "Verify email (Hunter.io)",
+      "Check if the email is valid (IF node)",
+      "Add contact to list (SendGrid)",
+      "Email is not valid, do nothing (NoOp)",
+      "Sticky Notes"
+    ],
+    "outputs": ["Adds valid emails to SendGrid list", "Ignores invalid emails"],
+    "processed_at": "08/06/2025 15:31"
+  },
+  {
+    "input_workflow_name": "1dnr1k4MAVbDiBmO_Get_event_triggered_notifications___updates_on_preferred_messaging_channels_with_TwentyCRM.json",
+    "output_workflow_name": "Get_event_triggered_notifications_updates_TwentyCRM",
+    "output_workflow_file_path": "analyzed_workflows/Get_event_triggered_notifications_updates_TwentyCRM/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Get_event_triggered_notifications_updates_TwentyCRM/README.md",
+    "summary": "Automates event-triggered notifications from TwentyCRM to Slack or Email, with event logging to Google Sheets.",
+    "inputs": ["Webhook (TwentyCRM event)", "Event Data"],
+    "nodes_used": [
+      "on new twentycrm event (Webhook)",
+      "filter required data #eventType mandatory (Set)",
+      "events log (Google Sheets)",
+      "message channel evaluation (IF)",
+      "email channel for delete eventType (Gmail)",
+      "message channel for all other eventTypes (Slack)",
+      "Sticky Notes"
+    ],
+    "outputs": ["Slack message for non-delete events", "Gmail email for delete events", "Google Sheets event log"],
+    "processed_at": "08/06/2025 15:46"
+  },
+  {
+    "input_workflow_name": "1g8EAij2RwhNN70t_xSend_and_check_TTS_(Text-to-speech)_voice_calls_end_email_verification.json",
+    "output_workflow_name": "xSend_and_check_TTS_voice_calls_end_email_verification",
+    "output_workflow_file_path": "analyzed_workflows/xSend_and_check_TTS_voice_calls_end_email_verification/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/xSend_and_check_TTS_voice_calls_end_email_verification/README.md",
+    "summary": "Multi-factor verification workflow using TTS phone call and email code, leveraging ClickSend and SMTP.",
+    "inputs": ["Form submission (phone, voice, lang, email, name)"],
+    "nodes_used": [
+      "On form submission (Form Trigger)",
+      "Set voice code (Set)",
+      "Code for voice (Code)",
+      "Send Voice (HTTP Request)",
+      "Verify voice code (Form)",
+      "Is voice code correct? (IF)",
+      "Set email code (Set)",
+      "Send Email (SMTP Email)",
+      "Verify email code (Form)",
+      "Is email code correct? (IF)",
+      "Success / Fail forms",
+      "Sticky Notes"
+    ],
+    "outputs": ["TTS phone call with code", "Email with verification code", "Success/failure messages"],
+    "processed_at": "08/06/2025 15:49"
   }
 ]
