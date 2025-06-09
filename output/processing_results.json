@@ -837,7 +837,11 @@
       "message channel for all other eventTypes (Slack)",
       "Sticky Notes"
     ],
-    "outputs": ["Slack message for non-delete events", "Gmail email for delete events", "Google Sheets event log"],
+    "outputs": [
+      "Slack message for non-delete events",
+      "Gmail email for delete events",
+      "Google Sheets event log"
+    ],
     "processed_at": "08/06/2025 15:46"
   },
   {
@@ -861,7 +865,11 @@
       "Success / Fail forms",
       "Sticky Notes"
     ],
-    "outputs": ["TTS phone call with code", "Email with verification code", "Success/failure messages"],
+    "outputs": [
+      "TTS phone call with code",
+      "Email with verification code",
+      "Success/failure messages"
+    ],
     "processed_at": "08/06/2025 15:49"
   },
   {
@@ -915,7 +923,15 @@
     "output_readme_file_path": "analyzed_workflows/RSS_to_Telegram/README.md",
     "summary": "Automatically forwards new items from an RSS feed to a Telegram chat.",
     "inputs": ["Cron"],
-    "nodes_used": ["Cron", "RSS Feed Read", "Latest Read (Function)", "IF", "Write Latest Read (Function)", "Telegram", "NoOp"],
+    "nodes_used": [
+      "Cron",
+      "RSS Feed Read",
+      "Latest Read (Function)",
+      "IF",
+      "Write Latest Read (Function)",
+      "Telegram",
+      "NoOp"
+    ],
     "outputs": ["Telegram message for each new RSS item"],
     "processed_at": "08/06/2025 16:21"
   },
@@ -926,7 +942,15 @@
     "output_readme_file_path": "analyzed_workflows/SIGNL4_Alert/README.md",
     "summary": "Automates the creation and processing of alert data files, converting between JSON and binary formats, and marking alerts as processed.",
     "inputs": ["Cron"],
-    "nodes_used": ["Cron", "Write Binary File", "Read Binary File", "Binary to JSON", "JSON to Binary", "Mark as Done (Function)", "IF"],
+    "nodes_used": [
+      "Cron",
+      "Write Binary File",
+      "Read Binary File",
+      "Binary to JSON",
+      "JSON to Binary",
+      "Mark as Done (Function)",
+      "IF"
+    ],
     "outputs": ["Processed alert data in binary and JSON files"],
     "processed_at": "08/06/2025 16:21"
   },
@@ -959,7 +983,11 @@
     "output_readme_file_path": "analyzed_workflows/Workflow_2/README.md",
     "summary": "Exports product data from a PostgreSQL database to an Excel spreadsheet file.",
     "inputs": ["Manual/None (can be scheduled externally)"],
-    "nodes_used": ["Run Query (Postgres)", "Spreadsheet File", "Write Binary File"],
+    "nodes_used": [
+      "Run Query (Postgres)",
+      "Spreadsheet File",
+      "Write Binary File"
+    ],
     "outputs": ["spreadsheet.xls with product data"],
     "processed_at": "08/06/2025 16:21"
   },
@@ -970,8 +998,13 @@
     "output_readme_file_path": "analyzed_workflows/AI_Agent_Cv_Resume_Automated_Screening_Sorting_Rating_Tracker_System/README.md",
     "summary": "Automates the screening, sorting, rating, and tracking of CV/resume files using Google Drive and Google Docs integrations in n8n.",
     "inputs": ["Google Drive Trigger"],
-    "nodes_used": ["Google Drive - Resume CV File Created", "GDocs - Get Job Desc"],
-    "outputs": ["Initiates automated processing of new resumes, including job description retrieval and preparation for screening and rating"],
+    "nodes_used": [
+      "Google Drive - Resume CV File Created",
+      "GDocs - Get Job Desc"
+    ],
+    "outputs": [
+      "Initiates automated processing of new resumes, including job description retrieval and preparation for screening and rating"
+    ],
     "processed_at": "08/06/2025 16:26"
   },
   {
@@ -981,8 +1014,17 @@
     "output_readme_file_path": "analyzed_workflows/Nostr_Damus_AI_Powered_Reporting_Gmail_Telegram/README.md",
     "summary": "Automates the extraction, analysis, and reporting of Nostr (#damus) threads, generating AI-powered summaries and distributing reports via Gmail and Telegram.",
     "inputs": ["Manual Trigger"],
-    "nodes_used": ["Manual Trigger", "Get HTML", "Get HTML Report", "Gmail Themes", "#damus Themes List", "#damus Thread Themes"],
-    "outputs": ["HTML and email reports summarizing Nostr #damus threads and their main themes, sent via Gmail"],
+    "nodes_used": [
+      "Manual Trigger",
+      "Get HTML",
+      "Get HTML Report",
+      "Gmail Themes",
+      "#damus Themes List",
+      "#damus Thread Themes"
+    ],
+    "outputs": [
+      "HTML and email reports summarizing Nostr #damus threads and their main themes, sent via Gmail"
+    ],
     "processed_at": "08/06/2025 16:26"
   },
   {
@@ -993,7 +1035,10 @@
     "summary": "Automates the creation of Zoom meetings and the setup of Stripe payment products for seamless, secure meeting scheduling and payment processing.",
     "inputs": ["Form submission or manual trigger"],
     "nodes_used": ["Config", "Create Zoom meeting", "Create Stripe Product"],
-    "outputs": ["A new Zoom meeting scheduled", "A Stripe product created for payment collection"],
+    "outputs": [
+      "A new Zoom meeting scheduled",
+      "A Stripe product created for payment collection"
+    ],
     "processed_at": "08/06/2025 16:30"
   },
   {
@@ -1004,7 +1049,9 @@
     "summary": "Automates the logging and analysis of yoga practice data using AI and Google Sheets.",
     "inputs": ["Trigger (scheduled or webhook, not shown)"],
     "nodes_used": ["Azure OpenAI Chat Model2", "YogaLog"],
-    "outputs": ["Appended rows in a Google Sheet containing the date, original JSON log, and AI-rewritten text summary of the yoga session"],
+    "outputs": [
+      "Appended rows in a Google Sheet containing the date, original JSON log, and AI-rewritten text summary of the yoga session"
+    ],
     "processed_at": "08/06/2025 16:30"
   },
   {
@@ -1014,8 +1061,16 @@
     "output_readme_file_path": "analyzed_workflows/RAG_AI_Agent_with_Milvus_and_Cohere/README.md",
     "summary": "Automates retrieval-augmented generation (RAG) by integrating LangChain, Milvus, and Cohere for document search, embedding, and chat-based responses.",
     "inputs": ["Google Drive Trigger", "Chat Trigger"],
-    "nodes_used": ["Watch New Files", "Default Data Loader", "Embeddings Cohere", "When chat message received"],
-    "outputs": ["Embedded documents in Milvus for semantic search", "AI-powered chat responses based on uploaded documents"],
+    "nodes_used": [
+      "Watch New Files",
+      "Default Data Loader",
+      "Embeddings Cohere",
+      "When chat message received"
+    ],
+    "outputs": [
+      "Embedded documents in Milvus for semantic search",
+      "AI-powered chat responses based on uploaded documents"
+    ],
     "processed_at": "08/06/2025 16:30"
   },
   {
@@ -1026,7 +1081,9 @@
     "summary": "Automates the aggregation of recent YouTube videos from AI news channels and processes them for playlist or form updates using Google Sheets and YouTube Data API.",
     "inputs": ["Trigger (scheduled or manual, not shown)"],
     "nodes_used": ["Read Channel Names", "Get Videos", "Split Out"],
-    "outputs": ["List of recent AI news videos, ready for playlist update, reporting, or further processing"],
+    "outputs": [
+      "List of recent AI news videos, ready for playlist update, reporting, or further processing"
+    ],
     "processed_at": "08/06/2025 17:15"
   },
   {
@@ -1035,9 +1092,22 @@
     "output_workflow_file_path": "analyzed_workflows/Exponential_Backoff_for_Google_APIs/workflow.json",
     "output_readme_file_path": "analyzed_workflows/Exponential_Backoff_for_Google_APIs/README.md",
     "summary": "Implements exponential backoff logic for handling Google API rate limits or errors, ensuring reliable and resilient workflow execution.",
-    "inputs": ["Manual Trigger", "(Can be extended to schedule or webhook)", "Loop Over Items"],
-    "nodes_used": ["Manual Trigger", "Loop Over Items", "Google Sheets", "Exponential Backoff", "Wait", "Stop and Error"],
-    "outputs": ["Data written to Google Sheets, or an error message if retries are exhausted"],
+    "inputs": [
+      "Manual Trigger",
+      "(Can be extended to schedule or webhook)",
+      "Loop Over Items"
+    ],
+    "nodes_used": [
+      "Manual Trigger",
+      "Loop Over Items",
+      "Google Sheets",
+      "Exponential Backoff",
+      "Wait",
+      "Stop and Error"
+    ],
+    "outputs": [
+      "Data written to Google Sheets, or an error message if retries are exhausted"
+    ],
     "processed_at": "08/06/2025 17:15"
   },
   {
@@ -1046,9 +1116,21 @@
     "output_workflow_file_path": "analyzed_workflows/Luma_AI_Dream_Machine_Simple_v1_AK/workflow.json",
     "output_readme_file_path": "analyzed_workflows/Luma_AI_Dream_Machine_Simple_v1_AK/README.md",
     "summary": "Automates text-to-video generation using the Luma AI Dream Machine API, with customizable camera motion and video settings.",
-    "inputs": ["Manual Trigger", "(Can be extended to schedule or webhook)", "Global SETTINGS"],
-    "nodes_used": ["Manual Trigger", "Global SETTINGS", "RANDOM Camera Motion", "Text 2 Video", "Sticky Note"],
-    "outputs": ["Generated video from the Luma AI Dream Machine API, based on the provided text prompt and settings"],
+    "inputs": [
+      "Manual Trigger",
+      "(Can be extended to schedule or webhook)",
+      "Global SETTINGS"
+    ],
+    "nodes_used": [
+      "Manual Trigger",
+      "Global SETTINGS",
+      "RANDOM Camera Motion",
+      "Text 2 Video",
+      "Sticky Note"
+    ],
+    "outputs": [
+      "Generated video from the Luma AI Dream Machine API, based on the provided text prompt and settings"
+    ],
     "processed_at": "08/06/2025 17:15"
   },
   {
@@ -1058,8 +1140,16 @@
     "output_readme_file_path": "analyzed_workflows/Clockify_to_Syncro/README.md",
     "summary": "Automates the transfer and mapping of project/task data between Clockify and Syncro, logging results in Google Sheets.",
     "inputs": ["Webhook (POST from Clockify or other sources)"],
-    "nodes_used": ["Webhook", "ForSyncro", "FindMatch", "ForGoogle", "Google Sheets"],
-    "outputs": ["Appended rows in Google Sheets containing mapped Syncro and Clockify IDs"],
+    "nodes_used": [
+      "Webhook",
+      "ForSyncro",
+      "FindMatch",
+      "ForGoogle",
+      "Google Sheets"
+    ],
+    "outputs": [
+      "Appended rows in Google Sheets containing mapped Syncro and Clockify IDs"
+    ],
     "processed_at": "08/06/2025 17:34"
   },
   {
@@ -1068,7 +1158,17 @@
     "output_workflow_file_path": "analyzed_workflows/Daily_poems_in_Telegram/workflow.json",
     "output_readme_file_path": "analyzed_workflows/Daily_poems_in_Telegram/README.md",
     "summary": "Automatically sends a daily poem to a Telegram chat by fetching a random poem, translating it if needed, and formatting it for Telegram delivery.",
-    "inputs": ["Cron (scheduled daily at 10:00 AM)", "HTTP Request (Poemist API)", "LingvaNex (translation)", "Telegram (chat delivery)", "Workflow settings (API keys, chat IDs)", "Poem content (from API)", "Translation configuration (optional)", "Scheduling parameters (cron)", "Telegram Bot credentials"],
+    "inputs": [
+      "Cron (scheduled daily at 10:00 AM)",
+      "HTTP Request (Poemist API)",
+      "LingvaNex (translation)",
+      "Telegram (chat delivery)",
+      "Workflow settings (API keys, chat IDs)",
+      "Poem content (from API)",
+      "Translation configuration (optional)",
+      "Scheduling parameters (cron)",
+      "Telegram Bot credentials"
+    ],
     "nodes_used": ["Cron", "HTTP Request", "LingvaNex", "Telegram"],
     "outputs": ["A formatted poem message sent to a Telegram chat"],
     "processed_at": "08/06/2025 17:36"
@@ -1079,7 +1179,13 @@
     "output_workflow_file_path": "analyzed_workflows/Mailchimp/workflow.json",
     "output_readme_file_path": "analyzed_workflows/Mailchimp/README.md",
     "summary": "Automates the addition of new subscribers to a Mailchimp list via a manual trigger in n8n.",
-    "inputs": ["Manual Trigger (user clicks 'execute' in n8n)", "Mailchimp list ID", "Subscriber email", "Merge fields (e.g., FNAME)", "Mailchimp API credentials"],
+    "inputs": [
+      "Manual Trigger (user clicks 'execute' in n8n)",
+      "Mailchimp list ID",
+      "Subscriber email",
+      "Merge fields (e.g., FNAME)",
+      "Mailchimp API credentials"
+    ],
     "nodes_used": ["On clicking 'execute'", "Mailchimp"],
     "outputs": ["New subscriber added to the specified Mailchimp list"],
     "processed_at": "08/06/2025 17:36"
@@ -1090,9 +1196,16 @@
     "output_workflow_file_path": "analyzed_workflows/NameCheap_Dynamic_DNS_DDNS/workflow.json",
     "output_readme_file_path": "analyzed_workflows/NameCheap_Dynamic_DNS_DDNS/README.md",
     "summary": "Automates dynamic DNS updates for NameCheap domains by regularly checking the public IP address and updating DNS records when changes are detected.",
-    "inputs": ["Cron (every 15 minutes)", "Checks IP if new (static data)", "subdomains (list of subdomains)", "NameCheap Dynamic DNS API credentials"],
+    "inputs": [
+      "Cron (every 15 minutes)",
+      "Checks IP if new (static data)",
+      "subdomains (list of subdomains)",
+      "NameCheap Dynamic DNS API credentials"
+    ],
     "nodes_used": ["Cron", "Checks IP if new", "subdomains"],
-    "outputs": ["DNS records for specified subdomains updated on NameCheap if public IP changes"],
+    "outputs": [
+      "DNS records for specified subdomains updated on NameCheap if public IP changes"
+    ],
     "processed_at": "08/06/2025 17:51"
   },
   {
@@ -1101,9 +1214,24 @@
     "output_workflow_file_path": "analyzed_workflows/StatsInstagram/workflow.json",
     "output_readme_file_path": "analyzed_workflows/StatsInstagram/README.md",
     "summary": "Automates the reporting of Instagram statistics to a Mattermost channel, using Google Sheets for data storage and scheduled reporting.",
-    "inputs": ["Cron (scheduled daily at 8:00 AM)", "Google Sheets (Instagram stats)", "Mattermost API credentials", "Sheet ID", "Channel ID", "Date/time formatting"],
-    "nodes_used": ["Cron", "Get the date today", "Date & Time", "Read data on Google Sheets", "Mattermost"],
-    "outputs": ["A formatted message posted to a Mattermost channel with Instagram stats"],
+    "inputs": [
+      "Cron (scheduled daily at 8:00 AM)",
+      "Google Sheets (Instagram stats)",
+      "Mattermost API credentials",
+      "Sheet ID",
+      "Channel ID",
+      "Date/time formatting"
+    ],
+    "nodes_used": [
+      "Cron",
+      "Get the date today",
+      "Date & Time",
+      "Read data on Google Sheets",
+      "Mattermost"
+    ],
+    "outputs": [
+      "A formatted message posted to a Mattermost channel with Instagram stats"
+    ],
     "processed_at": "08/06/2025 17:51"
   },
   {
@@ -1112,7 +1240,10 @@
     "output_workflow_file_path": "analyzed_workflows/Orlen/workflow.json",
     "output_readme_file_path": "analyzed_workflows/Orlen/README.md",
     "summary": "Automates daily folder and file management in Google Drive, triggered both manually and on a schedule, for streamlined document organization and archiving.",
-    "inputs": ["Manual Trigger (user clicks 'execute')", "Cron Trigger (every day at 23:45)"],
+    "inputs": [
+      "Manual Trigger (user clicks 'execute')",
+      "Cron Trigger (every day at 23:45)"
+    ],
     "nodes_used": [
       "Manual Trigger (On clicking 'execute')",
       "Cron Trigger (Every 23:45)",
@@ -1125,7 +1256,12 @@
       "Merge",
       "Slack"
     ],
-    "outputs": ["Year-based and month-based folders created/verified in Google Drive", "Invoices uploaded to Google Drive", "Slack notification sent", "Emails marked as read"],
+    "outputs": [
+      "Year-based and month-based folders created/verified in Google Drive",
+      "Invoices uploaded to Google Drive",
+      "Slack notification sent",
+      "Emails marked as read"
+    ],
     "processed_at": "2025-06-08T18:35:29+05:00"
   },
   {
@@ -1134,7 +1270,10 @@
     "output_workflow_file_path": "analyzed_workflows/TheHive/workflow.json",
     "output_readme_file_path": "analyzed_workflows/TheHive/README.md",
     "summary": "Automates alert creation, reading, and resolution in TheHive, with integration to SIGNL4 for alert notifications and resolution, triggered by webhooks, scheduled, or manual triggers.",
-    "inputs": ["Manual Trigger (Start (Testing))", "Webhook (TheHive Webhook Request)"],
+    "inputs": [
+      "Manual Trigger (Start (Testing))",
+      "Webhook (TheHive Webhook Request)"
+    ],
     "nodes_used": [
       "Manual Trigger (Start (Testing))",
       "TheHive Create Alert",
@@ -1144,7 +1283,12 @@
       "SIGNL4 Send Alert",
       "SIGNL4 Resolve Alert"
     ],
-    "outputs": ["Alerts created in TheHive", "Alerts read from TheHive", "Alerts sent to SIGNL4", "Alerts resolved in SIGNL4"],
+    "outputs": [
+      "Alerts created in TheHive",
+      "Alerts read from TheHive",
+      "Alerts sent to SIGNL4",
+      "Alerts resolved in SIGNL4"
+    ],
     "processed_at": "2025-06-08T18:35:29+05:00"
   },
   {
@@ -1184,12 +1328,10 @@
     "output_readme_file_path": "analyzed_workflows/workflow_3/README.md",
     "summary": "Automates the process of retrieving an image from a URL, editing it by overlaying custom text, and responding to webhook requests with the resulting image file.",
     "inputs": ["Webhook (receives HTTP requests with query parameters)"],
-    "nodes_used": [
-      "Webhook",
-      "Read File URL",
-      "Edit Image"
+    "nodes_used": ["Webhook", "Read File URL", "Edit Image"],
+    "outputs": [
+      "Edited image file returned as the response to the webhook request"
     ],
-    "outputs": ["Edited image file returned as the response to the webhook request"],
     "processed_at": "2025-06-08T18:35:29+05:00"
   },
   {
@@ -1215,7 +1357,11 @@
       "Send Chart Image",
       "Sticky Notes"
     ],
-    "outputs": ["Transaction details and summaries sent to Telegram", "Transaction data recorded in Notion", "Weekly spending chart image sent to Telegram"],
+    "outputs": [
+      "Transaction details and summaries sent to Telegram",
+      "Transaction data recorded in Notion",
+      "Weekly spending chart image sent to Telegram"
+    ],
     "processed_at": "08/06/2025 18:40"
   },
   {
@@ -1235,7 +1381,9 @@
       "Code",
       "Sticky Notes"
     ],
-    "outputs": ["Clean, direct article URLs extracted from Google News RSS feed items"],
+    "outputs": [
+      "Clean, direct article URLs extracted from Google News RSS feed items"
+    ],
     "processed_at": "08/06/2025 18:54"
   },
   {
@@ -1255,7 +1403,9 @@
       "Google Gemini Chat Model",
       "Structured Output Parser"
     ],
-    "outputs": ["Vectorized dataset stored in Pinecone, ready for LLM search, retrieval, or fine-tuning"],
+    "outputs": [
+      "Vectorized dataset stored in Pinecone, ready for LLM search, retrieval, or fine-tuning"
+    ],
     "processed_at": "08/06/2025 18:57"
   },
   {
@@ -1265,11 +1415,7 @@
     "output_readme_file_path": "analyzed_workflows/Automated_PDF_to_HTML_Conversion/README.md",
     "summary": "Automatically converts newly uploaded PDF files in Google Drive to HTML format for easy viewing and downstream processing.",
     "inputs": ["Google Drive Trigger"],
-    "nodes_used": [
-      "Google Drive Trigger",
-      "If",
-      "HTTP Request"
-    ],
+    "nodes_used": ["Google Drive Trigger", "If", "HTTP Request"],
     "outputs": ["HTML file or content generated from the uploaded PDF"],
     "processed_at": "08/06/2025 18:59"
   },
@@ -1286,7 +1432,9 @@
       "Structured Output Parser",
       "Set (SET EMAIL)"
     ],
-    "outputs": ["Structured error summary, diagnosis, cause, and resolution, ready for notification"],
+    "outputs": [
+      "Structured error summary, diagnosis, cause, and resolution, ready for notification"
+    ],
     "processed_at": "08/06/2025 18:59"
   },
   {
@@ -1302,7 +1450,9 @@
       "Code (Fraud Score)",
       "Respond to Webhook"
     ],
-    "outputs": ["Structured JSON analysis of IP reputation, spam activity, SPF/DKIM/DMARC status, and spoofing indicators"],
+    "outputs": [
+      "Structured JSON analysis of IP reputation, spam activity, SPF/DKIM/DMARC status, and spoofing indicators"
+    ],
     "processed_at": "08/06/2025 18:59"
   },
   {
@@ -1312,11 +1462,10 @@
     "output_readme_file_path": "analyzed_workflows/Workflow_Results_to_Markdown_Notes_in_Your_Obsidian_Vault_via_Google_Drive/README.md",
     "summary": "Automatically sends workflow results from n8n to your Obsidian Vault by saving them as Markdown files in Google Drive, with instant sync to your notes.",
     "inputs": ["Workflow Output"],
-    "nodes_used": [
-      "Sticky Note",
-      "Google Drive"
+    "nodes_used": ["Sticky Note", "Google Drive"],
+    "outputs": [
+      "Markdown (.md) notes and attachments instantly available in your Obsidian Vault"
     ],
-    "outputs": ["Markdown (.md) notes and attachments instantly available in your Obsidian Vault"],
     "processed_at": "08/06/2025 18:59"
   },
   {
@@ -1326,11 +1475,10 @@
     "output_readme_file_path": "analyzed_workflows/Email/README.md",
     "summary": "Automatically ingests emails via IMAP and creates TheHive cases for each email with attachments and metadata.",
     "inputs": ["IMAP Email"],
-    "nodes_used": [
-      "IMAP Email",
-      "TheHive"
+    "nodes_used": ["IMAP Email", "TheHive"],
+    "outputs": [
+      "New case created in TheHive for each processed email, with attachments and metadata"
     ],
-    "outputs": ["New case created in TheHive for each processed email, with attachments and metadata"],
     "processed_at": "08/06/2025 19:03"
   },
   {
@@ -1340,12 +1488,10 @@
     "output_readme_file_path": "analyzed_workflows/Save_Telegram_reply_to_journal_spreadsheet/README.md",
     "summary": "Automatically saves Telegram replies to a Google Sheets journal spreadsheet.",
     "inputs": ["Telegram Trigger"],
-    "nodes_used": [
-      "Telegram Trigger",
-      "Parse Message",
-      "Add Entry to Sheet"
+    "nodes_used": ["Telegram Trigger", "Parse Message", "Add Entry to Sheet"],
+    "outputs": [
+      "New row appended to a Google Sheets spreadsheet with the journal entry and date"
     ],
-    "outputs": ["New row appended to a Google Sheets spreadsheet with the journal entry and date"],
     "processed_at": "08/06/2025 19:08"
   },
   {
@@ -1362,7 +1508,9 @@
       "Ticket Filtering",
       "Notify for Standup"
     ],
-    "outputs": ["Summary message sent to a Zulip stream with ticket counts by status"],
+    "outputs": [
+      "Summary message sent to a Zulip stream with ticket counts by status"
+    ],
     "processed_at": "08/06/2025 19:08"
   },
   {
@@ -1372,12 +1520,7 @@
     "output_readme_file_path": "analyzed_workflows/post_to_wallabag/README.md",
     "summary": "Automatically posts new RSS feed items to Wallabag for reading and archiving.",
     "inputs": ["Cron", "Manual Trigger"],
-    "nodes_used": [
-      "Cron",
-      "Manual Trigger",
-      "Function",
-      "HTTP Request"
-    ],
+    "nodes_used": ["Cron", "Manual Trigger", "Function", "HTTP Request"],
     "outputs": ["New RSS feed items are posted to Wallabag as entries"],
     "processed_at": "08/06/2025 19:08"
   },
@@ -1388,13 +1531,10 @@
     "output_readme_file_path": "analyzed_workflows/workflow_4/README.md",
     "summary": "Posts notifications to Slack when the n8n GitHub repository receives or loses a star.",
     "inputs": ["GitHub Trigger"],
-    "nodes_used": [
-      "GitHub Trigger",
-      "IF",
-      "Slack - Add",
-      "Slack - Remove"
+    "nodes_used": ["GitHub Trigger", "IF", "Slack - Add", "Slack - Remove"],
+    "outputs": [
+      "Slack messages announcing new or removed stars, including user details and current star count"
     ],
-    "outputs": ["Slack messages announcing new or removed stars, including user details and current star count"],
     "processed_at": "08/06/2025 19:08"
   },
   {
@@ -1438,10 +1578,7 @@
     "output_readme_file_path": "analyzed_workflows/Import_Odoo_Product_Images_from_Google_Drive/README.md",
     "summary": "Imports product images from a Google Drive folder and filters them for Odoo integration.",
     "inputs": ["Manual/Automated Trigger"],
-    "nodes_used": [
-      "Find Files (Google Drive)",
-      "Filter Images"
-    ],
+    "nodes_used": ["Find Files (Google Drive)", "Filter Images"],
     "outputs": ["Filtered list of image files ready for Odoo import"],
     "processed_at": "08/06/2025 19:15"
   },
@@ -1474,7 +1611,9 @@
       "AI Agent",
       "OpenRouter Chat Model"
     ],
-    "outputs": ["Automated responses to Instagram comments, or ignores spam/irrelevant content"],
+    "outputs": [
+      "Automated responses to Instagram comments, or ignores spam/irrelevant content"
+    ],
     "processed_at": "08/06/2025 19:15"
   },
   {
@@ -1500,7 +1639,12 @@
     "output_readme_file_path": "analyzed_workflows/Append_lookup_update_and_read_data_from_a_Google_Sheets_spreadsheet/README.md",
     "summary": "Appends, looks up, updates, and reads data from a Google Sheets spreadsheet using n8n nodes.",
     "inputs": ["Manual Trigger"],
-    "nodes_used": ["Manual Trigger", "Google Sheets1", "Set1", "Google Sheets2"],
+    "nodes_used": [
+      "Manual Trigger",
+      "Google Sheets1",
+      "Set1",
+      "Google Sheets2"
+    ],
     "outputs": ["Updated Google Sheets data"],
     "processed_at": "08/06/2025 19:18"
   },
@@ -1555,7 +1699,17 @@
     "output_readme_file_path": "analyzed_workflows/Backup_n8n_Workflows_to_Nextcloud/README.md",
     "summary": "Backs up all n8n workflow definitions to a Nextcloud instance on a scheduled basis or manual trigger.",
     "inputs": ["Manual Trigger", "Cron"],
-    "nodes_used": ["Manual Trigger", "Cron", "Get Workflow List (HTTP Request)", "Map (Function)", "Get Workflow (HTTP Request)", "Merge", "Move Binary Data", "FunctionItem", "NextCloud1"],
+    "nodes_used": [
+      "Manual Trigger",
+      "Cron",
+      "Get Workflow List (HTTP Request)",
+      "Map (Function)",
+      "Get Workflow (HTTP Request)",
+      "Merge",
+      "Move Binary Data",
+      "FunctionItem",
+      "NextCloud1"
+    ],
     "outputs": ["JSON backup files of each n8n workflow stored in Nextcloud"],
     "processed_at": "08/06/2025 19:23"
   },
@@ -1566,7 +1720,12 @@
     "output_readme_file_path": "analyzed_workflows/Get_Comments_from_Facebook_Page/README.md",
     "summary": "Fetches, filters, and processes comments from a Facebook Page using n8n.",
     "inputs": ["Manual Trigger"],
-    "nodes_used": ["Manual Trigger", "Split Out Comments", "Filter Out Null Comments", "Select Result Field"],
+    "nodes_used": [
+      "Manual Trigger",
+      "Split Out Comments",
+      "Filter Out Null Comments",
+      "Select Result Field"
+    ],
     "outputs": ["Structured list of valid comments from the Facebook Page"],
     "processed_at": "08/06/2025 19:25"
   },
@@ -1588,7 +1747,12 @@
     "output_readme_file_path": "analyzed_workflows/Automate_Figma_Versioning_and_Jira_Updates/README.md",
     "summary": "Automates Figma versioning updates and posts comments to Jira issues via webhook integration.",
     "inputs": ["Figma Trigger"],
-    "nodes_used": ["Figma Trigger", "Find Jira Issue", "Add Comment in Issue", "Sticky Note"],
+    "nodes_used": [
+      "Figma Trigger",
+      "Find Jira Issue",
+      "Add Comment in Issue",
+      "Sticky Note"
+    ],
     "outputs": ["Comment added to the corresponding Jira issue"],
     "processed_at": "08/06/2025 19:25"
   },
@@ -1611,7 +1775,9 @@
     "summary": "Extracts tweets, performs sentiment analysis, stores results in MongoDB and Postgres, and notifies via Slack.",
     "inputs": [],
     "nodes_used": ["Twitter", "MongoDB", "Postgres", "Slack", "IF"],
-    "outputs": ["Tweets with sentiment scores stored in databases and posted to Slack"],
+    "outputs": [
+      "Tweets with sentiment scores stored in databases and posted to Slack"
+    ],
     "processed_at": "08/06/2025 19:31"
   },
   {
@@ -1643,7 +1809,13 @@
     "output_readme_file_path": "analyzed_workflows/POC_Chatbot_Order_by_Sheet_Data/README.md",
     "summary": "A proof-of-concept chatbot workflow that retrieves product data from a sheet and allows users to order products via chat.",
     "inputs": ["Chat OpenAI"],
-    "nodes_used": ["Chat OpenAI", "Calculator", "Window Buffer Memory", "Get Products", "Order Product"],
+    "nodes_used": [
+      "Chat OpenAI",
+      "Calculator",
+      "Window Buffer Memory",
+      "Get Products",
+      "Order Product"
+    ],
     "outputs": ["Orders placed and product information returned to the user"],
     "processed_at": "08/06/2025 19:44"
   },
@@ -1654,7 +1826,12 @@
     "output_readme_file_path": "analyzed_workflows/Telegram_RAG_pdf/README.md",
     "summary": "A workflow that enables retrieval-augmented generation (RAG) using Telegram as the interface and PDF documents as the knowledge source.",
     "inputs": ["Telegram Trigger"],
-    "nodes_used": ["Telegram Trigger", "Default Data Loader", "Recursive Character Text Splitter", "Embeddings OpenAI"],
+    "nodes_used": [
+      "Telegram Trigger",
+      "Default Data Loader",
+      "Recursive Character Text Splitter",
+      "Embeddings OpenAI"
+    ],
     "outputs": ["Answers to user queries based on uploaded PDF content"],
     "processed_at": "08/06/2025 19:44"
   },
@@ -1668,5 +1845,119 @@
     "nodes_used": ["Sticky Notes", "Other Nodes"],
     "outputs": ["Google Calendar events managed via MCP server"],
     "processed_at": "08/06/2025 19:44"
+  },
+  {
+    "input_workflow_name": "6FSx5OMVxp8Ldg8A_Prepare_CSV_files_with_GPT-4.json",
+    "output_workflow_name": "Prepare_CSV_files_with_GPT_4",
+    "output_workflow_file_path": "analyzed_workflows/Prepare_CSV_files_with_GPT_4/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Prepare_CSV_files_with_GPT_4/README.md",
+    "summary": "Helper workflow to generate mock user data with GPT-4 and prepare CSV files for testing or demo purposes.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": [
+      "Manual Trigger",
+      "OpenAI",
+      "Split In Batches",
+      "Sticky Note"
+    ],
+    "outputs": ["Mock user data, suitable for export as CSV files"],
+    "processed_at": "09/06/2025 17:22"
+  },
+  {
+    "input_workflow_name": "6LeAm5UyENgTdwkv_agente.json",
+    "output_workflow_name": "agente",
+    "output_workflow_file_path": "analyzed_workflows/agente/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/agente/README.md",
+    "summary": "AI-powered assistant for clinical appointment rescheduling and shopping list management via Telegram.",
+    "inputs": ["Telegram Message"],
+    "nodes_used": [
+      "OpenAI Chat Model",
+      "Assistente clinica interno",
+      "Google Tasks",
+      "MCP Google Calendar"
+    ],
+    "outputs": ["Rescheduled appointments and updated shopping list entries"],
+    "processed_at": "09/06/2025 17:22"
+  },
+  {
+    "input_workflow_name": "6MRJ2tfl8c2f3AuE_💥🛠️Build_a_Web_Search_Chatbot_with_GPT-4o_and_MCP_Brave_Search.json",
+    "output_workflow_name": "Build_a_Web_Search_Chatbot_with_GPT_4o_and_MCP_Brave_Search",
+    "output_workflow_file_path": "analyzed_workflows/Build_a_Web_Search_Chatbot_with_GPT_4o_and_MCP_Brave_Search/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Build_a_Web_Search_Chatbot_with_GPT_4o_and_MCP_Brave_Search/README.md",
+    "summary": "A chatbot workflow that uses GPT-4o and MCP Brave Search to answer user queries with up-to-date web information.",
+    "inputs": ["Chat Message Trigger"],
+    "nodes_used": [
+      "AI Agent",
+      "Chat Trigger",
+      "MCP Get Brave Tools",
+      "MCP Execute Brave Search",
+      "Simple Memory"
+    ],
+    "outputs": ["Answers to user queries based on live web search results"],
+    "processed_at": "09/06/2025 17:22"
+  },
+  {
+    "input_workflow_name": "6bMVzmrbPexvBe6q_YouTube_to_Airtable_Anonym.json",
+    "output_workflow_name": "YouTube_to_Airtable_Anonym",
+    "output_workflow_file_path": "analyzed_workflows/YouTube_to_Airtable_Anonym/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/YouTube_to_Airtable_Anonym/README.md",
+    "summary": "Extracts YouTube video transcripts and stores them in Airtable in an anonymized workflow.",
+    "inputs": [],
+    "nodes_used": [
+      "Get Video ID",
+      "Get video transcript",
+      "Combine Transcripts",
+      "Other Nodes"
+    ],
+    "outputs": ["YouTube video transcripts stored in Airtable"],
+    "processed_at": "09/06/2025 17:22"
+  },
+  {
+    "input_workflow_name": "6pOGYw5O3iOY1Gc6_Remote_IOT_Sensor_monitoring_via_MQTT_and_InfluxDB.json",
+    "output_workflow_name": "Remote_IOT_Sensor_monitoring_via_MQTT_and_InfluxDB",
+    "output_workflow_file_path": "analyzed_workflows/Remote_IOT_Sensor_monitoring_via_MQTT_and_InfluxDB/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Remote_IOT_Sensor_monitoring_via_MQTT_and_InfluxDB/README.md",
+    "summary": "Monitors remote IoT sensor data via MQTT and stores it in InfluxDB for time-series analysis.",
+    "inputs": ["MQTT Trigger"],
+    "nodes_used": [
+      "MQTT Trigger",
+      "Sticky Notes",
+      "HTTP Request",
+      "Other Nodes"
+    ],
+    "outputs": ["Sensor data stored in InfluxDB"],
+    "processed_at": "09/06/2025 17:22"
+  },
+  {
+    "input_workflow_name": "6sBxOuYYcJjIBmVJ_Automating_Betting_Data_Retrieval_with_TheOddsAPI_and_Airtable.json",
+    "output_workflow_name": "Automating_Betting_Data_Retrieval_with_TheOddsAPI_and_Airtable",
+    "output_workflow_file_path": "analyzed_workflows/Automating_Betting_Data_Retrieval_with_TheOddsAPI_and_Airtable/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Automating_Betting_Data_Retrieval_with_TheOddsAPI_and_Airtable/README.md",
+    "summary": "Automates the retrieval of betting data from TheOddsAPI and stores results in Airtable.",
+    "inputs": ["Schedule Triggers"],
+    "nodes_used": [
+      "Schedule Triggers",
+      "HTTP Requests",
+      "Sticky Notes",
+      "Other Nodes"
+    ],
+    "outputs": ["Betting odds and results stored in Airtable"],
+    "processed_at": "09/06/2025 17:22"
+  },
+  {
+    "input_workflow_name": "6yNJxDjV9rSiOkj9_AI_Agent_with_charts_capabilities_using_OpenAI_Structured_Output.json",
+    "output_workflow_name": "AI_Agent_with_charts_capabilities_using_OpenAI_Structured_Output",
+    "output_workflow_file_path": "analyzed_workflows/AI_Agent_with_charts_capabilities_using_OpenAI_Structured_Output/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI_Agent_with_charts_capabilities_using_OpenAI_Structured_Output/README.md",
+    "summary": "AI agent workflow that generates charts based on user queries using OpenAI's structured output and integrated tools.",
+    "inputs": [],
+    "nodes_used": [
+      "OpenAI Chat Model",
+      "Window Buffer Memory",
+      "Generate a chart",
+      "Execute \"Generate a chart\" tool",
+      "OpenAI - Generate Chart definition with Structured Output"
+    ],
+    "outputs": ["Charts generated based on user queries"],
+    "processed_at": "09/06/2025 17:22"
   }
 ]
