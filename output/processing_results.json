@@ -2038,4 +2038,81 @@
     "outputs": ["New YouTube videos saved as bookmarks in Raindrop"],
     "processed_at": "09/06/2025 19:51"
   }
+  ,{
+    "input_workflow_name": "7DPLpEkww5Uctcml_get_a_web_page.json",
+    "output_workflow_name": "Get a Web Page",
+    "output_workflow_file_path": "analyzed_workflows/Get_a_Web_Page/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Get_a_Web_Page/README.md",
+    "summary": "Fetches a web page using FireCrawl API and processes the content for downstream automation.",
+    "inputs": ["n8n-nodes-base.executeWorkflowTrigger"],
+    "nodes_used": ["n8n-nodes-base.executeWorkflowTrigger", "n8n-nodes-base.httpRequest", "n8n-nodes-base.set", "n8n-nodes-base.stickyNote"],
+    "outputs": ["Web page content as JSON"],
+    "processed_at": "10/06/2025 13:15"
+  },
+  {
+    "input_workflow_name": "7Gw4IfHaVMDSj70o_Convert_Squarespace_Profiles_to_Shopify_Customers_in_Google_Sheets.json",
+    "output_workflow_name": "Convert Squarespace Profiles to Shopify Customers in Google Sheets",
+    "output_workflow_file_path": "analyzed_workflows/Convert_Squarespace_Profiles_to_Shopify_Customers_in_Google_Sheets/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Convert_Squarespace_Profiles_to_Shopify_Customers_in_Google_Sheets/README.md",
+    "summary": "Automates conversion of Squarespace profile data to Shopify customer records and saves them in Google Sheets.",
+    "inputs": ["n8n-nodes-base.webhook"],
+    "nodes_used": ["n8n-nodes-base.webhook", "n8n-nodes-base.googleSheets"],
+    "outputs": ["Shopify customer data in Google Sheets"],
+    "processed_at": "10/06/2025 13:15"
+  },
+  {
+    "input_workflow_name": "7cXvgkl9170QXzT2_RAG_Workflow_For_Company_Documents_stored_in_Google_Drive.json",
+    "output_workflow_name": "RAG Workflow For Company Documents stored in Google Drive",
+    "output_workflow_file_path": "analyzed_workflows/RAG_Workflow_For_Company_Documents_stored_in_Google_Drive/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/RAG_Workflow_For_Company_Documents_stored_in_Google_Drive/README.md",
+    "summary": "Indexes and retrieves company documents from Google Drive for RAG-based question answering using Pinecone and Google Gemini.",
+    "inputs": ["n8n-nodes-base.googleDriveTrigger"],
+    "nodes_used": ["n8n-nodes-base.googleDriveTrigger", "n8n-nodes-base.googleDrive", "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini", "@n8n/n8n-nodes-langchain.vectorStorePinecone", "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter", "@n8n/n8n-nodes-langchain.toolVectorStore", "@n8n/n8n-nodes-langchain.agent", "n8n-nodes-base.stickyNote"],
+    "outputs": ["AI-powered answers to employee questions using company docs"],
+    "processed_at": "10/06/2025 13:15"
+  },
+  {
+    "input_workflow_name": "7eyNPahKcCuqK39V_DeepSeek_v3.1.json",
+    "output_workflow_name": "DeepSeek v3.1",
+    "output_workflow_file_path": "analyzed_workflows/DeepSeek_v3.1/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/DeepSeek_v3.1/README.md",
+    "summary": "Automates content creation and publishing using Notion, AI Task Planner, WordPress, and Gmail integration.",
+    "inputs": ["n8n-nodes-base.notionTrigger"],
+    "nodes_used": ["n8n-nodes-base.notionTrigger", "@n8n/n8n-nodes-langchain.agent", "n8n-nodes-base.gmailTool", "n8n-nodes-base.wordpressTool", "n8n-nodes-mcp.mcpClientTool", "n8n-nodes-base.set", "n8n-nodes-base.stickyNote"],
+    "outputs": ["SEO-optimized blog post draft, email notification, Notion update"],
+    "processed_at": "10/06/2025 13:15"
+  },
+  {
+    "input_workflow_name": "7fdJOvYNILCr24fH_Read_sitemap_and_filter_URLs.json",
+    "output_workflow_name": "Read sitemap and filter URLs",
+    "output_workflow_file_path": "analyzed_workflows/Read_sitemap_and_filter_URLs/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Read_sitemap_and_filter_URLs/README.md",
+    "summary": "Reads a sitemap.xml, converts it to JSON, and filters URLs based on custom logic (default: PDFs only).",
+    "inputs": ["n8n-nodes-base.manualTrigger"],
+    "nodes_used": ["n8n-nodes-base.manualTrigger", "n8n-nodes-base.set", "n8n-nodes-base.httpRequest", "n8n-nodes-base.xml", "n8n-nodes-base.splitOut", "n8n-nodes-base.filter", "n8n-nodes-base.stickyNote"],
+    "outputs": ["Filtered URLs from sitemap"],
+    "processed_at": "10/06/2025 13:15"
+  },
+  {
+    "input_workflow_name": "7gRbzEzCuOzQKn4M_SHEETS_RAG.json",
+    "output_workflow_name": "SHEETS RAG",
+    "output_workflow_file_path": "analyzed_workflows/SHEETS_RAG/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/SHEETS_RAG/README.md",
+    "summary": "Automates ingestion, schema inference, and AI-powered querying of Google Sheets data using Gemini and Langchain.",
+    "inputs": ["n8n-nodes-base.googleDriveTrigger"],
+    "nodes_used": ["n8n-nodes-base.googleDriveTrigger", "n8n-nodes-base.set", "n8n-nodes-base.code", "@n8n/n8n-nodes-langchain.toolWorkflow", "@n8n/n8n-nodes-langchain.lmChatGoogleGemini"],
+    "outputs": ["SQL and AI-powered answers over Google Sheets data"],
+    "processed_at": "10/06/2025 13:15"
+  },
+  {
+    "input_workflow_name": "7i2RqqCYaKHUt4n3_Google_Site_Index_-_sitemap.xml_example.json",
+    "output_workflow_name": "Google Site Index - sitemap.xml example",
+    "output_workflow_file_path": "analyzed_workflows/Google_Site_Index_-_sitemap.xml_example/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Google_Site_Index_-_sitemap.xml_example/README.md",
+    "summary": "Extracts URLs from a sitemap.xml, checks Google Indexing API status, and notifies Google of updates using manual or scheduled triggers.",
+    "inputs": ["n8n-nodes-base.manualTrigger", "n8n-nodes-base.scheduleTrigger"],
+    "nodes_used": ["n8n-nodes-base.manualTrigger", "n8n-nodes-base.scheduleTrigger", "n8n-nodes-base.splitOut", "n8n-nodes-base.httpRequest", "n8n-nodes-base.splitInBatches", "n8n-nodes-base.if", "n8n-nodes-base.wait", "n8n-nodes-base.stickyNote"],
+    "outputs": ["Google Indexing API notifications for new/updated URLs"],
+    "processed_at": "10/06/2025 13:15"
+  }
 ]
