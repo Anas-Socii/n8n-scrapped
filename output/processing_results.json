@@ -2348,5 +2348,91 @@
       "Cleaned LinkedIn usernames"
     ],
     "processed_at": "10/06/2025 15:59"
+  },
+  {
+    "input_workflow_name": "8EmNhftXznAGV3dR_Phishing_analysis__URLScan_io_and_Virustotal_.json",
+    "output_workflow_name": "Phishing analysis: URLScan.io and Virustotal",
+    "output_workflow_file_path": "analyzed_workflows/Phishing_analysis_URLScan_io_and_Virustotal/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Phishing_analysis_URLScan_io_and_Virustotal/README.md",
+    "summary": "Automates the analysis of URLs for phishing using URLScan.io and Virustotal integrations.",
+    "inputs": ["Manual", "Webhook"],
+    "nodes_used": [
+      "HTTP Request",
+      "Function/Code",
+      "Set/Format",
+      "Notification/Output Node",
+      "Sticky Note"
+    ],
+    "outputs": [
+      "Aggregated phishing analysis results for submitted URLs",
+      "Report or notification"
+    ],
+    "processed_at": "10/06/2025 17:22"
+  },
+  {
+    "input_workflow_name": "8FLJK1NsduFL0Y5P_Qualify_new_leads_in_Google_Sheets_via_OpenAI's_GPT-4.json",
+    "output_workflow_name": "Qualify Leads with Google Sheets and GPT-4",
+    "output_workflow_file_path": "analyzed_workflows/Qualify_Leads_with_Google_Sheets_and_GPT-4/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Qualify_Leads_with_Google_Sheets_and_GPT-4/README.md",
+    "summary": "Automatically qualifies new leads in a Google Sheet using OpenAI's GPT-4 and updates the sheet with the results.",
+    "inputs": ["Google Sheets Trigger (on new row added, every minute)"],
+    "nodes_used": ["Google Sheets Trigger", "OpenAI", "Set", "Merge", "Google Sheets", "Sticky Notes"],
+    "outputs": ["Updates Google Sheet with lead qualification status and explanation."],
+    "processed_at": "10/06/2025 18:01"
+  },
+  {
+    "input_workflow_name": "8_Get_only_new_RSS_with_Photo.json",
+    "output_workflow_name": "Get Only New RSS with Photo",
+    "output_workflow_file_path": "analyzed_workflows/Get_Only_New_RSS_with_Photo/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Get_Only_New_RSS_with_Photo/README.md",
+    "summary": "Fetches new RSS feed items from The Verge every 5 minutes, extracts image and metadata, and outputs only unseen items.",
+    "inputs": ["Cron (every 5 minutes)"],
+    "nodes_used": ["Cron", "RSS Feed Read", "Set", "Function", "HTML Extract"],
+    "outputs": ["New RSS items with images and metadata (title, subtitle, author, URL, date, content)."],
+    "processed_at": "10/06/2025 18:01"
+  },
+  {
+    "input_workflow_name": "8_Sample_Spotify.json",
+    "output_workflow_name": "Sample Spotify Track Info",
+    "output_workflow_file_path": "analyzed_workflows/Sample_Spotify_Track_Info/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Sample_Spotify_Track_Info/README.md",
+    "summary": "Manually retrieves information about a specific Spotify track using the n8n Spotify node.",
+    "inputs": ["Manual Trigger (user clicks 'execute')"],
+    "nodes_used": ["Manual Trigger", "Spotify"],
+    "outputs": ["Spotify track information (all metadata returned by the Spotify node)."],
+    "processed_at": "10/06/2025 18:13"
+  },
+  {
+    "input_workflow_name": "8_workflow_8.json",
+    "output_workflow_name": "Error Notification via Mailgun",
+    "output_workflow_file_path": "analyzed_workflows/Error_Notification_via_Mailgun/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Error_Notification_via_Mailgun/README.md",
+    "summary": "Sends an email notification with error details whenever any workflow fails in n8n.",
+    "inputs": ["Error Trigger (fires when any workflow fails)"],
+    "nodes_used": ["Error Trigger", "Mailgun"],
+    "outputs": ["Email notification with error details (error message and stack trace)."],
+    "processed_at": "10/06/2025 18:13"
+  },
+  {
+    "input_workflow_name": "8jDt77Y4FaV6ARYG_🤖_Telegram_Messaging_Agent_for_Text_Audio_Images.json",
+    "output_workflow_name": "Telegram Messaging Agent for Text/Audio/Images",
+    "output_workflow_file_path": "analyzed_workflows/Telegram_Messaging_Agent_Text_Audio_Images/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Telegram_Messaging_Agent_Text_Audio_Images/README.md",
+    "summary": "A Telegram bot workflow that receives, classifies, and processes text, audio, and image messages using n8n, OpenAI, and Telegram nodes.",
+    "inputs": ["Webhook (receives Telegram bot events)"],
+    "nodes_used": ["Webhook", "If", "Telegram", "HTTP Request", "Set", "OpenAI (LangChain)", "ConvertToFile", "ExtractFromFile", "TextClassifier", "Sticky Notes"],
+    "outputs": ["Telegram messages (text, audio, image replies, error messages, task confirmations, etc.)"],
+    "processed_at": "10/06/2025 18:13"
+  },
+  {
+    "input_workflow_name": "8jdT4wXjV5NljqKa_Enhance_Chat_Responses_with_Real-Time_Search_Data_via_Bright_Data_&_Gemini_AI.json",
+    "output_workflow_name": "Enhance Chat Responses with Real-Time Search Data via Bright Data & Gemini AI",
+    "output_workflow_file_path": "analyzed_workflows/Enhance_Chat_Responses_with_Real-Time_Search_Data/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Enhance_Chat_Responses_with_Real-Time_Search_Data/README.md",
+    "summary": "Enhances chat responses by integrating real-time search data from Bright Data's search tools and Google Gemini AI.",
+    "inputs": ["Chat Trigger (on new chat message)"],
+    "nodes_used": ["Chat Trigger", "LangChain Agent", "Google Gemini", "MCP Client/Tool (Bright Data)", "HTTP Request", "Memory Buffer", "Set", "Manual Trigger", "Sticky Notes"],
+    "outputs": ["Enriched chat responses (using real-time search data and Gemini AI)", "Webhook notifications for responses"],
+    "processed_at": "10/06/2025 18:39"
   }
 ]
