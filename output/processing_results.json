@@ -2258,5 +2258,95 @@
       "Skipped files (empty or n8n account API) are not restored"
     ],
     "processed_at": "10/06/2025 13:15"
+  },
+  {
+    "input_workflow_name": "7Pw91QNT4UGeNmL5_Customer_and_Sales_Support.json",
+    "output_workflow_name": "Customer and Sales Support",
+    "output_workflow_file_path": "analyzed_workflows/Customer_and_Sales_Support/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Customer_and_Sales_Support/README.md",
+    "summary": "Automates customer and sales support for 'My Apple Case' by handling chat-based queries, placing orders, and updating inventory in Google Sheets using AI-powered agent logic.",
+    "inputs": ["@n8n/n8n-nodes-langchain.chatTrigger"],
+    "nodes_used": [
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "n8n-nodes-base.googleSheetsTool",
+      "@n8n/n8n-nodes-langchain.agent"
+    ],
+    "outputs": [
+      "Orders appended to Google Sheets",
+      "Inventory updated in Google Sheets",
+      "AI-powered chat responses to customers"
+    ],
+    "processed_at": "10/06/2025 14:15"
+  },
+  {
+    "input_workflow_name": "7Qa2mH7PnDxy7Qat_Generate_Exam_Questions.json",
+    "output_workflow_name": "Generate Exam Questions",
+    "output_workflow_file_path": "analyzed_workflows/Generate_Exam_Questions/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Generate_Exam_Questions/README.md",
+    "summary": "Automates the generation, embedding, and storage of exam questions using AI models and vector databases for downstream retrieval and analysis.",
+    "inputs": ["n8n-nodes-base.manualTrigger"],
+    "nodes_used": [
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.httpRequest",
+      "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "@n8n/n8n-nodes-langchain.textSplitterTokenSplitter",
+      "n8n-nodes-base.googleDocs",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.convertToFile",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "n8n-nodes-base.splitInBatches",
+      "@n8n/n8n-nodes-langchain.outputParserItemList",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "outputs": [
+      "Exam questions embedded and stored in Qdrant vector store",
+      "Markdown and text file versions of questions",
+      "Processed Google Docs content"
+    ],
+    "processed_at": "10/06/2025 14:15"
+  },
+  {
+    "input_workflow_name": "7ZIG5xxEACMBgj4Z_Create_Threads_on_Bluesky.json",
+    "output_workflow_name": "Create Threads on Bluesky",
+    "output_workflow_file_path": "analyzed_workflows/Create_Threads_on_Bluesky/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Create_Threads_on_Bluesky/README.md",
+    "summary": "Automates the process of creating threads (posts and replies) on the Bluesky social platform, including credential setup, authentication, and structured thread posting.",
+    "inputs": ["n8n-nodes-base.scheduleTrigger"],
+    "nodes_used": [
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "outputs": ["Posts and threaded replies on Bluesky"],
+    "processed_at": "10/06/2025 14:15"
+  },
+  {
+    "input_workflow_name": "7wwY8wfZdNpL83QQ_LinkedIn_Leads_Scraping_&_Enrichment_(Main).json",
+    "output_workflow_name": "LinkedIn Leads Scraping & Enrichment (Main)",
+    "output_workflow_file_path": "analyzed_workflows/LinkedIn_Leads_Scraping_Enrichment_Main/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/LinkedIn_Leads_Scraping_Enrichment_Main/README.md",
+    "summary": "Automates the scraping of LinkedIn leads and enrichment of their data using form submissions and Google Sheets triggers, with AI-powered processing and enrichment.",
+    "inputs": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.googleSheetsTrigger"
+    ],
+    "nodes_used": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "outputs": [
+      "Enriched lead data in Google Sheets",
+      "Cleaned LinkedIn usernames"
+    ],
+    "processed_at": "10/06/2025 15:59"
   }
 ]
