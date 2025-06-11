@@ -14,7 +14,7 @@ const path = require('path');
 const Airtable = require('airtable');
 
 // Airtable configuration - replace with your API key
-const AIRTABLE_API_KEY = 'patEV9GtZ19cPiCjH.45d63b5fb2d828e82d62f6d5f2fa56534c91eb731f3c7f452c7e5da00723fc0d';
+const AIRTABLE_API_KEY = 'YOUR_API_KEY_HERE';
 const BASE_ID = 'app4u2MTevIg7o8np';
 const TABLE_NAME = 'n8n-workflows-analyzed';
 
