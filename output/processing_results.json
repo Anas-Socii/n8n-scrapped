@@ -1,0 +1,85 @@
+[
+  {
+    "input_workflow_name": "8Sbrzc7Au3ZGf62p_Publish_Videos_&_Images_-_Blotato.json",
+    "output_workflow_name": "Social Media Multi-Platform Publisher",
+    "output_workflow_file_path": "analyzed_workflows/Social Media Multi-Platform Publisher/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Social Media Multi-Platform Publisher/README.md",
+    "summary": "Automates publishing videos and images to multiple social media platforms using Blotato as the backend.",
+    "inputs": ["Manual"],
+    "nodes_used": ["Airtable", "Set", "HTTP Request", "Sticky Note"],
+    "outputs": ["Instagram Post", "Facebook Post", "LinkedIn Post", "TikTok Post", "Pinterest Post", "YouTube Post", "Threads Post", "Twitter Post", "Bluesky Post", "Airtable Update"],
+    "processed_at": "11/06/2025 22:07"
+  }
+  ,
+  {
+    "input_workflow_name": "8n0VYmvJgISwezyz_Build_your_first_AI_MCP_Server.json",
+    "output_workflow_name": "Build Your First AI MCP Server",
+    "output_workflow_file_path": "analyzed_workflows/Build Your First AI MCP Server/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Build Your First AI MCP Server/README.md",
+    "summary": "Demonstrates how to build an AI-powered MCP (Multi-Channel Platform) server for workflow automation, integrating Google Calendar and custom text-processing tools.",
+    "inputs": ["Chat message received", "Webhook (MCP trigger)", "Executed by another workflow"],
+    "nodes_used": ["AI Agent", "Google Calendar Tool", "Switch", "Set", "MCP Trigger", "Execute Workflow Trigger", "Tool Workflow", "Chat Trigger"],
+    "outputs": ["Google Calendar events created", "updated", "deleted", "searched", "Responses to chat or workflow requests with processed text or generated data"],
+    "processed_at": "11/06/2025 22:07"
+  }
+  ,
+  {
+    "input_workflow_name": "8tusZTTtcyaiznEG_🤖_AI_Powered_RAG_Chatbot_for_Your_Docs_+_Google_Drive_+_Gemini_+_Qdrant.json",
+    "output_workflow_name": "AI Powered RAG Chatbot for Docs and Google Drive",
+    "output_workflow_file_path": "analyzed_workflows/AI Powered RAG Chatbot for Docs and Google Drive/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI Powered RAG Chatbot for Docs and Google Drive/README.md",
+    "summary": "Provides a Retrieval-Augmented Generation (RAG) chatbot that can search, analyze, and answer questions over documents from Google Drive using Gemini, Qdrant, and OpenAI embeddings.",
+    "inputs": ["Manual trigger", "Google Drive folder selection"],
+    "nodes_used": ["Google Drive", "Extract From File", "Information Extractor", "OpenAI Embeddings", "Qdrant Vector Store", "Gemini Chat Model", "Text Splitter", "Set", "Wait", "Code"],
+    "outputs": ["Answers to user queries", "Document metadata and insights"],
+    "processed_at": "11/06/2025 22:07"
+  }
+  ,
+  {
+    "input_workflow_name": "8v4dynjkHSLVGJSG_Crypto_News_&_Sentiment.json",
+    "output_workflow_name": "Crypto News and Sentiment",
+    "output_workflow_file_path": "analyzed_workflows/Crypto News and Sentiment/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Crypto News and Sentiment/README.md",
+    "summary": "Aggregates crypto news from multiple sources and analyzes market sentiment for a given cryptocurrency or company, delivering concise summaries via Telegram.",
+    "inputs": ["Telegram message (crypto or company name)"],
+    "nodes_used": ["Telegram Trigger", "Set", "LangChain Agent", "RSS Feed Read", "Merge", "Code", "OpenAI Chat Model", "Telegram", "Sticky Note"],
+    "outputs": ["Summarized news and sentiment analysis delivered to Telegram"],
+    "processed_at": "11/06/2025 22:10"
+  }
+  ,
+  {
+    "input_workflow_name": "9Or3kzIEI2tskRyR_Google_Trend_Data_Extract,_Summarization_with_Bright_Data_&_Google_Gemini.json",
+    "output_workflow_name": "Google Trend Data Extract and Summarization",
+    "output_workflow_file_path": "analyzed_workflows/Google Trend Data Extract and Summarization/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Google Trend Data Extract and Summarization/README.md",
+    "summary": "Extracts, processes, and summarizes Google Trends data using Bright Data's Web Unlocker and Google Gemini AI, with results sent via webhook and Gmail.",
+    "inputs": ["Manual trigger"],
+    "nodes_used": ["Manual Trigger", "Set", "HTTP Request (Bright Data)", "Markdown to Textual Data Extractor", "Google Gemini Chat Model", "Structured Data Extractor", "Summarization Chain", "Webhook Notification", "Gmail", "Sticky Note"],
+    "outputs": ["Summarized Google Trends data delivered via webhook and Gmail"],
+    "processed_at": "11/06/2025 22:10"
+  }
+  ,
+  {
+    "input_workflow_name": "9_Coffee_Bot_(Matrix).json",
+    "output_workflow_name": "Coffee Bot (Matrix)",
+    "output_workflow_file_path": "analyzed_workflows/Coffee Bot (Matrix)/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Coffee Bot (Matrix)/README.md",
+    "summary": "Automates weekly virtual coffee group assignments and announcements in a Matrix chat room.",
+    "inputs": ["Weekly cron trigger (every Monday at 10:00)"] ,
+    "nodes_used": ["Cron Trigger", "Matrix (Greetings)", "Matrix (Employees in coffee chat channel)", "Function (Divide into groups)", "Matrix (Announce groups)"],
+    "outputs": ["Group assignments posted to the Matrix chat room"],
+    "processed_at": "11/06/2025 22:12"
+  }
+  ,
+  {
+    "input_workflow_name": "9nBQ1BfwxLhuzTcK_google_drive_to_instagram,_tiktok_and_youtube.json",
+    "output_workflow_name": "Google Drive to Instagram, TikTok and YouTube",
+    "output_workflow_file_path": "analyzed_workflows/Google Drive to Instagram, TikTok and YouTube/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Google Drive to Instagram, TikTok and YouTube/README.md",
+    "summary": "Automates the process of uploading videos from Google Drive to Instagram, TikTok, and YouTube, including AI-generated descriptions and error notifications.",
+    "inputs": ["Google Drive file creation in a specific folder"],
+    "nodes_used": ["Google Drive Trigger", "Google Drive", "OpenAI (Get Audio from Video)", "OpenAI (Generate Description)", "Read/Write Binary File", "HTTP Request", "Telegram", "If", "Sticky Note"],
+    "outputs": ["Videos uploaded to Instagram, TikTok, and YouTube with AI-generated descriptions", "Error notifications sent via Telegram"],
+    "processed_at": "11/06/2025 22:12"
+  }
+]

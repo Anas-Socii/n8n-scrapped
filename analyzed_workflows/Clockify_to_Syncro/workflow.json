@@ -1,0 +1,85 @@
+{
+  "id": "3",
+  "name": "Clockify to Syncro",
+  "nodes": [
+    {
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [280, 350],
+      "webhookId": "82b654d7-aeb2-4cc1-97a8-0ebd1a729202",
+      "parameters": {
+        "path": "82b654d7-aeb2-4cc1-97a8-0ebd1a729202",
+        "options": {},
+        "httpMethod": "POST",
+        "responseData": "allEntries",
+        "responseMode": "lastNode"
+      },
+      "typeVersion": 1
+    },
+    {
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [1830, 350],
+      "parameters": {
+        "range": "A:B",
+        "options": { "valueInputMode": "USER_ENTERED" },
+        "sheetId": "xxx",
+        "operation": "append"
+      },
+      "credentials": { "googleApi": "Google" },
+      "typeVersion": 1
+    },
+    {
+      "name": "ForGoogle",
+      "type": "n8n-nodes-base.set",
+      "position": [1650, 350],
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "Syncro", "value": "={{$json[\"id\"]}}" },
+            {
+              "name": "Clockify",
+              "value": "={{$node[\"Webhook\"].json[\"body\"][\"id\"]}}"
+            }
+          ]
+        },
+        "options": {},
+        "keepOnlySet": true
+      },
+      "typeVersion": 1
+    },
+    {
+      "name": "ForSyncro",
+      "type": "n8n-nodes-base.set",
+      "position": [730, 350],
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id",
+              "value": "={{ $json[\"body\"][\"project\"][\"name\"].match(/[(d+)]/)[1] }}"
+            }
+          ]
+        },
+        "options": {},
+        "keepOnlySet": true
+      },
+      "typeVersion": 1
+    },
+    {
+      "name": "FindMatch",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [1130, 350],
+      "parameters": {
+        "range": "A:B",
+        "options": {
+          "valueRenderMode": "UNFORMATTED_VALUE",
+          "returnAllMatches": true
+        },
+        "sheetId": "xxx"
+      },
+      "credentials": { "googleApi": "Google" },
+      "typeVersion": 1
+    }
+  ]
+}
