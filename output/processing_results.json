@@ -82,4 +82,64 @@
     "outputs": ["Videos uploaded to Instagram, TikTok, and YouTube with AI-generated descriptions", "Error notifications sent via Telegram"],
     "processed_at": "11/06/2025 22:12"
   }
+  ,
+  {
+    "input_workflow_name": "11_Plex_Automatic_Throttler.json",
+    "output_workflow_name": "Plex Automatic Throttler",
+    "output_workflow_file_path": "analyzed_workflows/Plex_Automatic_Throttler/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Plex_Automatic_Throttler/README.md",
+    "summary": "Automatically manages and throttles Plex-related network activity based on playback events, ensuring optimal bandwidth usage.",
+    "inputs": ["Webhook (Plex playback events)", "HTTP POST"],
+    "nodes_used": ["Webhook", "Switch", "If", "HTTP Request", "Set", "NoOp"],
+    "outputs": ["Adjusts qBittorrent speed limits via HTTP requests"],
+    "processed_at": "12/06/2025 17:53"
+  }
+  ,
+  {
+    "input_workflow_name": "11_What_To_Eat.json",
+    "output_workflow_name": "What To Eat",
+    "output_workflow_file_path": "analyzed_workflows/What_To_Eat/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/What_To_Eat/README.md",
+    "summary": "Sends daily personalized recipe suggestions via email based on user-defined dietary criteria and preferences.",
+    "inputs": ["Cron (scheduled daily at 10:00 AM)", "User dietary preferences"],
+    "nodes_used": ["Cron", "Set", "Function", "HTTP Request", "EmailSend", "Create Email Body in HTML"],
+    "outputs": ["Email with a curated list of recipes"],
+    "processed_at": "12/06/2025 17:53"
+  }
+  ,
+  {
+    "input_workflow_name": "11_workflow_11.json",
+    "output_workflow_name": "Google Sheets to Dropbox XLS Exporter",
+    "output_workflow_file_path": "analyzed_workflows/11_workflow_11/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/11_workflow_11/README.md",
+    "summary": "Automatically exports data from a Google Sheet to an XLS file and uploads it to Dropbox every 15 minutes.",
+    "inputs": ["Interval (every 15 minutes)", "Google Sheets data"],
+    "nodes_used": ["Interval", "Google Sheets", "Spreadsheet File", "Dropbox"],
+    "outputs": ["XLS file uploaded to Dropbox"],
+    "processed_at": "12/06/2025 17:58"
+  }
+  ,
+  {
+    "input_workflow_name": "9r4T5kELOXAV8L1F_3D_Figurine_Orthographic_Views_with_Midjourney_and_GPT-4o-Image_API.json",
+    "output_workflow_name": "3D Figurine Orthographic Views with Midjourney and GPT-4o-Image API",
+    "output_workflow_file_path": "analyzed_workflows/3D_Figurine_Orthographic_Views_with_Midjourney_and_GPT-4o-Image_API/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/3D_Figurine_Orthographic_Views_with_Midjourney_and_GPT-4o-Image_API/README.md",
+    "summary": "Generates orthographic views of 3D figurines using Midjourney and GPT-4o-Image API, providing AI-generated images and URLs for further use.",
+    "inputs": ["Manual Trigger (when clicking 'Test workflow')"],
+    "nodes_used": ["Manual Trigger", "HTTP Request", "If", "Wait", "Code"],
+    "outputs": ["URLs to generated images of 3D figurines"],
+    "processed_at": "12/06/2025 17:58"
+  }
+  ,
+  {
+    "input_workflow_name": "9w5vu5VmXxpdBLWi_Send_Daily_Birthday_Reminders_from_Google_Contacts_to_Slack.json",
+    "output_workflow_name": "Send Daily Birthday Reminders from Google Contacts to Slack",
+    "output_workflow_file_path": "analyzed_workflows/Send_Daily_Birthday_Reminders_from_Google_Contacts_to_Slack/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Send_Daily_Birthday_Reminders_from_Google_Contacts_to_Slack/README.md",
+    "summary": "Automates the process of sending daily birthday reminders from Google Contacts to a designated Slack channel.",
+    "inputs": ["Schedule Trigger (daily)", "Google Contacts data"],
+    "nodes_used": ["Schedule Trigger", "Google Contacts", "Filter", "If", "Slack", "Sticky Note"],
+    "outputs": ["Birthday reminder messages sent to Slack"],
+    "processed_at": "12/06/2025 17:58"
+  }
 ]
