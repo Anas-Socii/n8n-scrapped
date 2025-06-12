@@ -249,8 +249,7 @@
     "nodes_used": ["Onfleet Trigger", "Slack"],
     "outputs": ["Slack message announcing a new driver signup"],
     "processed_at": "12/06/2025 18:20"
-  }
-  ,
+  },
   {
     "input_workflow_name": "14_Update_Crypto_Values.json",
     "output_workflow_name": "Update Crypto Values",
@@ -297,5 +296,86 @@
     "nodes_used": ["Manual Trigger", "Cron", "ExecuteCommand (Export Workflows)", "ExecuteCommand (Export Credentials)", "ExecuteCommand (git add/commit/push)"],
     "outputs": ["Workflows and credentials exported and pushed to Gitlab repository"],
     "processed_at": "12/06/2025 18:34"
+  }
+  ,
+  {
+    "input_workflow_name": "16_User_Request_Management.json",
+    "output_workflow_name": "User Request Management",
+    "output_workflow_file_path": "analyzed_workflows/User_Request_Management/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/User_Request_Management/README.md",
+    "summary": "This workflow manages user requests submitted via a Typeform form and organizes them in ClickUp based on request type and urgency.",
+    "inputs": ["Typeform Trigger (form submission)"],
+    "nodes_used": ["Typeform Trigger", "Switch", "Set", "ClickUp"],
+    "outputs": ["New task created in ClickUp with all request details"],
+    "processed_at": "12/06/2025 19:09"
+  },
+  {
+    "input_workflow_name": "17j2efAe10uXRc4p_Auto_WordPress_Blog_Generator_(GPT_+_Postgres_+_WP_Media).json",
+    "output_workflow_name": "Auto WordPress Blog Generator (GPT + Postgres + WP Media)",
+    "output_workflow_file_path": "analyzed_workflows/Auto_WordPress_Blog_Generator_GPT_Postgres_WP_Media/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Auto_WordPress_Blog_Generator_GPT_Postgres_WP_Media/README.md",
+    "summary": "Automates the creation and publishing of WordPress blog posts using AI-generated content, category selection, and media management, leveraging GPT models, Postgres, and WP Media integration.",
+    "inputs": ["Schedule Trigger (runs at defined intervals)", "Category selection"],
+    "nodes_used": ["Schedule Trigger", "OpenAI Chat Model", "HTTP Request", "Media Upload to WP", "Merge", "Code", "Sticky Note"],
+    "outputs": ["Published WordPress blog post with AI-generated content and featured media"],
+    "processed_at": "12/06/2025 19:31"
+  },
+  {
+    "input_workflow_name": "18_Gender_Inclusive_Language.json",
+    "output_workflow_name": "Gender Inclusive Language",
+    "output_workflow_file_path": "analyzed_workflows/Gender_Inclusive_Language/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Gender_Inclusive_Language/README.md",
+    "summary": "Detects and suggests gender-inclusive alternatives in chat messages, promoting inclusive communication in Mattermost channels.",
+    "inputs": ["Webhook (POST request with chat message data)"] ,
+    "nodes_used": ["Webhook", "IF", "Mattermost", "NoOp"],
+    "outputs": ["Automated message in Mattermost suggesting inclusive language (if needed)"] ,
+    "processed_at": "12/06/2025 19:31"
+  },
+  {
+    "input_workflow_name": "19_Snowflake_CSV.json",
+    "output_workflow_name": "Snowflake CSV",
+    "output_workflow_file_path": "analyzed_workflows/Snowflake_CSV/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Snowflake_CSV/README.md",
+    "summary": "Automates the process of downloading a CSV file, extracting user data, and inserting it into a Snowflake database table.",
+    "inputs": ["Manual Trigger (on workflow execution)"] ,
+    "nodes_used": ["Manual Trigger", "HTTP Request", "Spreadsheet File", "Set", "Snowflake"],
+    "outputs": ["User data rows inserted into the Snowflake database"] ,
+    "processed_at": "12/06/2025 19:31"
+  }
+  ,
+  {
+    "input_workflow_name": "21IdmArlNT9LlaFf_Automate_Google_Analytics_Reporting_-_AlexK1919.json",
+    "output_workflow_name": "Automate Google Analytics Reporting - AlexK1919",
+    "output_workflow_file_path": "analyzed_workflows/Automate_Google_Analytics_Reporting_AlexK1919/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Automate_Google_Analytics_Reporting_AlexK1919/README.md",
+    "summary": "Automates the extraction, aggregation, and reporting of Google Analytics data, comparing key metrics across weekly periods and delivering the results via email.",
+    "inputs": ["Manual Trigger (via 'Test workflow')"],
+    "nodes_used": ["Manual Trigger", "Google Analytics", "Sticky Notes", "Set", "Aggregate Data", "Format Data", "Email"],
+    "outputs": ["Aggregated analytics report delivered via email"],
+    "processed_at": "12/06/2025 19:44"
+  }
+  ,
+  {
+    "input_workflow_name": "20_Create,_update_and_get_a_contact_in_Google_Contacts.json",
+    "output_workflow_name": "Create, update and get a contact in Google Contacts",
+    "output_workflow_file_path": "analyzed_workflows/Create_update_and_get_a_contact_in_Google_Contacts/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Create_update_and_get_a_contact_in_Google_Contacts/README.md",
+    "summary": "Automates the process of creating a new contact, updating the contact with organization details, and retrieving the contact's organization information in Google Contacts.",
+    "inputs": ["Manual Trigger (on workflow execution)"] ,
+    "nodes_used": ["Manual Trigger", "Google Contacts", "Google Contacts1", "Google Contacts2"],
+    "outputs": ["Google Contact created, updated, and fetched for organization details"] ,
+    "processed_at": "12/06/2025 19:44"
+  }
+  ,
+  {
+    "input_workflow_name": "21_Upload_video,_create_playlist_and_add_video_to_playlist.json",
+    "output_workflow_name": "Upload video, create playlist and add video to playlist",
+    "output_workflow_file_path": "analyzed_workflows/Upload_video_create_playlist_and_add_video_to_playlist/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Upload_video_create_playlist_and_add_video_to_playlist/README.md",
+    "summary": "Automates the process of uploading a video to YouTube, creating a playlist, and adding the uploaded video to the new playlist using n8n.",
+    "inputs": ["Manual Trigger (on workflow execution)"] ,
+    "nodes_used": ["Manual Trigger", "Read Binary File", "YouTube", "YouTube1", "YouTube2"],
+    "outputs": ["Video uploaded to YouTube", "Playlist created", "Video added to the playlist"] ,
+    "processed_at": "12/06/2025 19:44"
   }
 ]
