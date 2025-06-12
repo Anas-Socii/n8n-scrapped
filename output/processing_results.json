@@ -378,4 +378,130 @@
     "outputs": ["Video uploaded to YouTube", "Playlist created", "Video added to the playlist"] ,
     "processed_at": "12/06/2025 19:44"
   }
+,
+  {
+    "input_workflow_name": "23GPrqZjHnIVvTEa_Backup_n8n_Workflows_to_Bitbucket.json",
+    "output_workflow_name": "Backup n8n Workflows to Bitbucket",
+    "output_workflow_file_path": "analyzed_workflows/Backup_n8n_Workflows_to_Bitbucket/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Backup_n8n_Workflows_to_Bitbucket/README.md",
+    "summary": "This workflow automates daily backups of all n8n workflows to a Bitbucket repository. It retrieves all workflows, checks if each is new or changed, and uploads them to Bitbucket, handling API rate limits and ensuring only necessary uploads are performed.",
+    "inputs": ["Schedule Trigger (daily at 2 AM)", "n8n API credentials", "Bitbucket credentials", "WorkspaceSlug", "RepositorySlug"],
+    "nodes_used": ["Schedule Trigger", "Set", "Get All Workflows", "SplitInBatches", "HTTP Request (Bitbucket)", "IF", "Wait", "Code (Calculate Wait Time)"],
+    "outputs": ["Workflows backed up to Bitbucket repository"],
+    "processed_at": "12/06/2025 20:17"
+  }
+,
+  {
+    "input_workflow_name": "23_Zendesk-to-slack.json",
+    "output_workflow_name": "Zendesk to Slack",
+    "output_workflow_file_path": "analyzed_workflows/Zendesk_to_Slack/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Zendesk_to_Slack/README.md",
+    "summary": "Automates the retrieval of unassigned Zendesk tickets and posts a formatted summary to a Slack channel. Can be triggered manually or on a schedule.",
+    "inputs": ["Manual Trigger", "Cron (scheduled at 16:30)", "Zendesk API credentials", "Slack API credentials"],
+    "nodes_used": ["Manual Trigger", "Cron", "Zendesk", "Function", "Slack"],
+    "outputs": ["Slack message listing unassigned Zendesk tickets with links, statuses, and subjects"],
+    "processed_at": "12/06/2025 20:17"
+  }
+,
+  {
+    "input_workflow_name": "25_Add_subscriber_to_form,_create_tag_and_subscriber_to_the_tag.json",
+    "output_workflow_name": "Add Subscriber to Form, Create Tag, and Add Subscriber to the Tag",
+    "output_workflow_file_path": "analyzed_workflows/Add_Subscriber_and_Tag/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Add_Subscriber_and_Tag/README.md",
+    "summary": "Automates adding a new subscriber to a ConvertKit form, creating a tag, and associating the subscriber with the tag for streamlined audience management.",
+    "inputs": ["Manual Trigger", "ConvertKit API credentials", "Subscriber email address", "Form ID"],
+    "nodes_used": ["Manual Trigger", "ConvertKit", "ConvertKit1", "ConvertKit2"],
+    "outputs": ["New subscriber added to form", "New tag created", "Subscriber associated with new tag"],
+    "processed_at": "12/06/2025 20:17"
+  }
+,
+  {
+    "input_workflow_name": "27_Create_a_release_and_get_all_releases.json",
+    "output_workflow_name": "Create a Release and Get All Releases",
+    "output_workflow_file_path": "analyzed_workflows/Create_Release_and_Get_All_Releases/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Create_Release_and_Get_All_Releases/README.md",
+    "summary": "Automates the creation of a new release in Sentry and retrieves all releases for the specified organization or project. Useful for managing and tracking software releases from n8n.",
+    "inputs": ["Manual Trigger", "Sentry API credentials", "Release version", "Organization/project identifiers"],
+    "nodes_used": ["Manual Trigger", "Sentry.io", "Sentry.io1"],
+    "outputs": ["New release created in Sentry", "List of all releases retrieved from Sentry"],
+    "processed_at": "12/06/2025 20:26"
+  }
+,
+  {
+    "input_workflow_name": "27_workflow_27.json",
+    "output_workflow_name": "Telegram Sticker Checker Workflow",
+    "output_workflow_file_path": "analyzed_workflows/Workflow_27/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Workflow_27/README.md",
+    "summary": "Listens for messages in a Telegram chat and checks if the message contains a sticker. Replies with sticker details if found, or notifies the user if no sticker is present.",
+    "inputs": ["Telegram Trigger", "Telegram API credentials", "Telegram chat messages"],
+    "nodes_used": ["Telegram Trigger", "Look for Sticker (If)", "Return Sticker (Telegram)", "Return no Sticker found (Telegram)"],
+    "outputs": ["Telegram message with sticker details if found", "Telegram message indicating no sticker was found if not"],
+    "processed_at": "12/06/2025 20:26"
+  },
+  {
+    "input_workflow_name": "28_Receive_updates_when_a_subscriber_is_added_through_a_form_in_ConvertKit.json",
+    "output_workflow_name": "Receive updates when a subscriber is added through a form in ConvertKit",
+    "output_workflow_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_is_added_through_a_form_in_ConvertKit/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_is_added_through_a_form_in_ConvertKit/README.md",
+    "summary": "Listens for new subscribers added via a ConvertKit form and triggers an update process.",
+    "inputs": ["ConvertKit Trigger (formSubscribe)", "Webhook"],
+    "nodes_used": ["ConvertKit Trigger"],
+    "outputs": ["Trigger downstream actions"],
+    "processed_at": "12/06/2025 20:39"
+  },
+  {
+    "input_workflow_name": "29P4X9mTSmplnjlJ_AI_Phone_Agent_with_RetellAI.json",
+    "output_workflow_name": "AI Phone Agent with RetellAI",
+    "output_workflow_file_path": "analyzed_workflows/AI_Phone_Agent_with_RetellAI/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/AI_Phone_Agent_with_RetellAI/README.md",
+    "summary": "Implements an AI-powered phone agent that integrates RetellAI, OpenAI, Telegram, Google Calendar, and Qdrant for advanced call handling, analysis, and multi-channel notifications.",
+    "inputs": ["Webhook (RetellAI call events)", "Manual Trigger (for testing)"],
+    "nodes_used": ["Webhook", "OpenAI Chat Model", "Structured Output Parser", "Qdrant Vector Store", "Telegram", "Google Calendar", "Filter", "If", "Set", "Function", "Sticky Note"],
+    "outputs": ["Telegram notifications", "Google Calendar events", "Vector store updates (Qdrant)", "Structured call summaries and actionable tasks"],
+    "processed_at": "12/06/2025 20:44"
+  },
+  {
+    "input_workflow_name": "29_Receive_updates_when_a_subscriber_unsubscribes_in_Customer.io.json",
+    "output_workflow_name": "Receive updates when a subscriber unsubscribes in Customer.io",
+    "output_workflow_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_unsubscribes_in_Customerio/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_unsubscribes_in_Customerio/README.md",
+    "summary": "Listens for unsubscribe events in Customer.io and triggers downstream processes when a subscriber unsubscribes.",
+    "inputs": ["Customer.io Trigger (unsubscribe event)"],
+    "nodes_used": ["Customer.io Trigger"],
+    "outputs": ["Initiates downstream automation or notifications"],
+    "processed_at": "12/06/2025 20:44"
+  },
+  {
+    "input_workflow_name": "29_workflow_29.json",
+    "output_workflow_name": "Typeform to Google Sheets, Slack & Email Workflow",
+    "output_workflow_file_path": "analyzed_workflows/Workflow_29/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Workflow_29/README.md",
+    "summary": "Automates collection of Typeform responses, storing them in Google Sheets and sending Slack/email notifications based on severity.",
+    "inputs": ["Typeform Trigger (formId: UXuY0A)", "Typeform responses"],
+    "nodes_used": ["Typeform Trigger", "Google Sheets", "IF", "Slack", "Send Email"],
+    "outputs": ["Google Sheets row append", "Slack notification (if severity > 7)", "Email notification (if severity > 7)"],
+    "processed_at": "12/06/2025 20:44"
+  },
+  {
+    "input_workflow_name": "30_Receive_updates_when_a_subscriber_is_added_to_a_group_and_strore_the_information_in_Airtable.json",
+    "output_workflow_name": "Receive updates when a subscriber is added to a group and store the information in Airtable",
+    "output_workflow_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_is_added_to_a_group_and_strore_the_information_in_Airtable/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_is_added_to_a_group_and_strore_the_information_in_Airtable/README.md",
+    "summary": "Listens for new subscribers added to a MailerLite group and stores their information in Airtable.",
+    "inputs": ["MailerLite Trigger (subscriber added to group)"],
+    "nodes_used": ["MailerLite Trigger", "Set", "Airtable"],
+    "outputs": ["New record created in Airtable with subscriber information"],
+    "processed_at": "12/06/2025 20:44"
+  },
+  {
+    "input_workflow_name": "30r9acI1XVIIwAMi_mails2notion_V2.json",
+    "output_workflow_name": "mails2notion V2",
+    "output_workflow_file_path": "analyzed_workflows/mails2notion_V2/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/mails2notion_V2/README.md",
+    "summary": "Automates extraction of information from Gmail emails, processes with OpenAI, stores structured data in Airtable and Notion, and supports RAG use cases.",
+    "inputs": ["Gmail (new email received)", "Manual Trigger (for testing)"],
+    "nodes_used": ["Gmail", "OpenAI Chat Model", "Structured Output Parser", "Airtable", "Notion", "Qdrant Vector Store", "Manual Trigger", "Sticky Note"],
+    "outputs": ["Airtable record creation", "Notion updates", "Structured summaries and RAG context storage"],
+    "processed_at": "12/06/2025 20:44"
+  }
 ]
