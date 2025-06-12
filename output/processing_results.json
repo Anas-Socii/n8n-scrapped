@@ -142,4 +142,76 @@
     "outputs": ["Birthday reminder messages sent to Slack"],
     "processed_at": "12/06/2025 17:58"
   }
+  ,
+  {
+    "input_workflow_name": "12_Create_Onfleet_tasks_from_Spreadsheets.json",
+    "output_workflow_name": "Create Onfleet Tasks from Spreadsheets",
+    "output_workflow_file_path": "analyzed_workflows/Create_Onfleet_tasks_from_Spreadsheets/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Create_Onfleet_tasks_from_Spreadsheets/README.md",
+    "summary": "Automates the creation of Onfleet delivery tasks by reading addresses and recipient details from a spreadsheet file.",
+    "inputs": ["Manual or scheduled execution", "Input spreadsheet file (e.g., .xlsx)"],
+    "nodes_used": ["Read Binary File", "Spreadsheet File", "Onfleet"],
+    "outputs": ["Delivery tasks created in Onfleet"],
+    "processed_at": "12/06/2025 18:06"
+  }
+  ,
+  {
+    "input_workflow_name": "12_Find_a_New_Book.json",
+    "output_workflow_name": "Find a New Book",
+    "output_workflow_file_path": "analyzed_workflows/Find_a_New_Book/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Find_a_New_Book/README.md",
+    "summary": "Suggests a random book from Open Library based on a chosen subject and sends the recommendation by email.",
+    "inputs": ["Manual or scheduled execution", "Book subject"],
+    "nodes_used": ["Manual Trigger", "Cron", "Set", "HTTP Request", "If", "Function", "EmailSend"],
+    "outputs": ["Email with a book recommendation or notification if no books are found"],
+    "processed_at": "12/06/2025 18:06"
+  }
+  ,
+  {
+    "input_workflow_name": "13_Creating_an_Onfleet_Task_for_a_new_Shopify_Fulfillment.json",
+    "output_workflow_name": "Creating an Onfleet Task for a new Shopify Fulfillment",
+    "output_workflow_file_path": "analyzed_workflows/Creating_an_Onfleet_Task_for_a_new_Shopify_Fulfillment/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Creating_an_Onfleet_Task_for_a_new_Shopify_Fulfillment/README.md",
+    "summary": "Automatically creates a new Onfleet delivery task whenever a Shopify fulfillment is created.",
+    "inputs": ["Shopify webhook for fulfillments/create"],
+    "nodes_used": ["Shopify Trigger", "Onfleet"],
+    "outputs": ["Delivery task created in Onfleet"],
+    "processed_at": "12/06/2025 18:06"
+  }
+  ,
+  {
+    "input_workflow_name": "13_Mattermost_Webhook.json",
+    "output_workflow_name": "Mattermost Webhook",
+    "output_workflow_file_path": "analyzed_workflows/Mattermost_Webhook/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Mattermost_Webhook/README.md",
+    "summary": "Receives a webhook, fetches a random cocktail recipe, and posts it to a Mattermost channel with an image and instructions.",
+    "inputs": ["HTTP POST webhook (path: /webhook)", "Mattermost channel ID in payload"],
+    "nodes_used": ["Webhook", "HTTP Request", "Mattermost"],
+    "outputs": ["Cocktail recipe message sent to Mattermost channel"],
+    "processed_at": "12/06/2025 18:11"
+  }
+  ,
+  {
+    "input_workflow_name": "13_Receive_updates_when_a_form_is_submitted_in_Mautic,_and_send_a_confirmation_SMS.json",
+    "output_workflow_name": "Receive updates when a form is submitted in Mautic, and send a confirmation SMS",
+    "output_workflow_file_path": "analyzed_workflows/Receive_updates_when_a_form_is_submitted_in_Mautic_and_send_a_confirmation_SMS/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_updates_when_a_form_is_submitted_in_Mautic_and_send_a_confirmation_SMS/README.md",
+    "summary": "Sends a confirmation SMS via Twilio when a form is submitted in Mautic.",
+    "inputs": ["Mautic webhook for form submission (mautic.form_on_submit)", "Form data (name, phone number)"],
+    "nodes_used": ["Mautic Trigger", "Twilio"],
+    "outputs": ["SMS confirmation sent to the phone number provided in the form"],
+    "processed_at": "12/06/2025 18:11"
+  }
+  ,
+  {
+    "input_workflow_name": "13_workflow_13.json",
+    "output_workflow_name": "XML to Dropbox Converter",
+    "output_workflow_file_path": "analyzed_workflows/13_workflow_13/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/13_workflow_13/README.md",
+    "summary": "Fetches XML data from a URL, converts it to JSON, modifies its content, converts it back to XML, and uploads the result to Dropbox.",
+    "inputs": ["HTTP Request (fetches XML from an external URL)", "URL to XML data"],
+    "nodes_used": ["HTTP Request", "XML (To JSON)", "Set", "XML (To XML)", "Dropbox"],
+    "outputs": ["Modified XML file uploaded to Dropbox"],
+    "processed_at": "12/06/2025 18:11"
+  }
 ]
