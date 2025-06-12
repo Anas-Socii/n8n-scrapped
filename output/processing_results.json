@@ -214,4 +214,88 @@
     "outputs": ["Modified XML file uploaded to Dropbox"],
     "processed_at": "12/06/2025 18:11"
   }
+  ,
+  {
+    "input_workflow_name": "14_Activity_Encouragement.json",
+    "output_workflow_name": "Activity Encouragement",
+    "output_workflow_file_path": "analyzed_workflows/Activity_Encouragement/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Activity_Encouragement/README.md",
+    "summary": "Monitors Strava activity and sends encouragement emails to accountability partners if activity goals are not met.",
+    "inputs": ["Daily schedule (Cron)", "Strava activity data", "Accountability settings"],
+    "nodes_used": ["Cron", "Set (Accountability Settings)", "Strava", "If (Check Activity Level)", "NoOp (Enough Activity)", "EmailSend"],
+    "outputs": ["Encouragement email sent to accountability partners if activity is insufficient"],
+    "processed_at": "12/06/2025 18:20"
+  }
+  ,
+  {
+    "input_workflow_name": "14_Add_a_subscriber_to_a_list_and_create_and_send_a_campaign.json",
+    "output_workflow_name": "Add a Subscriber to a List and Create and Send a Campaign",
+    "output_workflow_file_path": "analyzed_workflows/Add_a_subscriber_to_a_list_and_create_and_send_a_campaign/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Add_a_subscriber_to_a_list_and_create_and_send_a_campaign/README.md",
+    "summary": "Adds a subscriber to a Sendy email list and immediately creates and sends a campaign to that list.",
+    "inputs": ["Manual execution (via 'execute')", "Subscriber details (name, email)", "Sendy list ID"],
+    "nodes_used": ["Manual Trigger", "Sendy", "Sendy1"],
+    "outputs": ["Subscriber is added to Sendy list", "Welcome campaign is created and sent to the list"],
+    "processed_at": "12/06/2025 18:20"
+  }
+  ,
+  {
+    "input_workflow_name": "14_Onfleet_Driver_signup_message_in_Slack.json",
+    "output_workflow_name": "Onfleet Driver Signup Message in Slack",
+    "output_workflow_file_path": "analyzed_workflows/Onfleet_Driver_signup_message_in_Slack/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Onfleet_Driver_signup_message_in_Slack/README.md",
+    "summary": "Sends a Slack notification when a new Onfleet driver signs up.",
+    "inputs": ["Onfleet webhook (workerCreated event)"],
+    "nodes_used": ["Onfleet Trigger", "Slack"],
+    "outputs": ["Slack message announcing a new driver signup"],
+    "processed_at": "12/06/2025 18:20"
+  }
+  ,
+  {
+    "input_workflow_name": "14_Update_Crypto_Values.json",
+    "output_workflow_name": "Update Crypto Values",
+    "output_workflow_file_path": "analyzed_workflows/Update_Crypto_Values/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Update_Crypto_Values/README.md",
+    "summary": "Automatically updates cryptocurrency values in an Airtable portfolio using CoinGecko API and logs the total portfolio value.",
+    "inputs": ["Scheduled (Cron: every hour)", "Airtable portfolio entries", "CoinGecko API"],
+    "nodes_used": ["Cron (Run Top of Hour)", "Airtable (Get Portfolio)", "CoinGecko", "Set", "Airtable (Update Values)", "Airtable (Get Portfolio Values)", "Function (Determine Total Value)", "Airtable (Append Portfolio Value)"],
+    "outputs": ["Updated crypto values in Airtable table", "Total portfolio value appended to log"],
+    "processed_at": "12/06/2025 18:34"
+  }
+  ,
+  {
+    "input_workflow_name": "14_extract_swifts.json",
+    "output_workflow_name": "Extract SWIFT Codes",
+    "output_workflow_file_path": "analyzed_workflows/extract_swifts/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/extract_swifts/README.md",
+    "summary": "Scrapes SWIFT code data from theswiftcodes.com for multiple countries and stores the results in MongoDB.",
+    "inputs": ["Manual execution (via 'execute')", "Country list page", "SWIFT code HTML pages"],
+    "nodes_used": ["Manual Trigger", "Create Directory", "HTTP Request", "HTML Extract", "SplitInBatches", "uProc", "Set/Function/FunctionItem", "Wait", "Write/Read Binary File", "MongoDB"],
+    "outputs": ["SWIFT code data for all countries, stored in MongoDB"],
+    "processed_at": "12/06/2025 18:34"
+  }
+  ,
+  {
+    "input_workflow_name": "15_Bubble_Data_Access.json",
+    "output_workflow_name": "Bubble Data Access",
+    "output_workflow_file_path": "analyzed_workflows/Bubble_Data_Access/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Bubble_Data_Access/README.md",
+    "summary": "Fetches user data from a Bubble app using an authenticated API request.",
+    "inputs": ["Manual execution (via 'execute')", "Bubble app API endpoint", "Authentication credentials"],
+    "nodes_used": ["Manual Trigger", "HTTP Request"],
+    "outputs": ["User data from the Bubble app API"],
+    "processed_at": "12/06/2025 18:34"
+  }
+  ,
+  {
+    "input_workflow_name": "15_Tools___Backup_Gitlab.json",
+    "output_workflow_name": "Tools / Backup Gitlab",
+    "output_workflow_file_path": "analyzed_workflows/Tools_Backup_Gitlab/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Tools_Backup_Gitlab/README.md",
+    "summary": "Automates backup of n8n workflows and credentials to a Gitlab repository using scheduled and manual triggers.",
+    "inputs": ["Manual execution (via 'execute')", "Scheduled (Cron: every 6 hours)", "n8n instance with workflows and credentials", "Local git repo and Gitlab credentials"],
+    "nodes_used": ["Manual Trigger", "Cron", "ExecuteCommand (Export Workflows)", "ExecuteCommand (Export Credentials)", "ExecuteCommand (git add/commit/push)"],
+    "outputs": ["Workflows and credentials exported and pushed to Gitlab repository"],
+    "processed_at": "12/06/2025 18:34"
+  }
 ]
