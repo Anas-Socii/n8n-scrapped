@@ -1,507 +1,90 @@
 [
   {
-    "input_workflow_name": "8Sbrzc7Au3ZGf62p_Publish_Videos_&_Images_-_Blotato.json",
-    "output_workflow_name": "Social Media Multi-Platform Publisher",
-    "output_workflow_file_path": "analyzed_workflows/Social Media Multi-Platform Publisher/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Social Media Multi-Platform Publisher/README.md",
-    "summary": "Automates publishing videos and images to multiple social media platforms using Blotato as the backend.",
-    "inputs": ["Manual"],
-    "nodes_used": ["Airtable", "Set", "HTTP Request", "Sticky Note"],
-    "outputs": ["Instagram Post", "Facebook Post", "LinkedIn Post", "TikTok Post", "Pinterest Post", "YouTube Post", "Threads Post", "Twitter Post", "Bluesky Post", "Airtable Update"],
-    "processed_at": "11/06/2025 22:07"
-  }
-  ,
-  {
-    "input_workflow_name": "8n0VYmvJgISwezyz_Build_your_first_AI_MCP_Server.json",
-    "output_workflow_name": "Build Your First AI MCP Server",
-    "output_workflow_file_path": "analyzed_workflows/Build Your First AI MCP Server/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Build Your First AI MCP Server/README.md",
-    "summary": "Demonstrates how to build an AI-powered MCP (Multi-Channel Platform) server for workflow automation, integrating Google Calendar and custom text-processing tools.",
-    "inputs": ["Chat message received", "Webhook (MCP trigger)", "Executed by another workflow"],
-    "nodes_used": ["AI Agent", "Google Calendar Tool", "Switch", "Set", "MCP Trigger", "Execute Workflow Trigger", "Tool Workflow", "Chat Trigger"],
-    "outputs": ["Google Calendar events created", "updated", "deleted", "searched", "Responses to chat or workflow requests with processed text or generated data"],
-    "processed_at": "11/06/2025 22:07"
-  }
-  ,
-  {
-    "input_workflow_name": "8tusZTTtcyaiznEG_🤖_AI_Powered_RAG_Chatbot_for_Your_Docs_+_Google_Drive_+_Gemini_+_Qdrant.json",
-    "output_workflow_name": "AI Powered RAG Chatbot for Docs and Google Drive",
-    "output_workflow_file_path": "analyzed_workflows/AI Powered RAG Chatbot for Docs and Google Drive/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/AI Powered RAG Chatbot for Docs and Google Drive/README.md",
-    "summary": "Provides a Retrieval-Augmented Generation (RAG) chatbot that can search, analyze, and answer questions over documents from Google Drive using Gemini, Qdrant, and OpenAI embeddings.",
-    "inputs": ["Manual trigger", "Google Drive folder selection"],
-    "nodes_used": ["Google Drive", "Extract From File", "Information Extractor", "OpenAI Embeddings", "Qdrant Vector Store", "Gemini Chat Model", "Text Splitter", "Set", "Wait", "Code"],
-    "outputs": ["Answers to user queries", "Document metadata and insights"],
-    "processed_at": "11/06/2025 22:07"
-  }
-  ,
-  {
-    "input_workflow_name": "8v4dynjkHSLVGJSG_Crypto_News_&_Sentiment.json",
-    "output_workflow_name": "Crypto News and Sentiment",
-    "output_workflow_file_path": "analyzed_workflows/Crypto News and Sentiment/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Crypto News and Sentiment/README.md",
-    "summary": "Aggregates crypto news from multiple sources and analyzes market sentiment for a given cryptocurrency or company, delivering concise summaries via Telegram.",
-    "inputs": ["Telegram message (crypto or company name)"],
-    "nodes_used": ["Telegram Trigger", "Set", "LangChain Agent", "RSS Feed Read", "Merge", "Code", "OpenAI Chat Model", "Telegram", "Sticky Note"],
-    "outputs": ["Summarized news and sentiment analysis delivered to Telegram"],
-    "processed_at": "11/06/2025 22:10"
-  }
-  ,
-  {
-    "input_workflow_name": "9Or3kzIEI2tskRyR_Google_Trend_Data_Extract,_Summarization_with_Bright_Data_&_Google_Gemini.json",
-    "output_workflow_name": "Google Trend Data Extract and Summarization",
-    "output_workflow_file_path": "analyzed_workflows/Google Trend Data Extract and Summarization/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Google Trend Data Extract and Summarization/README.md",
-    "summary": "Extracts, processes, and summarizes Google Trends data using Bright Data's Web Unlocker and Google Gemini AI, with results sent via webhook and Gmail.",
-    "inputs": ["Manual trigger"],
-    "nodes_used": ["Manual Trigger", "Set", "HTTP Request (Bright Data)", "Markdown to Textual Data Extractor", "Google Gemini Chat Model", "Structured Data Extractor", "Summarization Chain", "Webhook Notification", "Gmail", "Sticky Note"],
-    "outputs": ["Summarized Google Trends data delivered via webhook and Gmail"],
-    "processed_at": "11/06/2025 22:10"
-  }
-  ,
-  {
-    "input_workflow_name": "9_Coffee_Bot_(Matrix).json",
-    "output_workflow_name": "Coffee Bot (Matrix)",
-    "output_workflow_file_path": "analyzed_workflows/Coffee Bot (Matrix)/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Coffee Bot (Matrix)/README.md",
-    "summary": "Automates weekly virtual coffee group assignments and announcements in a Matrix chat room.",
-    "inputs": ["Weekly cron trigger (every Monday at 10:00)"] ,
-    "nodes_used": ["Cron Trigger", "Matrix (Greetings)", "Matrix (Employees in coffee chat channel)", "Function (Divide into groups)", "Matrix (Announce groups)"],
-    "outputs": ["Group assignments posted to the Matrix chat room"],
-    "processed_at": "11/06/2025 22:12"
-  }
-  ,
-  {
-    "input_workflow_name": "9nBQ1BfwxLhuzTcK_google_drive_to_instagram,_tiktok_and_youtube.json",
-    "output_workflow_name": "Google Drive to Instagram, TikTok and YouTube",
-    "output_workflow_file_path": "analyzed_workflows/Google Drive to Instagram, TikTok and YouTube/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Google Drive to Instagram, TikTok and YouTube/README.md",
-    "summary": "Automates the process of uploading videos from Google Drive to Instagram, TikTok, and YouTube, including AI-generated descriptions and error notifications.",
-    "inputs": ["Google Drive file creation in a specific folder"],
-    "nodes_used": ["Google Drive Trigger", "Google Drive", "OpenAI (Get Audio from Video)", "OpenAI (Generate Description)", "Read/Write Binary File", "HTTP Request", "Telegram", "If", "Sticky Note"],
-    "outputs": ["Videos uploaded to Instagram, TikTok, and YouTube with AI-generated descriptions", "Error notifications sent via Telegram"],
-    "processed_at": "11/06/2025 22:12"
-  }
-  ,
-  {
-    "input_workflow_name": "11_Plex_Automatic_Throttler.json",
-    "output_workflow_name": "Plex Automatic Throttler",
-    "output_workflow_file_path": "analyzed_workflows/Plex_Automatic_Throttler/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Plex_Automatic_Throttler/README.md",
-    "summary": "Automatically manages and throttles Plex-related network activity based on playback events, ensuring optimal bandwidth usage.",
-    "inputs": ["Webhook (Plex playback events)", "HTTP POST"],
-    "nodes_used": ["Webhook", "Switch", "If", "HTTP Request", "Set", "NoOp"],
-    "outputs": ["Adjusts qBittorrent speed limits via HTTP requests"],
-    "processed_at": "12/06/2025 17:53"
-  }
-  ,
-  {
-    "input_workflow_name": "11_What_To_Eat.json",
-    "output_workflow_name": "What To Eat",
-    "output_workflow_file_path": "analyzed_workflows/What_To_Eat/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/What_To_Eat/README.md",
-    "summary": "Sends daily personalized recipe suggestions via email based on user-defined dietary criteria and preferences.",
-    "inputs": ["Cron (scheduled daily at 10:00 AM)", "User dietary preferences"],
-    "nodes_used": ["Cron", "Set", "Function", "HTTP Request", "EmailSend", "Create Email Body in HTML"],
-    "outputs": ["Email with a curated list of recipes"],
-    "processed_at": "12/06/2025 17:53"
-  }
-  ,
-  {
-    "input_workflow_name": "11_workflow_11.json",
-    "output_workflow_name": "Google Sheets to Dropbox XLS Exporter",
-    "output_workflow_file_path": "analyzed_workflows/11_workflow_11/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/11_workflow_11/README.md",
-    "summary": "Automatically exports data from a Google Sheet to an XLS file and uploads it to Dropbox every 15 minutes.",
-    "inputs": ["Interval (every 15 minutes)", "Google Sheets data"],
-    "nodes_used": ["Interval", "Google Sheets", "Spreadsheet File", "Dropbox"],
-    "outputs": ["XLS file uploaded to Dropbox"],
-    "processed_at": "12/06/2025 17:58"
-  }
-  ,
-  {
-    "input_workflow_name": "9r4T5kELOXAV8L1F_3D_Figurine_Orthographic_Views_with_Midjourney_and_GPT-4o-Image_API.json",
-    "output_workflow_name": "3D Figurine Orthographic Views with Midjourney and GPT-4o-Image API",
-    "output_workflow_file_path": "analyzed_workflows/3D_Figurine_Orthographic_Views_with_Midjourney_and_GPT-4o-Image_API/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/3D_Figurine_Orthographic_Views_with_Midjourney_and_GPT-4o-Image_API/README.md",
-    "summary": "Generates orthographic views of 3D figurines using Midjourney and GPT-4o-Image API, providing AI-generated images and URLs for further use.",
-    "inputs": ["Manual Trigger (when clicking 'Test workflow')"],
-    "nodes_used": ["Manual Trigger", "HTTP Request", "If", "Wait", "Code"],
-    "outputs": ["URLs to generated images of 3D figurines"],
-    "processed_at": "12/06/2025 17:58"
-  }
-  ,
-  {
-    "input_workflow_name": "9w5vu5VmXxpdBLWi_Send_Daily_Birthday_Reminders_from_Google_Contacts_to_Slack.json",
-    "output_workflow_name": "Send Daily Birthday Reminders from Google Contacts to Slack",
-    "output_workflow_file_path": "analyzed_workflows/Send_Daily_Birthday_Reminders_from_Google_Contacts_to_Slack/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Send_Daily_Birthday_Reminders_from_Google_Contacts_to_Slack/README.md",
-    "summary": "Automates the process of sending daily birthday reminders from Google Contacts to a designated Slack channel.",
-    "inputs": ["Schedule Trigger (daily)", "Google Contacts data"],
-    "nodes_used": ["Schedule Trigger", "Google Contacts", "Filter", "If", "Slack", "Sticky Note"],
-    "outputs": ["Birthday reminder messages sent to Slack"],
-    "processed_at": "12/06/2025 17:58"
-  }
-  ,
-  {
-    "input_workflow_name": "12_Create_Onfleet_tasks_from_Spreadsheets.json",
-    "output_workflow_name": "Create Onfleet Tasks from Spreadsheets",
-    "output_workflow_file_path": "analyzed_workflows/Create_Onfleet_tasks_from_Spreadsheets/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Create_Onfleet_tasks_from_Spreadsheets/README.md",
-    "summary": "Automates the creation of Onfleet delivery tasks by reading addresses and recipient details from a spreadsheet file.",
-    "inputs": ["Manual or scheduled execution", "Input spreadsheet file (e.g., .xlsx)"],
-    "nodes_used": ["Read Binary File", "Spreadsheet File", "Onfleet"],
-    "outputs": ["Delivery tasks created in Onfleet"],
-    "processed_at": "12/06/2025 18:06"
-  }
-  ,
-  {
-    "input_workflow_name": "12_Find_a_New_Book.json",
-    "output_workflow_name": "Find a New Book",
-    "output_workflow_file_path": "analyzed_workflows/Find_a_New_Book/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Find_a_New_Book/README.md",
-    "summary": "Suggests a random book from Open Library based on a chosen subject and sends the recommendation by email.",
-    "inputs": ["Manual or scheduled execution", "Book subject"],
-    "nodes_used": ["Manual Trigger", "Cron", "Set", "HTTP Request", "If", "Function", "EmailSend"],
-    "outputs": ["Email with a book recommendation or notification if no books are found"],
-    "processed_at": "12/06/2025 18:06"
-  }
-  ,
-  {
-    "input_workflow_name": "13_Creating_an_Onfleet_Task_for_a_new_Shopify_Fulfillment.json",
-    "output_workflow_name": "Creating an Onfleet Task for a new Shopify Fulfillment",
-    "output_workflow_file_path": "analyzed_workflows/Creating_an_Onfleet_Task_for_a_new_Shopify_Fulfillment/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Creating_an_Onfleet_Task_for_a_new_Shopify_Fulfillment/README.md",
-    "summary": "Automatically creates a new Onfleet delivery task whenever a Shopify fulfillment is created.",
-    "inputs": ["Shopify webhook for fulfillments/create"],
-    "nodes_used": ["Shopify Trigger", "Onfleet"],
-    "outputs": ["Delivery task created in Onfleet"],
-    "processed_at": "12/06/2025 18:06"
-  }
-  ,
-  {
-    "input_workflow_name": "13_Mattermost_Webhook.json",
-    "output_workflow_name": "Mattermost Webhook",
-    "output_workflow_file_path": "analyzed_workflows/Mattermost_Webhook/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Mattermost_Webhook/README.md",
-    "summary": "Receives a webhook, fetches a random cocktail recipe, and posts it to a Mattermost channel with an image and instructions.",
-    "inputs": ["HTTP POST webhook (path: /webhook)", "Mattermost channel ID in payload"],
-    "nodes_used": ["Webhook", "HTTP Request", "Mattermost"],
-    "outputs": ["Cocktail recipe message sent to Mattermost channel"],
-    "processed_at": "12/06/2025 18:11"
-  }
-  ,
-  {
-    "input_workflow_name": "13_Receive_updates_when_a_form_is_submitted_in_Mautic,_and_send_a_confirmation_SMS.json",
-    "output_workflow_name": "Receive updates when a form is submitted in Mautic, and send a confirmation SMS",
-    "output_workflow_file_path": "analyzed_workflows/Receive_updates_when_a_form_is_submitted_in_Mautic_and_send_a_confirmation_SMS/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Receive_updates_when_a_form_is_submitted_in_Mautic_and_send_a_confirmation_SMS/README.md",
-    "summary": "Sends a confirmation SMS via Twilio when a form is submitted in Mautic.",
-    "inputs": ["Mautic webhook for form submission (mautic.form_on_submit)", "Form data (name, phone number)"],
-    "nodes_used": ["Mautic Trigger", "Twilio"],
-    "outputs": ["SMS confirmation sent to the phone number provided in the form"],
-    "processed_at": "12/06/2025 18:11"
-  }
-  ,
-  {
-    "input_workflow_name": "13_workflow_13.json",
-    "output_workflow_name": "XML to Dropbox Converter",
-    "output_workflow_file_path": "analyzed_workflows/13_workflow_13/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/13_workflow_13/README.md",
-    "summary": "Fetches XML data from a URL, converts it to JSON, modifies its content, converts it back to XML, and uploads the result to Dropbox.",
-    "inputs": ["HTTP Request (fetches XML from an external URL)", "URL to XML data"],
-    "nodes_used": ["HTTP Request", "XML (To JSON)", "Set", "XML (To XML)", "Dropbox"],
-    "outputs": ["Modified XML file uploaded to Dropbox"],
-    "processed_at": "12/06/2025 18:11"
-  }
-  ,
-  {
-    "input_workflow_name": "14_Activity_Encouragement.json",
-    "output_workflow_name": "Activity Encouragement",
-    "output_workflow_file_path": "analyzed_workflows/Activity_Encouragement/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Activity_Encouragement/README.md",
-    "summary": "Monitors Strava activity and sends encouragement emails to accountability partners if activity goals are not met.",
-    "inputs": ["Daily schedule (Cron)", "Strava activity data", "Accountability settings"],
-    "nodes_used": ["Cron", "Set (Accountability Settings)", "Strava", "If (Check Activity Level)", "NoOp (Enough Activity)", "EmailSend"],
-    "outputs": ["Encouragement email sent to accountability partners if activity is insufficient"],
-    "processed_at": "12/06/2025 18:20"
-  }
-  ,
-  {
-    "input_workflow_name": "14_Add_a_subscriber_to_a_list_and_create_and_send_a_campaign.json",
-    "output_workflow_name": "Add a Subscriber to a List and Create and Send a Campaign",
-    "output_workflow_file_path": "analyzed_workflows/Add_a_subscriber_to_a_list_and_create_and_send_a_campaign/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Add_a_subscriber_to_a_list_and_create_and_send_a_campaign/README.md",
-    "summary": "Adds a subscriber to a Sendy email list and immediately creates and sends a campaign to that list.",
-    "inputs": ["Manual execution (via 'execute')", "Subscriber details (name, email)", "Sendy list ID"],
-    "nodes_used": ["Manual Trigger", "Sendy", "Sendy1"],
-    "outputs": ["Subscriber is added to Sendy list", "Welcome campaign is created and sent to the list"],
-    "processed_at": "12/06/2025 18:20"
-  }
-  ,
-  {
-    "input_workflow_name": "14_Onfleet_Driver_signup_message_in_Slack.json",
-    "output_workflow_name": "Onfleet Driver Signup Message in Slack",
-    "output_workflow_file_path": "analyzed_workflows/Onfleet_Driver_signup_message_in_Slack/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Onfleet_Driver_signup_message_in_Slack/README.md",
-    "summary": "Sends a Slack notification when a new Onfleet driver signs up.",
-    "inputs": ["Onfleet webhook (workerCreated event)"],
-    "nodes_used": ["Onfleet Trigger", "Slack"],
-    "outputs": ["Slack message announcing a new driver signup"],
-    "processed_at": "12/06/2025 18:20"
+    "input_workflow_name": "32_Create_a_customer_and_add_them_to_a_segment_in_Customer.io.json",
+    "output_workflow_name": "Create_Customer_and_Add_to_Segment_Customerio",
+    "output_workflow_file_path": "analyzed_workflows/Create_Customer_and_Add_to_Segment_Customerio/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Create_Customer_and_Add_to_Segment_Customerio/README.md",
+    "summary": "Creates a customer in Customer.io and adds them to a segment using a manual trigger.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger", "CustomerIo", "CustomerIo1"],
+    "outputs": ["Customer created in Customer.io", "Customer added to segment in Customer.io"],
+    "processed_at": "16/06/2025 12:41"
   },
   {
-    "input_workflow_name": "14_Update_Crypto_Values.json",
-    "output_workflow_name": "Update Crypto Values",
-    "output_workflow_file_path": "analyzed_workflows/Update_Crypto_Values/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Update_Crypto_Values/README.md",
-    "summary": "Automatically updates cryptocurrency values in an Airtable portfolio using CoinGecko API and logs the total portfolio value.",
-    "inputs": ["Scheduled (Cron: every hour)", "Airtable portfolio entries", "CoinGecko API"],
-    "nodes_used": ["Cron (Run Top of Hour)", "Airtable (Get Portfolio)", "CoinGecko", "Set", "Airtable (Update Values)", "Airtable (Get Portfolio Values)", "Function (Determine Total Value)", "Airtable (Append Portfolio Value)"],
-    "outputs": ["Updated crypto values in Airtable table", "Total portfolio value appended to log"],
-    "processed_at": "12/06/2025 18:34"
-  }
-  ,
-  {
-    "input_workflow_name": "14_extract_swifts.json",
-    "output_workflow_name": "Extract SWIFT Codes",
-    "output_workflow_file_path": "analyzed_workflows/extract_swifts/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/extract_swifts/README.md",
-    "summary": "Scrapes SWIFT code data from theswiftcodes.com for multiple countries and stores the results in MongoDB.",
-    "inputs": ["Manual execution (via 'execute')", "Country list page", "SWIFT code HTML pages"],
-    "nodes_used": ["Manual Trigger", "Create Directory", "HTTP Request", "HTML Extract", "SplitInBatches", "uProc", "Set/Function/FunctionItem", "Wait", "Write/Read Binary File", "MongoDB"],
-    "outputs": ["SWIFT code data for all countries, stored in MongoDB"],
-    "processed_at": "12/06/2025 18:34"
-  }
-  ,
-  {
-    "input_workflow_name": "15_Bubble_Data_Access.json",
-    "output_workflow_name": "Bubble Data Access",
-    "output_workflow_file_path": "analyzed_workflows/Bubble_Data_Access/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Bubble_Data_Access/README.md",
-    "summary": "Fetches user data from a Bubble app using an authenticated API request.",
-    "inputs": ["Manual execution (via 'execute')", "Bubble app API endpoint", "Authentication credentials"],
-    "nodes_used": ["Manual Trigger", "HTTP Request"],
-    "outputs": ["User data from the Bubble app API"],
-    "processed_at": "12/06/2025 18:34"
-  }
-  ,
-  {
-    "input_workflow_name": "15_Tools___Backup_Gitlab.json",
-    "output_workflow_name": "Tools / Backup Gitlab",
-    "output_workflow_file_path": "analyzed_workflows/Tools_Backup_Gitlab/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Tools_Backup_Gitlab/README.md",
-    "summary": "Automates backup of n8n workflows and credentials to a Gitlab repository using scheduled and manual triggers.",
-    "inputs": ["Manual execution (via 'execute')", "Scheduled (Cron: every 6 hours)", "n8n instance with workflows and credentials", "Local git repo and Gitlab credentials"],
-    "nodes_used": ["Manual Trigger", "Cron", "ExecuteCommand (Export Workflows)", "ExecuteCommand (Export Credentials)", "ExecuteCommand (git add/commit/push)"],
-    "outputs": ["Workflows and credentials exported and pushed to Gitlab repository"],
-    "processed_at": "12/06/2025 18:34"
-  }
-  ,
-  {
-    "input_workflow_name": "16_User_Request_Management.json",
-    "output_workflow_name": "User Request Management",
-    "output_workflow_file_path": "analyzed_workflows/User_Request_Management/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/User_Request_Management/README.md",
-    "summary": "This workflow manages user requests submitted via a Typeform form and organizes them in ClickUp based on request type and urgency.",
-    "inputs": ["Typeform Trigger (form submission)"],
-    "nodes_used": ["Typeform Trigger", "Switch", "Set", "ClickUp"],
-    "outputs": ["New task created in ClickUp with all request details"],
-    "processed_at": "12/06/2025 19:09"
+    "input_workflow_name": "33_Postgres_Data_Ingestion.json",
+    "output_workflow_name": "Postgres_Data_Ingestion",
+    "output_workflow_file_path": "analyzed_workflows/Postgres_Data_Ingestion/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Postgres_Data_Ingestion/README.md",
+    "summary": "Automates the ingestion of sensor data into a Postgres database on a scheduled basis.",
+    "inputs": ["Cron"],
+    "nodes_used": ["Cron", "Function", "Postgres"],
+    "outputs": ["Sensor data inserted into Postgres table 'n8n'"],
+    "processed_at": "16/06/2025 12:41"
   },
   {
-    "input_workflow_name": "17j2efAe10uXRc4p_Auto_WordPress_Blog_Generator_(GPT_+_Postgres_+_WP_Media).json",
-    "output_workflow_name": "Auto WordPress Blog Generator (GPT + Postgres + WP Media)",
-    "output_workflow_file_path": "analyzed_workflows/Auto_WordPress_Blog_Generator_GPT_Postgres_WP_Media/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Auto_WordPress_Blog_Generator_GPT_Postgres_WP_Media/README.md",
-    "summary": "Automates the creation and publishing of WordPress blog posts using AI-generated content, category selection, and media management, leveraging GPT models, Postgres, and WP Media integration.",
-    "inputs": ["Schedule Trigger (runs at defined intervals)", "Category selection"],
-    "nodes_used": ["Schedule Trigger", "OpenAI Chat Model", "HTTP Request", "Media Upload to WP", "Merge", "Code", "Sticky Note"],
-    "outputs": ["Published WordPress blog post with AI-generated content and featured media"],
-    "processed_at": "12/06/2025 19:31"
+    "input_workflow_name": "33_Receive_updates_for_support_in_Zendesk.json",
+    "output_workflow_name": "Receive_Updates_for_Support_in_Zendesk",
+    "output_workflow_file_path": "analyzed_workflows/Receive_Updates_for_Support_in_Zendesk/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_Updates_for_Support_in_Zendesk/README.md",
+    "summary": "Receives real-time updates for support-related events in Zendesk via a webhook trigger.",
+    "inputs": ["Zendesk Trigger"],
+    "nodes_used": ["Zendesk Trigger"],
+    "outputs": ["Triggers downstream actions in n8n when a support event occurs in Zendesk"],
+    "processed_at": "16/06/2025 20:35"
   },
   {
-    "input_workflow_name": "18_Gender_Inclusive_Language.json",
-    "output_workflow_name": "Gender Inclusive Language",
-    "output_workflow_file_path": "analyzed_workflows/Gender_Inclusive_Language/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Gender_Inclusive_Language/README.md",
-    "summary": "Detects and suggests gender-inclusive alternatives in chat messages, promoting inclusive communication in Mattermost channels.",
-    "inputs": ["Webhook (POST request with chat message data)"] ,
-    "nodes_used": ["Webhook", "IF", "Mattermost", "NoOp"],
-    "outputs": ["Automated message in Mattermost suggesting inclusive language (if needed)"] ,
-    "processed_at": "12/06/2025 19:31"
+    "input_workflow_name": "33_n8n_check.json",
+    "output_workflow_name": "n8n_Check_and_Notify_New_Releases",
+    "output_workflow_file_path": "analyzed_workflows/n8n_Check_and_Notify_New_Releases/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/n8n_Check_and_Notify_New_Releases/README.md",
+    "summary": "Checks the n8n GitHub releases feed and notifies via Telegram and email when a new major version is released.",
+    "inputs": ["Manual Trigger", "Cron"],
+    "nodes_used": ["Manual Trigger", "Cron", "RSS Feed Read", "Function (Filter by current day)", "IF", "Telegram", "AWS SES"],
+    "outputs": ["Telegram message and email notification when a new major n8n release is detected."],
+    "processed_at": "16/06/2025 20:35"
   },
   {
-    "input_workflow_name": "19_Snowflake_CSV.json",
-    "output_workflow_name": "Snowflake CSV",
-    "output_workflow_file_path": "analyzed_workflows/Snowflake_CSV/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Snowflake_CSV/README.md",
-    "summary": "Automates the process of downloading a CSV file, extracting user data, and inserting it into a Snowflake database table.",
-    "inputs": ["Manual Trigger (on workflow execution)"] ,
-    "nodes_used": ["Manual Trigger", "HTTP Request", "Spreadsheet File", "Set", "Snowflake"],
-    "outputs": ["User data rows inserted into the Snowflake database"] ,
-    "processed_at": "12/06/2025 19:31"
-  }
-  ,
-  {
-    "input_workflow_name": "21IdmArlNT9LlaFf_Automate_Google_Analytics_Reporting_-_AlexK1919.json",
-    "output_workflow_name": "Automate Google Analytics Reporting - AlexK1919",
-    "output_workflow_file_path": "analyzed_workflows/Automate_Google_Analytics_Reporting_AlexK1919/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Automate_Google_Analytics_Reporting_AlexK1919/README.md",
-    "summary": "Automates the extraction, aggregation, and reporting of Google Analytics data, comparing key metrics across weekly periods and delivering the results via email.",
-    "inputs": ["Manual Trigger (via 'Test workflow')"],
-    "nodes_used": ["Manual Trigger", "Google Analytics", "Sticky Notes", "Set", "Aggregate Data", "Format Data", "Email"],
-    "outputs": ["Aggregated analytics report delivered via email"],
-    "processed_at": "12/06/2025 19:44"
-  }
-  ,
-  {
-    "input_workflow_name": "20_Create,_update_and_get_a_contact_in_Google_Contacts.json",
-    "output_workflow_name": "Create, update and get a contact in Google Contacts",
-    "output_workflow_file_path": "analyzed_workflows/Create_update_and_get_a_contact_in_Google_Contacts/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Create_update_and_get_a_contact_in_Google_Contacts/README.md",
-    "summary": "Automates the process of creating a new contact, updating the contact with organization details, and retrieving the contact's organization information in Google Contacts.",
-    "inputs": ["Manual Trigger (on workflow execution)"] ,
-    "nodes_used": ["Manual Trigger", "Google Contacts", "Google Contacts1", "Google Contacts2"],
-    "outputs": ["Google Contact created, updated, and fetched for organization details"] ,
-    "processed_at": "12/06/2025 19:44"
-  }
-  ,
-  {
-    "input_workflow_name": "21_Upload_video,_create_playlist_and_add_video_to_playlist.json",
-    "output_workflow_name": "Upload video, create playlist and add video to playlist",
-    "output_workflow_file_path": "analyzed_workflows/Upload_video_create_playlist_and_add_video_to_playlist/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Upload_video_create_playlist_and_add_video_to_playlist/README.md",
-    "summary": "Automates the process of uploading a video to YouTube, creating a playlist, and adding the uploaded video to the new playlist using n8n.",
-    "inputs": ["Manual Trigger (on workflow execution)"] ,
-    "nodes_used": ["Manual Trigger", "Read Binary File", "YouTube", "YouTube1", "YouTube2"],
-    "outputs": ["Video uploaded to YouTube", "Playlist created", "Video added to the playlist"] ,
-    "processed_at": "12/06/2025 19:44"
-  }
-,
-  {
-    "input_workflow_name": "23GPrqZjHnIVvTEa_Backup_n8n_Workflows_to_Bitbucket.json",
-    "output_workflow_name": "Backup n8n Workflows to Bitbucket",
-    "output_workflow_file_path": "analyzed_workflows/Backup_n8n_Workflows_to_Bitbucket/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Backup_n8n_Workflows_to_Bitbucket/README.md",
-    "summary": "This workflow automates daily backups of all n8n workflows to a Bitbucket repository. It retrieves all workflows, checks if each is new or changed, and uploads them to Bitbucket, handling API rate limits and ensuring only necessary uploads are performed.",
-    "inputs": ["Schedule Trigger (daily at 2 AM)", "n8n API credentials", "Bitbucket credentials", "WorkspaceSlug", "RepositorySlug"],
-    "nodes_used": ["Schedule Trigger", "Set", "Get All Workflows", "SplitInBatches", "HTTP Request (Bitbucket)", "IF", "Wait", "Code (Calculate Wait Time)"],
-    "outputs": ["Workflows backed up to Bitbucket repository"],
-    "processed_at": "12/06/2025 20:17"
-  }
-,
-  {
-    "input_workflow_name": "23_Zendesk-to-slack.json",
-    "output_workflow_name": "Zendesk to Slack",
-    "output_workflow_file_path": "analyzed_workflows/Zendesk_to_Slack/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Zendesk_to_Slack/README.md",
-    "summary": "Automates the retrieval of unassigned Zendesk tickets and posts a formatted summary to a Slack channel. Can be triggered manually or on a schedule.",
-    "inputs": ["Manual Trigger", "Cron (scheduled at 16:30)", "Zendesk API credentials", "Slack API credentials"],
-    "nodes_used": ["Manual Trigger", "Cron", "Zendesk", "Function", "Slack"],
-    "outputs": ["Slack message listing unassigned Zendesk tickets with links, statuses, and subjects"],
-    "processed_at": "12/06/2025 20:17"
-  }
-,
-  {
-    "input_workflow_name": "25_Add_subscriber_to_form,_create_tag_and_subscriber_to_the_tag.json",
-    "output_workflow_name": "Add Subscriber to Form, Create Tag, and Add Subscriber to the Tag",
-    "output_workflow_file_path": "analyzed_workflows/Add_Subscriber_and_Tag/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Add_Subscriber_and_Tag/README.md",
-    "summary": "Automates adding a new subscriber to a ConvertKit form, creating a tag, and associating the subscriber with the tag for streamlined audience management.",
-    "inputs": ["Manual Trigger", "ConvertKit API credentials", "Subscriber email address", "Form ID"],
-    "nodes_used": ["Manual Trigger", "ConvertKit", "ConvertKit1", "ConvertKit2"],
-    "outputs": ["New subscriber added to form", "New tag created", "Subscriber associated with new tag"],
-    "processed_at": "12/06/2025 20:17"
-  }
-,
-  {
-    "input_workflow_name": "27_Create_a_release_and_get_all_releases.json",
-    "output_workflow_name": "Create a Release and Get All Releases",
-    "output_workflow_file_path": "analyzed_workflows/Create_Release_and_Get_All_Releases/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Create_Release_and_Get_All_Releases/README.md",
-    "summary": "Automates the creation of a new release in Sentry and retrieves all releases for the specified organization or project. Useful for managing and tracking software releases from n8n.",
-    "inputs": ["Manual Trigger", "Sentry API credentials", "Release version", "Organization/project identifiers"],
-    "nodes_used": ["Manual Trigger", "Sentry.io", "Sentry.io1"],
-    "outputs": ["New release created in Sentry", "List of all releases retrieved from Sentry"],
-    "processed_at": "12/06/2025 20:26"
-  }
-,
-  {
-    "input_workflow_name": "27_workflow_27.json",
-    "output_workflow_name": "Telegram Sticker Checker Workflow",
-    "output_workflow_file_path": "analyzed_workflows/Workflow_27/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Workflow_27/README.md",
-    "summary": "Listens for messages in a Telegram chat and checks if the message contains a sticker. Replies with sticker details if found, or notifies the user if no sticker is present.",
-    "inputs": ["Telegram Trigger", "Telegram API credentials", "Telegram chat messages"],
-    "nodes_used": ["Telegram Trigger", "Look for Sticker (If)", "Return Sticker (Telegram)", "Return no Sticker found (Telegram)"],
-    "outputs": ["Telegram message with sticker details if found", "Telegram message indicating no sticker was found if not"],
-    "processed_at": "12/06/2025 20:26"
+    "input_workflow_name": "34_Monitoring_and_alerting.json",
+    "output_workflow_name": "Monitoring_and_Alerting_Sensor_Thresholds",
+    "output_workflow_file_path": "analyzed_workflows/Monitoring_and_Alerting_Sensor_Thresholds/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Monitoring_and_Alerting_Sensor_Thresholds/README.md",
+    "summary": "Monitors sensor readings in a Postgres database and sends an SMS alert via Twilio if a threshold is exceeded, then updates the notification status.",
+    "inputs": ["Cron"],
+    "nodes_used": ["Cron", "Postgres", "Twilio", "Set", "Postgres1"],
+    "outputs": ["SMS alert sent via Twilio when a sensor value exceeds the threshold", "Database updated to mark notification as sent"],
+    "processed_at": "16/06/2025 20:35"
   },
   {
-    "input_workflow_name": "28_Receive_updates_when_a_subscriber_is_added_through_a_form_in_ConvertKit.json",
-    "output_workflow_name": "Receive updates when a subscriber is added through a form in ConvertKit",
-    "output_workflow_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_is_added_through_a_form_in_ConvertKit/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_is_added_through_a_form_in_ConvertKit/README.md",
-    "summary": "Listens for new subscribers added via a ConvertKit form and triggers an update process.",
-    "inputs": ["ConvertKit Trigger (formSubscribe)", "Webhook"],
-    "nodes_used": ["ConvertKit Trigger"],
-    "outputs": ["Trigger downstream actions"],
-    "processed_at": "12/06/2025 20:39"
+    "input_workflow_name": "34_Receive_updates_when_a_sale_is_made_in_Gumroad.json",
+    "output_workflow_name": "Receive_Updates_on_Gumroad_Sales",
+    "output_workflow_file_path": "analyzed_workflows/Receive_Updates_on_Gumroad_Sales/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_Updates_on_Gumroad_Sales/README.md",
+    "summary": "Triggers an n8n workflow whenever a sale is made on Gumroad using a webhook trigger.",
+    "inputs": ["Gumroad Trigger"],
+    "nodes_used": ["Gumroad Trigger"],
+    "outputs": ["Triggers downstream actions in n8n when a sale is made in Gumroad."],
+    "processed_at": "17/06/2025 10:07"
   },
   {
-    "input_workflow_name": "29P4X9mTSmplnjlJ_AI_Phone_Agent_with_RetellAI.json",
-    "output_workflow_name": "AI Phone Agent with RetellAI",
-    "output_workflow_file_path": "analyzed_workflows/AI_Phone_Agent_with_RetellAI/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/AI_Phone_Agent_with_RetellAI/README.md",
-    "summary": "Implements an AI-powered phone agent that integrates RetellAI, OpenAI, Telegram, Google Calendar, and Qdrant for advanced call handling, analysis, and multi-channel notifications.",
-    "inputs": ["Webhook (RetellAI call events)", "Manual Trigger (for testing)"],
-    "nodes_used": ["Webhook", "OpenAI Chat Model", "Structured Output Parser", "Qdrant Vector Store", "Telegram", "Google Calendar", "Filter", "If", "Set", "Function", "Sticky Note"],
-    "outputs": ["Telegram notifications", "Google Calendar events", "Vector store updates (Qdrant)", "Structured call summaries and actionable tasks"],
-    "processed_at": "12/06/2025 20:44"
+    "input_workflow_name": "39KuujB1fbOvx8Al_OpenAI_e-mail_classification_-_application.json",
+    "output_workflow_name": "OpenAI_Email_Classification_Application",
+    "output_workflow_file_path": "analyzed_workflows/OpenAI_Email_Classification_Application/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/OpenAI_Email_Classification_Application/README.md",
+    "summary": "Automatically classifies incoming emails and attachments using OpenAI, extracts applicant data, and routes them for further processing.",
+    "inputs": ["Email trigger (IMAP)", "PDF attachment"],
+    "nodes_used": ["Email trigger", "Extract data from attachment", "Classify email", "Extract variables - email & attachment", "OpenAI Chat Model", "OpenAI Chat Model 2", "Workflow 2", "Workflow 3", "workflow 4", "Sticky Note"],
+    "outputs": ["Extracted variables from email and attachment", "Classification label", "Routed to appropriate sub-workflow"],
+    "processed_at": "17/06/2025 10:41"
   },
   {
-    "input_workflow_name": "29_Receive_updates_when_a_subscriber_unsubscribes_in_Customer.io.json",
-    "output_workflow_name": "Receive updates when a subscriber unsubscribes in Customer.io",
-    "output_workflow_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_unsubscribes_in_Customerio/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_unsubscribes_in_Customerio/README.md",
-    "summary": "Listens for unsubscribe events in Customer.io and triggers downstream processes when a subscriber unsubscribes.",
-    "inputs": ["Customer.io Trigger (unsubscribe event)"],
-    "nodes_used": ["Customer.io Trigger"],
-    "outputs": ["Initiates downstream automation or notifications"],
-    "processed_at": "12/06/2025 20:44"
-  },
-  {
-    "input_workflow_name": "29_workflow_29.json",
-    "output_workflow_name": "Typeform to Google Sheets, Slack & Email Workflow",
-    "output_workflow_file_path": "analyzed_workflows/Workflow_29/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Workflow_29/README.md",
-    "summary": "Automates collection of Typeform responses, storing them in Google Sheets and sending Slack/email notifications based on severity.",
-    "inputs": ["Typeform Trigger (formId: UXuY0A)", "Typeform responses"],
-    "nodes_used": ["Typeform Trigger", "Google Sheets", "IF", "Slack", "Send Email"],
-    "outputs": ["Google Sheets row append", "Slack notification (if severity > 7)", "Email notification (if severity > 7)"],
-    "processed_at": "12/06/2025 20:44"
-  },
-  {
-    "input_workflow_name": "30_Receive_updates_when_a_subscriber_is_added_to_a_group_and_strore_the_information_in_Airtable.json",
-    "output_workflow_name": "Receive updates when a subscriber is added to a group and store the information in Airtable",
-    "output_workflow_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_is_added_to_a_group_and_strore_the_information_in_Airtable/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/Receive_updates_when_a_subscriber_is_added_to_a_group_and_strore_the_information_in_Airtable/README.md",
-    "summary": "Listens for new subscribers added to a MailerLite group and stores their information in Airtable.",
-    "inputs": ["MailerLite Trigger (subscriber added to group)"],
-    "nodes_used": ["MailerLite Trigger", "Set", "Airtable"],
-    "outputs": ["New record created in Airtable with subscriber information"],
-    "processed_at": "12/06/2025 20:44"
-  },
-  {
-    "input_workflow_name": "30r9acI1XVIIwAMi_mails2notion_V2.json",
-    "output_workflow_name": "mails2notion V2",
-    "output_workflow_file_path": "analyzed_workflows/mails2notion_V2/workflow.json",
-    "output_readme_file_path": "analyzed_workflows/mails2notion_V2/README.md",
-    "summary": "Automates extraction of information from Gmail emails, processes with OpenAI, stores structured data in Airtable and Notion, and supports RAG use cases.",
-    "inputs": ["Gmail (new email received)", "Manual Trigger (for testing)"],
-    "nodes_used": ["Gmail", "OpenAI Chat Model", "Structured Output Parser", "Airtable", "Notion", "Qdrant Vector Store", "Manual Trigger", "Sticky Note"],
-    "outputs": ["Airtable record creation", "Notion updates", "Structured summaries and RAG context storage"],
-    "processed_at": "12/06/2025 20:44"
+    "input_workflow_name": "39_PostgreSQL_export_to_CSV.json",
+    "output_workflow_name": "PostgreSQL_Export_to_CSV",
+    "output_workflow_file_path": "analyzed_workflows/PostgreSQL_Export_to_CSV/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/PostgreSQL_Export_to_CSV/README.md",
+    "summary": "Exports data from a specified PostgreSQL table to a CSV file using n8n.",
+    "inputs": ["Manual Trigger (When clicking 'Execute Workflow')"],
+    "nodes_used": ["When clicking 'Execute Workflow'", "TableName (Set node)", "Postgres", "Spreadsheet File"],
+    "outputs": ["CSV file containing the exported table data"],
+    "processed_at": "17/06/2025 10:46"
   }
 ]
