@@ -1,0 +1,6 @@
+{
+  "id": "48",
+  "name": "Receive updates when an email is bounced or opened",
+  "nodes": [ ... ],
+  "connections": { }
+}

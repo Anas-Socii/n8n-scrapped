@@ -86,5 +86,137 @@
     "nodes_used": ["When clicking 'Execute Workflow'", "TableName (Set node)", "Postgres", "Spreadsheet File"],
     "outputs": ["CSV file containing the exported table data"],
     "processed_at": "17/06/2025 10:46"
+  },
+  {
+    "input_workflow_name": "42_Receive_updates_when_a_form_submission_occurs_in_your_Webflow_website.json",
+    "output_workflow_name": "Receive_Updates_on_Webflow_Form_Submission",
+    "output_workflow_file_path": "analyzed_workflows/Receive_Updates_on_Webflow_Form_Submission/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_Updates_on_Webflow_Form_Submission/README.md",
+    "summary": "Listens for form submissions on a Webflow site and triggers n8n workflows.",
+    "inputs": ["Webflow Trigger"],
+    "nodes_used": ["Webflow Trigger"],
+    "outputs": ["Workflow triggered on Webflow form submission"],
+    "processed_at": "18/06/2025 14:55"
+  },
+  {
+    "input_workflow_name": "43gMd18arOcxqDcC_LLM_Chaining_examples.json",
+    "output_workflow_name": "LLM_Chaining_Examples_with_Anthropic_and_HTTP",
+    "output_workflow_file_path": "analyzed_workflows/LLM_Chaining_Examples_with_Anthropic_and_HTTP/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/LLM_Chaining_Examples_with_Anthropic_and_HTTP/README.md",
+    "summary": "Demonstrates advanced LLM chaining in n8n using Anthropic Claude models, HTTP requests, and memory management.",
+    "inputs": ["Manual Trigger", "Webhook"],
+    "nodes_used": ["Manual Trigger", "Webhook", "HTTP Request", "Markdown", "Anthropic Chat Model", "Merge", "Split Out", "Memory Manager", "Set", "Sticky Note", "NoOp"],
+    "outputs": ["Processed LLM results", "Markdown-rendered content from HTTP requests"],
+    "processed_at": "18/06/2025 15:03"
+  },
+  {
+    "input_workflow_name": "44PIIGwPzUe9dGfb_Sync_New_Shopify_Products_to_Odoo_Product.json",
+    "output_workflow_name": "Sync_New_Shopify_Products_to_Odoo",
+    "output_workflow_file_path": "analyzed_workflows/Sync_New_Shopify_Products_to_Odoo/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Sync_New_Shopify_Products_to_Odoo/README.md",
+    "summary": "Synchronizes new products created in Shopify to Odoo, ensuring product catalog consistency.",
+    "inputs": ["Shopify Trigger"],
+    "nodes_used": ["Shopify Trigger", "Odoo (Odoo6)", "Code", "Filter (Filter2)", "Odoo (Odoo7)"],
+    "outputs": ["New or updated product record in Odoo ERP"],
+    "processed_at": "18/06/2025 15:03"
+  },
+  {
+    "input_workflow_name": "46_Cocktail_Recipe_Sharing.json",
+    "output_workflow_name": "Cocktail_Recipe_Sharing",
+    "output_workflow_file_path": "analyzed_workflows/Cocktail_Recipe_Sharing/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Cocktail_Recipe_Sharing/README.md",
+    "summary": "Shares a random cocktail recipe with a generated image to Rocketchat on a weekly schedule.",
+    "inputs": ["Cron"],
+    "nodes_used": ["Cron", "HTTP Request", "Bannerbear", "Rocketchat"],
+    "outputs": ["Message with cocktail image and recipe posted to Rocketchat"],
+    "processed_at": "18/06/2025 15:03"
+  },
+  {
+    "input_workflow_name": "46_Receive_updates_when_a_billing_plan_is_activated_in_PayPal.json",
+    "output_workflow_name": "Receive_Updates_on_PayPal_Billing_Plan_Activated",
+    "output_workflow_file_path": "analyzed_workflows/Receive_Updates_on_PayPal_Billing_Plan_Activated/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_Updates_on_PayPal_Billing_Plan_Activated/README.md",
+    "summary": "Listens for PayPal billing plan activation events and can trigger follow-up actions.",
+    "inputs": ["PayPal Trigger"],
+    "nodes_used": ["PayPal Trigger"],
+    "outputs": ["Workflow triggered on PayPal billing plan activation event"],
+    "processed_at": "18/06/2025 15:03"
+  },
+  {
+    "input_workflow_name": "47_Receive_updates_when_an_event_occurs_in_Asana.json",
+    "output_workflow_name": "Receive_Updates_on_Asana_Event",
+    "output_workflow_file_path": "analyzed_workflows/Receive_Updates_on_Asana_Event/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_Updates_on_Asana_Event/README.md",
+    "summary": "Listens for Asana events and can trigger follow-up actions.",
+    "inputs": ["Asana Trigger"],
+    "nodes_used": ["Asana Trigger"],
+    "outputs": ["Workflow triggered on Asana event"],
+    "processed_at": "18/06/2025 17:55"
+  },
+  {
+    "input_workflow_name": "47_Receive_updates_when_an_event_occurs_in_Asana copy.json",
+    "output_workflow_name": "Receive_Updates_on_Asana_Event_Copy",
+    "output_workflow_file_path": "analyzed_workflows/Receive_Updates_on_Asana_Event_Copy/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_Updates_on_Asana_Event_Copy/README.md",
+    "summary": "Duplicate: Listens for Asana events and can trigger follow-up actions.",
+    "inputs": ["Asana Trigger"],
+    "nodes_used": ["Asana Trigger"],
+    "outputs": ["Workflow triggered on Asana event"],
+    "processed_at": "18/06/2025 17:55"
+  },
+  {
+    "input_workflow_name": "48_Receive_updates_when_an_email_is_bounced_or_opened.json",
+    "output_workflow_name": "Receive_Updates_on_Email_Bounce_or_Open",
+    "output_workflow_file_path": "analyzed_workflows/Receive_Updates_on_Email_Bounce_or_Open/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_Updates_on_Email_Bounce_or_Open/README.md",
+    "summary": "Listens for Postmark bounce and open events and can trigger follow-up actions or analytics.",
+    "inputs": ["Postmark Trigger"],
+    "nodes_used": ["Postmark Trigger"],
+    "outputs": ["Workflow triggered on Postmark bounce/open event"],
+    "processed_at": "18/06/2025 17:55"
+  },
+  {
+    "input_workflow_name": "48_Workflow_management.json",
+    "output_workflow_name": "Workflow_Management_with_Airtable_and_Dropbox",
+    "output_workflow_file_path": "analyzed_workflows/Workflow_Management_with_Airtable_and_Dropbox/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Workflow_Management_with_Airtable_and_Dropbox/README.md",
+    "summary": "Complex workflow for managing workflows, integrating with Airtable and Dropbox, with error handling and batch processing.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger","Function","SplitInBatches","Airtable","Set","HTTP Request","Dropbox","NoOp","IF"],
+    "outputs": ["Updates/Appends workflow records in Airtable","Handles workflow files in Dropbox","Processes data in batches and manages errors"],
+    "processed_at": "18/06/2025 18:08"
+  },
+  {
+    "input_workflow_name": "51_Receive_messages_for_a_MQTT_queue.json",
+    "output_workflow_name": "Receive_Messages_for_MQTT_Queue",
+    "output_workflow_file_path": "analyzed_workflows/Receive_Messages_for_MQTT_Queue/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Receive_Messages_for_MQTT_Queue/README.md",
+    "summary": "Listens for MQTT messages and can trigger processing, logging, or forwarding actions.",
+    "inputs": ["MQTT Trigger"],
+    "nodes_used": ["MQTT Trigger"],
+    "outputs": ["Workflow triggered on MQTT message"],
+    "processed_at": "18/06/2025 18:08"
+  },
+  {
+    "input_workflow_name": "52_Trigger_a_build_using_the_TravisCI_node.json",
+    "output_workflow_name": "Trigger_Build_with_TravisCI",
+    "output_workflow_file_path": "analyzed_workflows/Trigger_Build_with_TravisCI/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/Trigger_Build_with_TravisCI/README.md",
+    "summary": "Triggers a TravisCI build on demand for a specified repository and branch.",
+    "inputs": ["Manual Trigger"],
+    "nodes_used": ["Manual Trigger","TravisCI"],
+    "outputs": ["Triggers a build on TravisCI for the specified repository and branch"],
+    "processed_at": "18/06/2025 18:08"
+  },
+  {
+    "input_workflow_name": "52pBJt8swWgtdY54_MCP_Client_with_Brave_and_Telegram.json",
+    "output_workflow_name": "MCP_Client_with_Brave_and_Telegram",
+    "output_workflow_file_path": "analyzed_workflows/MCP_Client_with_Brave_and_Telegram/workflow.json",
+    "output_readme_file_path": "analyzed_workflows/MCP_Client_with_Brave_and_Telegram/README.md",
+    "summary": "Enables Telegram users to perform Brave web searches via MCP integration and returns results to chat.",
+    "inputs": ["Telegram Trigger"],
+    "nodes_used": ["Telegram Trigger","IF","Set","Code","MCP Client","Telegram","Sticky Note"],
+    "outputs": ["Sends search results back to Telegram chat"],
+    "processed_at": "18/06/2025 22:00"
   }
 ]
